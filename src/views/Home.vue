@@ -1,15 +1,14 @@
 <template>
-  <div ref="main" id="main" class="pa-4 fill-height"></div>
+  <Lumino />
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import Lumino from '@/components/Lumino'
 
 export default {
   name: 'Home',
   components: {
-    HelloWorld
+    Lumino
   }
 }
 </script>
