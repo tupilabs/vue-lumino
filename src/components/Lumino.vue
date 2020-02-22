@@ -2,7 +2,11 @@
   <div>
     <div ref="main" id="main" class="pa-4 fill-height"></div>
     <div v-show="false">
-      <HelloWorld/>
+      <!-- in this hidden area, you need to create your component wrappers. The LuminoWidget will be inserted
+           in the div above, but the code will `appendChild` each component to a new widget. -->
+      <VueComponentWrapper widgetId="hello-world-1">
+        <HelloWorld :msg="Lumino" />
+      </VueComponentWrapper>
     </div>
   </div>
 </template>
@@ -10,9 +14,25 @@
 <script>
 import HelloWorld from '@/components/HelloWorld'
 import { BoxPanel, DockPanel, Widget } from '@lumino/widgets'
+import Vue from 'vue'
 
 import '@lumino/default-theme/style/index.css';
 
+/**
+ * This is a valid Lumino widget, that contains only a dummy div
+ * element.
+ *
+ * It will be created and added to the Lumino panel, then a Vue component
+ * will be created elsewhere, and attached to the div.
+ *
+ * Events of Lumino widgets are intercepted in this object by overriding
+ * functions, and emitting events expected by the Vue component.
+ *
+ * Since a Vue component needs to follow a certain signature, to
+ * receive events, and use the ID to attach the element, we use a
+ * Vue component wrapper (see below). An alternative approach could
+ * be the use of mixins, or HOC.
+ */
 class LuminoWidget extends Widget {
   /**
    * @param {string} id - widget id
@@ -40,24 +60,64 @@ class LuminoWidget extends Widget {
     return div
   }
   onCloseRequest (msg) {
-    // remove the Vue component
-    const event = new Event('delete:widgetcomponent')
+    // Emit an event so that the Vue component knows that it needs to be removed too
+    const event = new Event('component:delete')
     document.getElementById(this.id).dispatchEvent(event)
-    // close widget
+    // call super method
     super.onCloseRequest(msg)
   }
-  // eslint-disable-next-line no-unused-vars
   onActivateRequest (msg) {
-    // Offer an opportunity for components to act when the widget is activated
-    const event = new Event('activate:widgetcomponent')
+    // Emit an event so that the Vue component knows that it was activated
+    const event = new Event('component:activate')
     document.getElementById(this.id).dispatchEvent(event)
+    // call super method
+    super.onActivateRequest(msg)
   }
 }
 
+const VueComponentWrapper = Vue.component('VueComponentWrapper', {
+  name: 'VueComponentWrapper',
+  props: {
+    widgetId: {
+      type: String,
+      required: true
+    }
+  },
+  /**
+   * When this component is mounted, we want to transfer/attach it to the
+   * Lumino widget.
+   */
+  mounted () {
+    const widgetElement = document.getElementById(this.widgetId)
+    widgetElement.appendChild(this.$refs[this.widgetId].$el)
+    document.getElementById(this.widgetId).addEventListener('component:delete', this.delete)
+  },
+  beforeDestroy () {
+    document.getElementById(this.widgetId).removeEventListener('component:delete', this.delete)
+  },
+  methods: {
+    delete () {
+      // You can also emit an event here, to tell other Vue components that this component is going away...
+      this.$destroy()
+    }
+  },
+  template: `
+    <div>
+      <slot></slot>
+    </div>
+  `
+})
+
+/**
+ * This component is the example of how the LuminoWidget and the VueComponentWrapper
+ * together in your application. You can call this component whatever you like,
+ * use more events, or customize more how you use Lumino in your application.
+ */
 export default {
   name: 'Lumino',
   components: {
-    HelloWorld
+    HelloWorld,
+    VueComponentWrapper
   },
   data () {
     return {
@@ -78,8 +138,9 @@ export default {
       Widget.attach(vm.main, vm.$refs.main)
     })
     // Create a widget. This can go into a method, event listener, etc
-    const luminoWidget = new LuminoWidget('lumino-widget-1', 'home')
-    this.dock.addWidget(luminoWidget)
+    const luminoWidget = new LuminoWidget('hello-world-1', 'home')
+    console.log(luminoWidget)
+    // this.dock.addWidget(luminoWidget)
   }
 }
 </script>
