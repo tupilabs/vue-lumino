@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="workflow-panel">
     <div ref="main" id="main" class="pa-4 fill-height"></div>
     <div v-show="false">
       <!-- in this hidden area, you need to create your component wrappers. The LuminoWidget will be inserted
@@ -92,7 +92,7 @@ const VueComponentWrapper = Vue.component('VueComponentWrapper', {
    */
   mounted () {
     const widgetElement = document.getElementById(this.widgetId)
-    widgetElement.appendChild(this.$refs[this.widgetId].$el)
+    widgetElement.appendChild(this.$refs[this.widgetId])
     document.getElementById(this.widgetId).addEventListener('component:delete', this.delete)
   },
   beforeDestroy () {
@@ -157,3 +157,50 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+$body-font-family: 'Roboto, Ubuntu, Arial, Verdana, sans-serif';
+$font-size-root: 14px;
+#workflow-panel {
+  #main {
+    display: flex;
+    min-height: calc(100vh - 48px);
+    .content {
+      min-width: 300px;
+      min-height: 300px;
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      border: 1px solid #C0C0C0;
+      border-top: none;
+      background: white;
+      position: relative;
+      overflow: auto;
+    }
+
+    .p-BoxPanel {
+      flex: 1 1 auto;
+      .p-TabBar-content {
+        padding-left: 0;
+
+        .p-TabBar-tab {
+          border-bottom: 1px solid #C0C0C0;
+        }
+
+        .p-TabBar-tabLabel {
+          font-family: $body-font-family;
+          font-size: $font-size-root;
+        }
+
+        .p-TabBar-tabCloseIcon {
+          color: inherit;
+        }
+
+        .p-TabBar-tabCloseIcon:before {
+          content: 'X';
+        }
+      }
+    }
+  }
+}
+</style>
