@@ -141,6 +141,7 @@ export default {
     const vm = this
     this.$nextTick(() => {
       Widget.attach(vm.main, vm.$refs.main)
+      vm.addWidget('hello-world-1')
     })
   },
   methods: {
