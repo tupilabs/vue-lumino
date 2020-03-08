@@ -4,7 +4,10 @@
     <div v-show="false">
       <!-- in this hidden area, you need to create your component wrappers. The LuminoWidget will be inserted
            in the div above, but the code will `appendChild` each component to a new widget. -->
-      <VueComponentWrapper widgetId="hello-world-1">
+      <VueComponentWrapper
+        v-for="widgetId of this.widgetIds"
+        :key="widgetId"
+        :widgetId="widgetId">
         <HelloWorld msg="Lumino" />
       </VueComponentWrapper>
     </div>
@@ -102,7 +105,7 @@ const VueComponentWrapper = Vue.component('VueComponentWrapper', {
     }
   },
   template: `
-    <div>
+    <div :ref="widgetId">
       <slot></slot>
     </div>
   `
@@ -124,7 +127,9 @@ export default {
       // create a box panel, which holds the dock panel, and controls its layout
       main: new BoxPanel({ direction: 'left-to-right', spacing: 0 }),
       // create dock panel, which holds the widgets
-      dock: new DockPanel()
+      dock: new DockPanel(),
+      // holds a list of widgets added to the UI
+      widgetIds: []
     }
   },
   created () {
@@ -146,6 +151,7 @@ export default {
     addWidget(id) {
       const luminoWidget = new LuminoWidget(id, 'home')
       this.dock.addWidget(luminoWidget)
+      this.widgetIds.push(id)
     }
   }
 }
