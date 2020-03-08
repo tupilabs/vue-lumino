@@ -18,3 +18,7 @@ $ yarn run build    # compiles and minifies for production
 $ yarn run test     # run tests
 $ yarn run lint     # lint and fix files
 ```
+
+## License
+
+Licensed under the Apache License. See LICENSE file for more.
