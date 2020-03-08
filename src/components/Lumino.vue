@@ -8,7 +8,7 @@
         v-for="widgetId of this.widgetIds"
         :key="widgetId"
         :widgetId="widgetId">
-        <HelloWorld msg="Lumino" />
+        <HelloWorld msg="Hello World Lumino!" />
       </VueComponentWrapper>
     </div>
   </div>
