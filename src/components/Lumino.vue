@@ -1,15 +1,18 @@
 <template>
-  <div id="workflow-panel">
-    <div ref="main" id="main" class="pa-4 fill-height"></div>
-    <div v-show="false">
-      <!-- in this hidden area, you need to create your component wrappers. The LuminoWidget will be inserted
-           in the div above, but the code will `appendChild` each component to a new widget. -->
-      <VueComponentWrapper
-        v-for="widgetId of this.widgetIds"
-        :key="widgetId"
-        :widgetId="widgetId">
-        <HelloWorld msg="Hello World Lumino!" />
-      </VueComponentWrapper>
+  <div>
+    <button @click="buttonClicked">Add</button>
+    <div id="workflow-panel">
+      <div ref="main" id="main" class="pa-4 fill-height"></div>
+      <div v-show="false">
+        <!-- in this hidden area, you need to create your component wrappers. The LuminoWidget will be inserted
+             in the div above, but the code will `appendChild` each component to a new widget. -->
+        <VueComponentWrapper
+            v-for="widgetId of this.widgetIds"
+            :key="widgetId"
+            :widgetId="widgetId">
+          <HelloWorld msg="Hello World Lumino!" />
+        </VueComponentWrapper>
+      </div>
     </div>
   </div>
 </template>
@@ -153,6 +156,10 @@ export default {
       const luminoWidget = new LuminoWidget(id, 'home')
       this.dock.addWidget(luminoWidget)
       this.widgetIds.push(id)
+    },
+    buttonClicked () {
+      const id = `new-widget-${Math.random()}`
+      this.addWidget(id)
     }
   }
 }
