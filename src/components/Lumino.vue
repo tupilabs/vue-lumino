@@ -39,7 +39,7 @@ class LuminoWidget extends Widget {
    * @param {string} name - widget name (displayed in the tab bar)
    */
   constructor (id, name) {
-    super();
+    super({ node: LuminoWidget.createNode(id) })
     this.id = id
     // classes and flags
     this.setFlag(Widget.Flag.DisallowLayout)
