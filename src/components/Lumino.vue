@@ -5,7 +5,7 @@
       <!-- in this hidden area, you need to create your component wrappers. The LuminoWidget will be inserted
            in the div above, but the code will `appendChild` each component to a new widget. -->
       <VueComponentWrapper widgetId="hello-world-1">
-        <HelloWorld :msg="Lumino" />
+        <HelloWorld msg="Lumino" />
       </VueComponentWrapper>
     </div>
   </div>
