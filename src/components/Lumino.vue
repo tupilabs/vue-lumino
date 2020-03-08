@@ -137,10 +137,16 @@ export default {
     this.$nextTick(() => {
       Widget.attach(vm.main, vm.$refs.main)
     })
-    // Create a widget. This can go into a method, event listener, etc
-    const luminoWidget = new LuminoWidget('hello-world-1', 'home')
-    console.log(luminoWidget)
-    // this.dock.addWidget(luminoWidget)
+  },
+  methods: {
+    /**
+     * Create a widget.
+     * @param {string} id - widget ID
+     */
+    addWidget(id) {
+      const luminoWidget = new LuminoWidget(id, 'home')
+      this.dock.addWidget(luminoWidget)
+    }
   }
 }
 </script>
