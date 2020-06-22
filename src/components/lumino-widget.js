@@ -99,12 +99,26 @@ const VueComponentWrapper = Vue.component('VueComponentWrapper', {
      * Widget object. Must have at least a valid id.
      *
      * @type {{
-     *   id: string
+     *   id: string,
+     *   name: string,
+     *   closable: [null|boolean],
+     *   is: Class
      * }}
      */
     widget: {
       type: Object,
-      required: true
+      required: true,
+      /**
+       * Validate the the wrapper component is receiving the right prop.
+       *
+       * @param value
+       * @return {boolean|boolean}
+       */
+      validator: value => {
+        return value.id !== undefined && value.id !== null &&
+          value.name !== undefined && value.name !== null &&
+          value.is !== undefined && value.is !== null
+      }
     }
   },
 
@@ -118,6 +132,9 @@ const VueComponentWrapper = Vue.component('VueComponentWrapper', {
     document.getElementById(this.widget.id).addEventListener('component:delete', this.delete)
   },
 
+  /**
+   * Remove event listeners if the HTML element still exists in the DOM.
+   */
   beforeDestroy () {
     const widgetElement = document.getElementById(this.widget.id)
     if (widgetElement) {
