@@ -102,6 +102,7 @@ const VueComponentWrapper = Vue.component('VueComponentWrapper', {
      *   id: string,
      *   name: string,
      *   closable: [null|boolean],
+     *   propsData: [null|Object],
      *   is: Class
      * }}
      */

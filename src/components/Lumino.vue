@@ -26,6 +26,7 @@
             :widget="widget">
           <component
             :is="widget.is"
+            v-bind="widget.propsData"
           />
         </VueComponentWrapper>
       </div>
@@ -94,6 +95,7 @@ export default {
      *   id: string,
      *   name: string,
      *   closable: [null|boolean],
+     *   propsData: [null|Object],
      *   is: Class
      * }} widget - widget
      */
