@@ -15,6 +15,10 @@
  * limitations under the License.
  */
 
+/**
+ * NOTE: Used for example/documentation only. Not intended to be used by users of this component.
+ */
+
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'

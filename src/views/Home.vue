@@ -13,6 +13,10 @@
    limitations under the License.
 -->
 
+<!--
+NOTE: Used for example/documentation only. Not intended to be used by users of this component.
+-->
+
 <!-- Example only. One div, with a button, and the Lumino component holder (needs a ref to use
      when the button is clicked) -->
 <template>

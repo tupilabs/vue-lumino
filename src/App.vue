@@ -13,6 +13,10 @@
    limitations under the License.
 -->
 
+<!--
+NOTE: Used for example/documentation only. Not intended to be used by users of this component.
+-->
+
 <template>
   <div id="app">
     <router-view/>
