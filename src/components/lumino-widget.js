@@ -18,18 +18,21 @@ import Vue from 'vue'
  */
 class LuminoWidget extends Widget {
   /**
-   * @param {string} id - widget id
-   * @param {string} name - widget name (displayed in the tab bar)
+   * @param {{
+   *   id: string,
+   *   name: string,
+   *   closable: [null|boolean]
+   * }} widget - widget
    */
-  constructor (id, name) {
-    super({ node: LuminoWidget.createNode(id) })
-    this.id = id
+  constructor (widget) {
+    super({ node: LuminoWidget.createNode(widget.id) })
+    this.widget = widget
     // classes and flags
     this.setFlag(Widget.Flag.DisallowLayout)
     this.addClass('content')
     // tab title
-    this.title.label = name
-    this.title.closable = true
+    this.title.label = widget.name
+    this.title.closable = (widget.closable !== undefined && widget.closable !== null) ? widget.closable : true
   }
 
   /**
@@ -99,7 +102,10 @@ const VueComponentWrapper = Vue.component('VueComponentWrapper', {
   },
 
   beforeDestroy () {
-    document.getElementById(this.widget.id).removeEventListener('component:delete', this.delete)
+    const widgetElement = document.getElementById(this.widget.id)
+    if (widgetElement) {
+      widgetElement.removeEventListener('component:delete', this.delete)
+    }
   },
 
   methods: {

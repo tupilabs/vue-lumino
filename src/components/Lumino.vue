@@ -30,12 +30,21 @@ import '@lumino/default-theme/style/index.css';
  * use more events, or customize more how you use Lumino in your application.
  */
 export default {
+  /**
+   * Show a useful name in logs/debug/vue-extension
+   */
   name: 'Lumino',
 
+  /**
+   * Components used by the Lumino component
+   */
   components: {
     VueComponentWrapper
   },
 
+  /**
+   * Data for the Lumino component
+   */
   data () {
     return {
       // create a box panel, which holds the dock panel, and controls its layout
@@ -47,6 +56,10 @@ export default {
     }
   },
 
+  /**
+   * Here we define the ID's for the Lumino DOM elements, and add the Dock panel to the main
+   * Box panel. In the next tick of Vue, the DOM element and the Vue element/ref are attached.
+   */
   created () {
     this.dock.id = 'dock'
     this.main.id = 'main'
@@ -63,11 +76,14 @@ export default {
     /**
      * Create a widget.
      * @param {{
-     *   id: string
-     * }} widget - widget ID
+     *   id: string,
+     *   name: string,
+     *   closable: [null|boolean],
+     *   is: Class
+     * }} widget - widget
      */
     addWidget(widget) {
-      const luminoWidget = new LuminoWidget(widget.id, 'home')
+      const luminoWidget = new LuminoWidget(widget)
       this.dock.addWidget(luminoWidget)
       this.widgets.push(widget)
     }
