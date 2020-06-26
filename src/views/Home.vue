@@ -24,6 +24,15 @@ NOTE: Used for example/documentation only. Not intended to be used by users of t
     <button @click="addHelloWorldWidget">Add Hello World</button>
     <button @click="addColoredCircleWidget">Add Circle</button>
     <Lumino ref="lumino">
+      <!-- In this example we are adding two types of elements as tabs. The code
+      of this view is using the component name plus a random number for the component
+      ID, and the component name as the name to be displayed in the Lumino tab.
+
+      Props, events, slots are all supported. The elements will be added to the
+      default slot, which is wrapped in a `<div v-show=false>`. Later some
+      code attaches the Vue component `$el` under the Lumino widget, and via
+      events tries to keep everything in-sync (fingers-crossed).
+      -->
       <HelloWorld
         v-for="helloWorldWidget of this.helloWorldWidgets"
         :key="helloWorldWidget.id"
@@ -62,8 +71,11 @@ export default {
 
   data () {
     return {
+      // list of `HelloWorld` widgets
       helloWorldWidgets: [],
+      // list of `ColoredCircle` widgets
       coloredCircleWidgets: [],
+      // colors used in the `ColoredCircle` widget, we pick only one randomly
       colors: ['purple', 'green', 'blue', 'red']
     }
   },
