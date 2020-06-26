@@ -1,4 +1,4 @@
-## 0.2 (2020-07-??)
+## 0.2 (2020-06-27)
 
 - Removed `VueComponentWrapper` simplifying code
 - Using the default `<slot></slot>` wrapped in a `<div v-show=false>`
