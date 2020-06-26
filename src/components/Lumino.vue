@@ -96,7 +96,7 @@ export default {
 
 <style lang="scss">
 $body-font-family: 'Roboto, Ubuntu, Arial, Verdana, sans-serif';
-$font-size-root: 14px;
+$font-size-root: 16px;
 #workflow-panel {
   #main {
     display: flex;
