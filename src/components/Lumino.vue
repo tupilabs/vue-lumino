@@ -18,45 +18,40 @@
     <div id="workflow-panel">
       <div ref="main" id="main" class="pa-4 fill-height"></div>
       <div v-show="false">
-        <!-- in this hidden area, you need to create your component wrappers. The LuminoWidget will be inserted
-             in the div above, but the code will `appendChild` each component to a new widget. -->
-        <VueComponentWrapper
-            v-for="widget of this.widgets"
-            :key="widget.id"
-            :widget="widget">
-          <component
-            :is="widget.is"
-            v-bind="widget.propsData"
-          />
-        </VueComponentWrapper>
+        <slot></slot>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import { LuminoWidget, VueComponentWrapper } from '@/components/lumino-widget'
+import LuminoWidget from '@/components/lumino-widget'
 import { BoxPanel, DockPanel, Widget } from '@lumino/widgets'
 
 import '@lumino/default-theme/style/index.css';
 
 /**
- * This component is the example of how the LuminoWidget and the VueComponentWrapper
- * together in your application. You can call this component whatever you like,
- * use more events, or customize more how you use Lumino in your application.
+ * A component to wrap the Lumino application.
+ *
+ * It will create a BoxPanel (left to right, no gutters) with a dock
+ * panel. Each component created in the default slot will be added
+ * to an invisible area.
+ *
+ * Upon creation, the component will take care to transfer the $el
+ * of each children component to the Lumino widget div, creating the
+ * impression that the component was created inside the tab/widget.
+ *
+ * Lumino uses DOM, and Vue the VDOM. So this is an approach that
+ * works, but there could be alternative approaches too. Feel free
+ * to adapt it to your use case as necessary.
+ *
+ * @since 0.2
  */
 export default {
   /**
    * Show a useful name in logs/debug/vue-extension
    */
   name: 'Lumino',
-
-  /**
-   * Components used by the Lumino component
-   */
-  components: {
-    VueComponentWrapper
-  },
 
   /**
    * Data for the Lumino component
@@ -66,9 +61,7 @@ export default {
       // create a box panel, which holds the dock panel, and controls its layout
       main: new BoxPanel({ direction: 'left-to-right', spacing: 0 }),
       // create dock panel, which holds the widgets
-      dock: new DockPanel(),
-      // holds a list of widgets added to the UI
-      widgets: []
+      dock: new DockPanel()
     }
   },
 
@@ -91,18 +84,11 @@ export default {
   methods: {
     /**
      * Create a widget.
-     * @param {{
-     *   id: string,
-     *   name: string,
-     *   closable: [null|boolean],
-     *   propsData: [null|Object],
-     *   is: Class
-     * }} widget - widget
+     *
      */
-    addWidget(widget) {
-      const luminoWidget = new LuminoWidget(widget)
+    addWidget(id, name) {
+      const luminoWidget = new LuminoWidget(id, name, /* closable */ true)
       this.dock.addWidget(luminoWidget)
-      this.widgets.push(widget)
     }
   }
 }
