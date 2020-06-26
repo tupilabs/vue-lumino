@@ -11,11 +11,6 @@ web applications.
 
 Based on work done for [Cylc UI](https://github.com/cylc/cylc-ui).
 
-NB: this is not production-ready code, but purely an example on one way to achieve using Lumino and Vue.js.
-The original code uses events to intercept when widgets are added or removed, and the listeners update
-DOM and Vue components, trying to make sure there are no memory leaks, no dangling objects, etc. Hopefully
-others will find this useful as a reference for one way to achieve the same in their projects.
-
 ## Building
 
 ```bash
