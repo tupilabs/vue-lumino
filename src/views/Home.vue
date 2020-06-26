@@ -21,9 +21,19 @@ NOTE: Used for example/documentation only. Not intended to be used by users of t
      when the button is clicked) -->
 <template>
   <div>
-    <button @click="onAddHomeButtonClicked">Add Home</button>
-    <button @click="onAddCircleButtonClicked">Add Circle</button>
-    <Lumino ref="lumino" />
+    <button @click="addHelloWorldWidget">Add Hello World</button>
+    <button @click="addColoredCircleWidget">Add Circle</button>
+    <Lumino ref="lumino">
+      <HelloWorld
+        v-for="helloWorldWidget of this.helloWorldWidgets"
+        :key="helloWorldWidget.id"
+      ></HelloWorld>
+      <ColoredCircle
+        v-for="coloredCircleWidget of this.coloredCircleWidgets"
+        :key="coloredCircleWidget.id"
+        :color="_getRandomColor()"
+      ></ColoredCircle>
+    </Lumino>
   </div>
 </template>
 
@@ -45,12 +55,17 @@ export default {
 
   components: {
     Lumino,
-    // It is important to declare the components here, or globally, so that when the Lumino component declares
-    // <component :is=widget.is />, it is loaded correctly.
-    // eslint-disable-next-line vue/no-unused-components
+    // components used as example
     HelloWorld,
-    // eslint-disable-next-line vue/no-unused-components
     ColoredCircle
+  },
+
+  data () {
+    return {
+      helloWorldWidgets: [],
+      coloredCircleWidgets: [],
+      colors: ['purple', 'green', 'blue', 'red']
+    }
   },
 
   /**
@@ -61,13 +76,7 @@ export default {
    */
   mounted () {
     this.$nextTick(() => {
-      const id = 'hello-world-pre-added-component-1'
-      this.$refs.lumino.addWidget({
-        // unique ID
-        id,
-        name: id,
-        is: HelloWorld
-      })
+      this.addHelloWorldWidget()
     })
   },
 
@@ -76,30 +85,28 @@ export default {
    */
   methods: {
     /**
-     * Showing how one can add widgets reacting to events such as a button click.
+     * Add a `HelloWorld` widget.
      */
-    onAddHomeButtonClicked () {
-      const id = `${Math.random()}`
-      const widget = {
-        id,
-        name: `hello-${id}`,
-        is: HelloWorld
-      }
-      this.$refs.lumino.addWidget(widget)
+    addHelloWorldWidget () {
+      const id = `${HelloWorld.name}-${Math.random()}`
+      const name = `${HelloWorld.name}`
+      this.$refs.lumino.addWidget(id, name)
     },
-    onAddCircleButtonClicked () {
-      const id = `${Math.random()}`
-      const colors = ['purple', 'green', 'blue', 'red']
-      const color = colors[Math.floor(Math.random() * colors.length)]
-      const widget = {
-        id,
-        name: `circle-${id}`,
-        is: ColoredCircle,
-        propsData: {
-          color
-        }
-      }
-      this.$refs.lumino.addWidget(widget)
+    /**
+     * Add a `ColoredCircle` widget.
+     */
+    addColoredCircleWidget () {
+      const id = `${ColoredCircle.name}-${Math.random()}`
+      const name = `${ColoredCircle.name}`
+      this.$refs.lumino.addWidget(id, name)
+    },
+    /**
+     * Get a random color to be used as prop for the `ColoredCircle` widget.
+     * @returns {string} a random color member of `this.colors`
+     * @private
+     */
+    _getRandomColor () {
+      return this.colors[Math.floor(Math.random() * this.colors.length)]
     }
   }
 }
