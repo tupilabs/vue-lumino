@@ -22,12 +22,15 @@ NOTE: Used for example/documentation only. Not intended to be used by users of t
 <template>
   <div>
     <button
-      @click="helloWorldWidgets.push(new Date().getTime())"
+      @click="onAddHelloWorldButtonClicked"
       >Add Hello World</button>
     <button
-      @click="coloredCircleWidgets.push(new Date().getTime())"
+      @click="onAddColoredCircleButtonClicked"
       >Add Circle</button>
-    <Lumino ref="lumino">
+    <Lumino ref="lumino"
+      v-on:lumino:deleted="onWidgetDeletedEvent"
+      v-on:lumino:activated="onWidgetActivatedEvent"
+    >
       <!-- In this example we are adding two types of elements as tabs. The code
       of this view is using the component name plus a random number for the component
       ID, and the component name as the name to be displayed in the Lumino tab.
@@ -38,13 +41,15 @@ NOTE: Used for example/documentation only. Not intended to be used by users of t
       events tries to keep everything in-sync (fingers-crossed).
       -->
       <HelloWorld
-        v-for="helloWorldWidget of this.helloWorldWidgets"
-        :key="helloWorldWidget"
+        v-for="id of this.helloWorldWidgets"
+        :key="id"
+        :id="id"
       ></HelloWorld>
       <ColoredCircle
-        v-for="coloredCircleWidget of this.coloredCircleWidgets"
-        :key="coloredCircleWidget"
-        :color="_getRandomColor()"
+        v-for="id of this.coloredCircleWidgets"
+        :key="id"
+        :id="id"
+        :color="'red'"
       ></ColoredCircle>
     </Lumino>
   </div>
@@ -56,6 +61,8 @@ import Lumino from '@/components/Lumino'
 // importing the components we want to display within the Lumino component
 import HelloWorld from '@/components/example/HelloWorld'
 import ColoredCircle from '@/components/example/ColoredCircle'
+// to set reactive value
+import Vue from 'vue'
 
 /**
  * An example view, showing how to use the Lumino component. Not exported, not for external use, for
@@ -75,12 +82,36 @@ export default {
 
   data () {
     return {
-      // list of `HelloWorld` widgets
-      helloWorldWidgets: [],
-      // list of `ColoredCircle` widgets
-      coloredCircleWidgets: [],
-      // colors used in the `ColoredCircle` widget, we pick only one randomly
-      colors: ['purple', 'green', 'blue', 'red']
+      // the widgets added to the view
+      /**
+       * @type {
+       *   Object.<string, string>
+       * }
+       */
+      widgets: {},
+      helloWorldType: HelloWorld.name,
+      coloredCircleType: ColoredCircle.name
+    }
+  },
+
+  computed: {
+    helloWorldWidgets () {
+      const widgets = []
+      for (const [id, type] of Object.entries(this.widgets)) {
+        if (type === HelloWorld.name) {
+          widgets.push(id)
+        }
+      }
+      return widgets
+    },
+    coloredCircleWidgets () {
+      const widgets = []
+      for (const [id, type] of Object.entries(this.widgets)) {
+        if (type === ColoredCircle.name) {
+          widgets.push(id)
+        }
+      }
+      return widgets
     }
   },
 
@@ -92,7 +123,7 @@ export default {
    */
   mounted () {
     this.$nextTick(() => {
-      this.helloWorldWidgets.push(new Date().getTime())
+      this.onAddHelloWorldButtonClicked()
     })
   },
 
@@ -100,13 +131,26 @@ export default {
    * Example methods.
    */
   methods: {
-    /**
-     * Get a random color to be used as prop for the `ColoredCircle` widget.
-     * @returns {string} a random color member of `this.colors`
-     * @private
-     */
-    _getRandomColor () {
-      return this.colors[Math.floor(Math.random() * this.colors.length)]
+    onAddHelloWorldButtonClicked () {
+      const id = `${new Date().getTime()}`
+      // eslint-disable-next-line no-console
+      console.log(`Adding new widget ${ColoredCircle.name}, ID ${id}`)
+      Vue.set(this.widgets, id, HelloWorld.name)
+    },
+    onAddColoredCircleButtonClicked () {
+      const id = `${new Date().getTime()}`
+      // eslint-disable-next-line no-console
+      console.log(`Adding new widget ${ColoredCircle.name}, ID ${id}`)
+      Vue.set(this.widgets, id, ColoredCircle.name)
+    },
+    onWidgetActivatedEvent (event) {
+      // eslint-disable-next-line no-console
+      console.log(`Activated widget ${event.id}`)
+    },
+    onWidgetDeletedEvent (event) {
+      // eslint-disable-next-line no-console
+      console.log(`Deleted widget ${event.id}`)
+      Vue.delete(this.widgets, event.id)
     }
   }
 }

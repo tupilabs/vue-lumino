@@ -82,13 +82,20 @@ export default {
     })
   },
 
+  /**
+   * Every time a new child element is added to the slot, this method will
+   * be called. It will iterate the children elements looking for new ones
+   * to add.
+   *
+   * The removal is handled via event listeners from Lumino.
+   */
   updated () {
     this.$children
-      .filter(child => !this.widgets.includes(child._uid))
+      .filter(child => !this.widgets.includes(child.$attrs.id))
       .forEach(newChild => {
-        this.widgets.push(newChild._uid)
-        const id = `${newChild.$options.name}-${new Date().getTime()}`
+        const id = `${newChild.$attrs.id}`
         const name = newChild.$options.name
+        this.widgets.push(id)
         this.addWidget(id, name)
         this.$nextTick(() => {
           document.getElementById(id).appendChild(newChild.$el)
@@ -104,6 +111,49 @@ export default {
     addWidget(id, name) {
       const luminoWidget = new LuminoWidget(id, name, /* closable */ true)
       this.dock.addWidget(luminoWidget)
+      // give time for Lumino's widget DOM element to be created
+      this.$nextTick(() => {
+        document.getElementById(id)
+          .addEventListener(LuminoWidget.EVENT_WIDGET_ACTIVATED, this.onWidgetActivated)
+        document.getElementById(id)
+          .addEventListener(LuminoWidget.EVENT_WIDGET_DELETED, this.onWidgetDeleted)
+      })
+    },
+
+    /**
+     * React to a deleted event.
+     *
+     * @param customEvent {
+     *   detail: {
+     *     id: string,
+     *     name: string,
+     *     closable: boolean
+     *   }
+     * }}
+     */
+    onWidgetActivated (customEvent) {
+      this.$emit(LuminoWidget.EVENT_WIDGET_ACTIVATED, customEvent.detail)
+    },
+
+    /**
+     * React to a deleted event.
+     *
+     * @param customEvent {
+     *   detail: {
+     *     id: string,
+     *     name: string,
+     *     closable: boolean
+     *   }
+     * }}
+     */
+    onWidgetDeleted (customEvent) {
+      const id = customEvent.detail.id
+      this.widgets.splice(this.widgets.indexOf(id), 1)
+      document.getElementById(id)
+        .removeEventListener(LuminoWidget.EVENT_WIDGET_DELETED, this.onWidgetDeleted)
+      document.getElementById(id)
+        .removeEventListener(LuminoWidget.EVENT_WIDGET_ACTIVATED, this.onWidgetActivated)
+      this.$emit(LuminoWidget.EVENT_WIDGET_DELETED, customEvent.detail)
     }
   }
 }

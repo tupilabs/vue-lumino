@@ -28,6 +28,9 @@ import { Widget } from "@lumino/widgets";
  * listeners much be attached to the DOM element with the widget ID.
  */
 export default class LuminoWidget extends Widget {
+
+  static EVENT_WIDGET_ACTIVATED = 'lumino:activated'
+  static EVENT_WIDGET_DELETED = 'lumino:deleted'
   /**
    * Create a LuminoWidget object.
    * @param id {string} unique ID of the widget
@@ -36,6 +39,9 @@ export default class LuminoWidget extends Widget {
    */
   constructor (id, name, closable = true) {
     super({ node: LuminoWidget.createNode(id) })
+    this.id = id
+    this.name = name
+    this.closable = closable
     // classes and flags
     this.setFlag(Widget.Flag.DisallowLayout)
     this.addClass('content')
@@ -56,19 +62,36 @@ export default class LuminoWidget extends Widget {
     return div
   }
 
+  onActivateRequest (msg) {
+    // Emit an event so that the Vue component knows that it was activated
+    const event = new CustomEvent(LuminoWidget.EVENT_WIDGET_ACTIVATED, this._getEventDetails())
+    document.getElementById(this.id).dispatchEvent(event)
+    // call super method
+    super.onActivateRequest(msg)
+  }
+
   onCloseRequest (msg) {
     // Emit an event so that the Vue component knows that it needs to be removed too
-    const event = new Event('lumino:delete')
+    const event = new CustomEvent(LuminoWidget.EVENT_WIDGET_DELETED, this._getEventDetails())
     document.getElementById(this.id).dispatchEvent(event)
     // call super method
     super.onCloseRequest(msg)
   }
 
-  onActivateRequest (msg) {
-    // Emit an event so that the Vue component knows that it was activated
-    const event = new Event('lumino:activate')
-    document.getElementById(this.id).dispatchEvent(event)
-    // call super method
-    super.onActivateRequest(msg)
+  /**
+   * Event details returned for a `CustomEvent`.
+   *
+   * @link https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Creating_and_triggering_events
+   * @returns {{closable: boolean, name: string, id: string}}
+   * @private
+   */
+  _getEventDetails () {
+    return {
+      detail: {
+        id: this.id,
+        name: this.name,
+        closable: this.closable
+      }
+    }
   }
 }
