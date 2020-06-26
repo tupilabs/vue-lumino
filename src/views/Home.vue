@@ -21,8 +21,12 @@ NOTE: Used for example/documentation only. Not intended to be used by users of t
      when the button is clicked) -->
 <template>
   <div>
-    <button @click="addHelloWorldWidget">Add Hello World</button>
-    <button @click="addColoredCircleWidget">Add Circle</button>
+    <button
+      @click="helloWorldWidgets.push(new Date().getTime())"
+      >Add Hello World</button>
+    <button
+      @click="coloredCircleWidgets.push(new Date().getTime())"
+      >Add Circle</button>
     <Lumino ref="lumino">
       <!-- In this example we are adding two types of elements as tabs. The code
       of this view is using the component name plus a random number for the component
@@ -35,11 +39,11 @@ NOTE: Used for example/documentation only. Not intended to be used by users of t
       -->
       <HelloWorld
         v-for="helloWorldWidget of this.helloWorldWidgets"
-        :key="helloWorldWidget.id"
+        :key="helloWorldWidget"
       ></HelloWorld>
       <ColoredCircle
         v-for="coloredCircleWidget of this.coloredCircleWidgets"
-        :key="coloredCircleWidget.id"
+        :key="coloredCircleWidget"
         :color="_getRandomColor()"
       ></ColoredCircle>
     </Lumino>
@@ -88,30 +92,14 @@ export default {
    */
   mounted () {
     this.$nextTick(() => {
-      this.addHelloWorldWidget()
+      this.helloWorldWidgets.push(new Date().getTime())
     })
   },
 
   /**
-   * Only methods implemented are the ones to handle the buttons being clicked.
+   * Example methods.
    */
   methods: {
-    /**
-     * Add a `HelloWorld` widget.
-     */
-    addHelloWorldWidget () {
-      const id = `${HelloWorld.name}-${Math.random()}`
-      const name = `${HelloWorld.name}`
-      this.$refs.lumino.addWidget(id, name)
-    },
-    /**
-     * Add a `ColoredCircle` widget.
-     */
-    addColoredCircleWidget () {
-      const id = `${ColoredCircle.name}-${Math.random()}`
-      const name = `${ColoredCircle.name}`
-      this.$refs.lumino.addWidget(id, name)
-    },
     /**
      * Get a random color to be used as prop for the `ColoredCircle` widget.
      * @returns {string} a random color member of `this.colors`

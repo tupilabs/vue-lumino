@@ -61,7 +61,8 @@ export default {
       // create a box panel, which holds the dock panel, and controls its layout
       main: new BoxPanel({ direction: 'left-to-right', spacing: 0 }),
       // create dock panel, which holds the widgets
-      dock: new DockPanel()
+      dock: new DockPanel(),
+      widgets: []
     }
   },
 
@@ -79,6 +80,20 @@ export default {
     this.$nextTick(() => {
       Widget.attach(vm.main, vm.$refs.main)
     })
+  },
+
+  updated () {
+    this.$children
+      .filter(child => !this.widgets.includes(child._uid))
+      .forEach(newChild => {
+        this.widgets.push(newChild._uid)
+        const id = `${newChild.$options.name}-${new Date().getTime()}`
+        const name = newChild.$options.name
+        this.addWidget(id, name)
+        this.$nextTick(() => {
+          document.getElementById(id).appendChild(newChild.$el)
+        })
+      })
   },
 
   methods: {
