@@ -1,3 +1,8 @@
+## 0.3 (2020-06-??)
+
+- Added tests
+- Added CI
+
 ## 0.2 (2020-06-27)
 
 - Removed `VueComponentWrapper` simplifying code
