@@ -5,7 +5,9 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "test:unit": "vue-cli-service test:unit",
+    "coverage:unit": "nyc vue-cli-service test:unit"
   },
   "dependencies": {
     "@lumino/datagrid": "^0.8.0",
