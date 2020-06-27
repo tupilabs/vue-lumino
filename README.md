@@ -8,7 +8,7 @@ An example project showing one way to integrate Vue.js and
 
 ![](./demo.gif)
 
-Lumino “is a library for building interactive web applications”. It is used by JupyterLab to create the
+Lumino *“is a library for building interactive web applications”*. It is used by JupyterLab to create the
 top menu bar, widgets with close/maximize buttons, and other components that allow users to create
 web applications.
 
