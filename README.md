@@ -17,11 +17,12 @@ Based on work done for [Cylc UI](https://github.com/cylc/cylc-ui).
 ## Building
 
 ```bash
-$ yarn install      # install dependencies
-$ yarn run serve    # run development server
-$ yarn run build    # compiles and minifies for production
-$ yarn run test     # run tests
-$ yarn run lint     # lint and fix files
+$ yarn install             # install dependencies
+$ yarn run serve           # run development server
+$ yarn run build           # compiles and minifies for production
+$ yarn run lint            # lint and fix files
+$ yarn run test:unit       # run unit tests
+$ yarn run coverage:unit   # report unit tests coverage
 ```
 
 ## License
