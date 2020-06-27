@@ -20,7 +20,7 @@ import LuminoWidget from '@/components/lumino-widget'
 
 describe('lumino-widget', () => {
   it('should create a widget correctly', () => {
-    const widget = new LuminoWidget()
+    const widget = new LuminoWidget('id', 'name', true)
     expect(widget).to.not.equal(null)
   })
 })

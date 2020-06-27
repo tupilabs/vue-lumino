@@ -1,0 +1,23 @@
+{
+  "include": ["src/**/*.js", "src/**/*.vue"],
+  "exclude": [
+    "node_modules",
+    "docs",
+    "tests",
+    "src/i18n",
+    "src/lang",
+    "src/plugins",
+    "src/components/example",
+    "src/router",
+    "src/views",
+    "src/App.vue",
+    "src/main.js"
+   ],
+  "extension": [".js", ".vue"],
+  "reporter": ["html", "lcov", "text-summary"],
+  "cache": false,
+  "all": true,
+  "check-coverage": false,
+  "instrument": true,
+  "sourceMap": true
+}

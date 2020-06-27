@@ -15,9 +15,34 @@
  * limitations under the License.
  */
 
+const path = require('path')
+
 module.exports = {
   publicPath: '',
   outputDir: 'dist',
   indexPath: 'index.html',
-  runtimeCompiler: true
+  runtimeCompiler: true,
+  chainWebpack: config => {
+    if (['test', 'offline'].includes(process.env.NODE_ENV)) {
+      config.module.rule('istanbul')
+        .test(/\.js$/)
+        .include.add(path.resolve('src')).end()
+        .use('istanbul-instrumenter-loader')
+        .loader('istanbul-instrumenter-loader')
+        .options({ esModules: true })
+        .before('babel-loader')
+
+      config.output
+        .devtoolModuleFilenameTemplate('[absolute-resource-path]')
+        .devtoolFallbackModuleFilenameTemplate('[absolute-resource-path]?[hash]')
+    }
+    // https://webpack.js.org/configuration/devtool/
+    if (process.env.NODE_ENV !== 'production') {
+      if (process.env.NODE_ENV === 'test') {
+        config.devtool('eval-source-map')
+      } else {
+        config.devtool('eval-source-map')
+      }
+    }
+  }
 }

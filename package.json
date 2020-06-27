@@ -27,8 +27,17 @@
     "chai": "^4.2.0",
     "eslint": "^7.3.0",
     "eslint-plugin-vue": "^6.2.2",
+    "istanbul-instrumenter-loader": "^3.0.1",
+    "istanbul-lib-coverage": "^3.0.0",
+    "nyc": "^15.0.1",
     "sass": "^1.26.8",
     "sass-loader": "^8.0.2",
     "vue-template-compiler": "^2.6.11"
+  },
+  "resolutions": {
+    "istanbul-instrumenter-loader/**/istanbul-lib-instrument": "4.0.1"
+  },
+  "bugs": {
+    "url": "https://github.com/kinow/vue-lumino/issues"
   }
 }
