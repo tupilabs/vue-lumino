@@ -1,5 +1,7 @@
 # vue-lumino
 
+![CI](https://github.com/kinow/vue-lumino/workflows/CI/badge.svg)
+
 An example project showing one way to integrate Vue.js and
 [Lumino](https://github.com/jupyterlab/lumino) (née PhosphorJS).
 
