@@ -95,7 +95,6 @@ export default {
       .forEach(newChild => {
         const id = `${newChild.$attrs.id}`
         const name = newChild.$options.name
-        this.widgets.push(id)
         this.addWidget(id, name)
         this.$nextTick(() => {
           document.getElementById(id).appendChild(newChild.$el)
@@ -109,6 +108,7 @@ export default {
      *
      */
     addWidget(id, name) {
+      this.widgets.push(id)
       const luminoWidget = new LuminoWidget(id, name, /* closable */ true)
       this.dock.addWidget(luminoWidget)
       // give time for Lumino's widget DOM element to be created
