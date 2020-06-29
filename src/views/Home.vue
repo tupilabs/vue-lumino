@@ -26,7 +26,7 @@ NOTE: Used for example/documentation only. Not intended to be used by users of t
       >Add Hello World</button>
     <button
       @click="onAddColoredCircleButtonClicked"
-      >Add Circle</button>
+      >Add Colored Circle</button>
     <Lumino ref="lumino"
       v-on:lumino:deleted="onWidgetDeletedEvent"
       v-on:lumino:activated="onWidgetActivatedEvent"
