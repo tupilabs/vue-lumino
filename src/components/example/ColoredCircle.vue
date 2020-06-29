@@ -25,7 +25,7 @@ NOTE: Used for example/documentation only. Not intended to be used by users of t
 
 <script>
 export default {
-  name: 'SymbolColor',
+  name: 'ColoredCircle',
 
   props: {
     color: {
