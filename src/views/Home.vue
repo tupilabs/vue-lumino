@@ -24,9 +24,11 @@ NOTE: Used for example/documentation only. Not intended to be used by users of t
   <div>
     <button
       @click="onAddHelloWorldButtonClicked"
+      id="add-hello-world-widget-button"
       >Add Hello World</button>
     <button
       @click="onAddColoredCircleButtonClicked"
+      id="add-colored-circle-widget-button"
       >Add Colored Circle</button>
     <Lumino ref="lumino"
       v-on:lumino:deleted="onWidgetDeletedEvent"
