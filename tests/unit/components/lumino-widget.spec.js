@@ -19,15 +19,17 @@ import { expect } from 'chai'
 import LuminoWidget from '@/components/lumino-widget'
 
 describe('lumino-widget', () => {
+  let widget, id, name, closable
+  beforeEach(() => {
+    id = 'id1'
+    name = 'name1'
+    closable = false
+    widget = new LuminoWidget(id, name, closable)
+  })
   it('should create a widget correctly', () => {
-    const widget = new LuminoWidget('id', 'name', true)
     expect(widget).to.not.equal(null)
   })
   it('should create the right event details', () => {
-    const id = 'id1'
-    const name = 'name1'
-    const closable = false
-    const widget = new LuminoWidget(id, name, closable)
     const eventDetails = widget._getEventDetails()
     expect(eventDetails.detail.id).to.equal(id)
     expect(eventDetails.detail.name).to.equal(name)

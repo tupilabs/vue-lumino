@@ -22,7 +22,7 @@
     "@vue/cli-plugin-eslint": "^4.4.4",
     "@vue/cli-plugin-unit-mocha": "^4.4.4",
     "@vue/cli-service": "^4.4.4",
-    "@vue/test-utils": "^1.0.0-beta.29",
+    "@vue/test-utils": "^1.0.3",
     "babel-eslint": "^10.1.0",
     "chai": "^4.2.0",
     "eslint": "^7.3.0",
@@ -32,7 +32,8 @@
     "nyc": "^15.0.1",
     "sass": "^1.26.8",
     "sass-loader": "^8.0.2",
-    "vue-template-compiler": "^2.6.11"
+    "vue-template-compiler": "^2.6.11",
+    "webpack": "^4.43.0"
   },
   "resolutions": {
     "istanbul-instrumenter-loader/**/istanbul-lib-instrument": "4.0.1"

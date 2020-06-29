@@ -39,7 +39,7 @@ module.exports = {
     // https://webpack.js.org/configuration/devtool/
     if (process.env.NODE_ENV !== 'production') {
       if (process.env.NODE_ENV === 'test') {
-        config.devtool('eval-source-map')
+        config.devtool('eval')
       } else {
         config.devtool('eval-source-map')
       }
