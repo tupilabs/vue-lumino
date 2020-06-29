@@ -23,4 +23,14 @@ describe('lumino-widget', () => {
     const widget = new LuminoWidget('id', 'name', true)
     expect(widget).to.not.equal(null)
   })
+  it('should create the right event details', () => {
+    const id = 'id1'
+    const name = 'name1'
+    const closable = false
+    const widget = new LuminoWidget(id, name, closable)
+    const eventDetails = widget._getEventDetails()
+    expect(eventDetails.detail.id).to.equal(id)
+    expect(eventDetails.detail.name).to.equal(name)
+    expect(eventDetails.detail.closable).to.equal(closable)
+  })
 })
