@@ -51,7 +51,7 @@ jobs:
         with:
           start: yarn run serve
           wait-on: http://localhost:8080/
-          config_file: cypress.json
+          config-file: cypress.json
           spec: "tests/e2e/**/*"
         env:
           CYPRESS_baseUrl: http://localhost:8080/
