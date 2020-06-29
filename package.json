@@ -7,7 +7,8 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit",
-    "coverage:unit": "nyc vue-cli-service test:unit"
+    "coverage:unit": "nyc vue-cli-service test:unit",
+    "test:e2e": "vue-cli-service test:e2e"
   },
   "dependencies": {
     "@lumino/datagrid": "^0.8.0",
@@ -18,7 +19,10 @@
     "vue-router": "^3.3.4"
   },
   "devDependencies": {
+    "@cypress/code-coverage": "^2.0.5",
+    "@cypress/webpack-preprocessor": "^5.1.2",
     "@vue/cli-plugin-babel": "^4.4.4",
+    "@vue/cli-plugin-e2e-cypress": "^4.3.1",
     "@vue/cli-plugin-eslint": "^4.4.4",
     "@vue/cli-plugin-unit-mocha": "^4.4.4",
     "@vue/cli-service": "^4.4.4",
