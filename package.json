@@ -1,8 +1,18 @@
 {
   "name": "vue-lumino",
+  "description": "A Vue component that integrates with Lumino",
+  "author": "Bruno P. Kinoshita <brunodepaulak@gmail.com> (https://twitter.com/kinow)",
   "version": "0.3.0-SNAPSHOT",
   "private": false,
   "license": "Apache-2.0",
+  "homepage": "https://github.com/kinow/vue-lumino/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kinow/vue-lumino.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kinow/vue-lumino/issues"
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -44,7 +54,11 @@
   "resolutions": {
     "istanbul-instrumenter-loader/**/istanbul-lib-instrument": "4.0.1"
   },
-  "bugs": {
-    "url": "https://github.com/kinow/vue-lumino/issues"
-  }
+  "keywords": [
+    "component",
+    "lumino",
+    "tabs",
+    "widgets",
+    "vue"
+  ]
 }
