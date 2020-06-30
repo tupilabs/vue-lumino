@@ -2,6 +2,7 @@
   "name": "vue-lumino",
   "version": "0.3.0-SNAPSHOT",
   "private": true,
+  "license": "Apache-2.0",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
