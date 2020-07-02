@@ -28,8 +28,6 @@ import { Widget } from "@lumino/widgets";
  */
 export default class LuminoWidget extends Widget {
 
-  static EVENT_WIDGET_ACTIVATED = 'lumino:activated'
-  static EVENT_WIDGET_DELETED = 'lumino:deleted'
   /**
    * Create a LuminoWidget object.
    * @param id {string} unique ID of the widget
@@ -63,7 +61,7 @@ export default class LuminoWidget extends Widget {
 
   onActivateRequest (msg) {
     // Emit an event so that the Vue component knows that it was activated
-    const event = new CustomEvent(LuminoWidget.EVENT_WIDGET_ACTIVATED, this._getEventDetails())
+    const event = new CustomEvent('lumino:activated', this._getEventDetails())
     document.getElementById(this.id).dispatchEvent(event)
     // call super method
     super.onActivateRequest(msg)
@@ -71,7 +69,7 @@ export default class LuminoWidget extends Widget {
 
   onCloseRequest (msg) {
     // Emit an event so that the Vue component knows that it needs to be removed too
-    const event = new CustomEvent(LuminoWidget.EVENT_WIDGET_DELETED, this._getEventDetails())
+    const event = new CustomEvent('lumino:deleted', this._getEventDetails())
     document.getElementById(this.id).dispatchEvent(event)
     // call super method
     super.onCloseRequest(msg)

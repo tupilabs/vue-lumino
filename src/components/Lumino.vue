@@ -115,9 +115,9 @@ export default {
       // give time for Lumino's widget DOM element to be created
       this.$nextTick(() => {
         document.getElementById(id)
-          .addEventListener(LuminoWidget.EVENT_WIDGET_ACTIVATED, this.onWidgetActivated)
+          .addEventListener('lumino:activated', this.onWidgetActivated)
         document.getElementById(id)
-          .addEventListener(LuminoWidget.EVENT_WIDGET_DELETED, this.onWidgetDeleted)
+          .addEventListener('lumino:deleted', this.onWidgetDeleted)
       })
     },
 
@@ -133,7 +133,7 @@ export default {
      * }}
      */
     onWidgetActivated (customEvent) {
-      this.$emit(LuminoWidget.EVENT_WIDGET_ACTIVATED, customEvent.detail)
+      this.$emit('lumino:activated', customEvent.detail)
     },
 
     /**
@@ -151,10 +151,10 @@ export default {
       const id = customEvent.detail.id
       this.widgets.splice(this.widgets.indexOf(id), 1)
       document.getElementById(id)
-        .removeEventListener(LuminoWidget.EVENT_WIDGET_DELETED, this.onWidgetDeleted)
+        .removeEventListener('lumino:deleted', this.onWidgetDeleted)
       document.getElementById(id)
-        .removeEventListener(LuminoWidget.EVENT_WIDGET_ACTIVATED, this.onWidgetActivated)
-      this.$emit(LuminoWidget.EVENT_WIDGET_DELETED, customEvent.detail)
+        .removeEventListener('lumino:activated', this.onWidgetActivated)
+      this.$emit('lumino:deleted', customEvent.detail)
     }
   }
 }
