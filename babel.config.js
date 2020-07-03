@@ -20,7 +20,7 @@ module.exports = {
   ],
   env: {
     coverage: {
-      plugins: ['istanbul']
+      plugins: ['babel-plugin-istanbul']
     }
   }
 }
