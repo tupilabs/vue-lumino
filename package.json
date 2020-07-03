@@ -38,6 +38,7 @@
     "@vue/cli-plugin-unit-jest": "^4.4.0",
     "@vue/cli-service": "^4.4.6",
     "@vue/test-utils": "^1.0.3",
+    "babel-core": "^6.26.3",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^26.1.0",
     "babel-loader": "^8.1.0",
@@ -46,6 +47,7 @@
     "eslint-plugin-vue": "^6.2.2",
     "sass": "^1.26.9",
     "sass-loader": "^8.0.2",
+    "vue-jest": "^3.0.6",
     "vue-template-compiler": "^2.6.11",
     "webpack": "^4.43.0"
   },

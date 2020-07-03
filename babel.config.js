@@ -19,7 +19,7 @@ module.exports = {
     '@vue/cli-plugin-babel/preset'
   ],
   env: {
-    test: {
+    coverage: {
       plugins: ['istanbul']
     }
   }
