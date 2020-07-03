@@ -22,9 +22,9 @@ module.exports = {
   indexPath: 'index.html',
   runtimeCompiler: true,
   chainWebpack: config => {
-    if (['test'].includes(process.env.NODE_ENV)) {
-      config.module.rule('istanbul')
-        .test(/\.js$/)
+    if (process.env.NODE_ENV !== 'production') {
+      config.module.rule('js')
+        .test(/\.(js)$/)
         .include.add(path.resolve('src')).end()
         .use('istanbul-instrumenter-loader')
         .loader('istanbul-instrumenter-loader')
@@ -34,9 +34,7 @@ module.exports = {
       config.output
         .devtoolModuleFilenameTemplate('[absolute-resource-path]')
         .devtoolFallbackModuleFilenameTemplate('[absolute-resource-path]?[hash]')
-    }
-    // https://webpack.js.org/configuration/devtool/
-    if (process.env.NODE_ENV !== 'production') {
+
       if (process.env.NODE_ENV === 'test') {
         config.devtool('eval')
       } else {
