@@ -46,6 +46,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+      - name: Install
+        run: yarn install
       - name: e2e
         run: |
           yarn run test:e2e --headless --mode coverage
