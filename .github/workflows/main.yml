@@ -50,7 +50,7 @@ jobs:
         run: yarn install
       - name: e2e
         run: |
-          NODE_ENV=coverage yarn run test:e2e --headless
+          yarn run test:e2e --headless --mode development
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v1
         with:
