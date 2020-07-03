@@ -49,7 +49,7 @@ jobs:
       - name: e2e
         uses: cypress-io/github-action@v1
         with:
-          start: yarn run serve
+          start: yarn run serve --mode test
           wait-on: http://localhost:8080/
           config-file: cypress.json
           spec: "tests/e2e/**/*"

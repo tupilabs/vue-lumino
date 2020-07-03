@@ -14,12 +14,15 @@
  * limitations under the License.
  */
 
-const webpackPreprocessor = require('@cypress/webpack-preprocessor')
-
 module.exports = (on, config) => {
-  // For test coverage
   require('@cypress/code-coverage/task')(on, config)
-  const webpackOptions = require('@vue/cli-service/webpack.config')
-  // on('file:preprocessor', webpackPreprocessor())
+
+  on(
+    'file:preprocessor',
+    require('@cypress/code-coverage/use-browserify-istanbul')
+  )
+
+  // important - return config because code coverage plugin
+  // modifies environment variables there
   return config
 }

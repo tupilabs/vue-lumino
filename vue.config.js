@@ -20,26 +20,5 @@ module.exports = {
   publicPath: '',
   outputDir: 'dist',
   indexPath: 'index.html',
-  runtimeCompiler: true,
-  chainWebpack: config => {
-    if (process.env.NODE_ENV !== 'production') {
-      config.module.rule('js')
-        .test(/\.(js)$/)
-        .include.add(path.resolve('src')).end()
-        .use('istanbul-instrumenter-loader')
-        .loader('istanbul-instrumenter-loader')
-        .options({ esModules: true })
-        .before('babel-loader')
-
-      config.output
-        .devtoolModuleFilenameTemplate('[absolute-resource-path]')
-        .devtoolFallbackModuleFilenameTemplate('[absolute-resource-path]?[hash]')
-
-      if (process.env.NODE_ENV === 'test') {
-        config.devtool('eval')
-      } else {
-        config.devtool('eval-source-map')
-      }
-    }
-  }
+  runtimeCompiler: true
 }
