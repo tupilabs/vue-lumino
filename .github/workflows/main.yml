@@ -7,8 +7,8 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
+  unit-tests:
+    runs-on: ubuntu-18.04
 
     steps:
     - uses: actions/checkout@v2
@@ -41,7 +41,7 @@ jobs:
 
     - name: Build
       run: yarn run build
-  cypress-run:
+  e2e-tests:
     runs-on: ubuntu-16.04
     steps:
       - name: Checkout
