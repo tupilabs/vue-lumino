@@ -1,7 +1,7 @@
 {
   "include": ["src/**/*.js", "src/**/*.vue"],
   "extension": [".js", ".vue"],
-  "reporter": ["html", "lcov", "text-summary"],
+  "reporter": ["html", "lcov", "text"],
   "cache": false,
   "all": true,
   "check-coverage": false,
