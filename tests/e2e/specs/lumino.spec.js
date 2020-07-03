@@ -41,4 +41,59 @@ describe('Lumino component', () => {
       .contains('ColoredCircle')
       .should('be.visible')
   })
+  it('should switch correctly to a different widget', () => {
+    cy.visit('/')
+    cy
+      .get('.lm-TabBar-tabLabel')
+      .contains('HelloWorld')
+      .should('be.visible')
+    // SVG element is used only in the ColoredCircle component
+    cy.get('svg')
+      .should('not.be.visible')
+
+    cy
+      .get('#add-colored-circle-widget-button')
+      .click()
+    cy
+      .get('.lm-TabBar-tabLabel')
+      .contains('ColoredCircle')
+      .should('be.visible')
+    cy
+      .get('.lm-TabBar-tabLabel')
+      .contains('ColoredCircle')
+      .click()
+    cy.get('svg')
+      .should('be.visible')
+  })
+  it('should successfully close a widget', () => {
+    cy.visit('/')
+    cy
+      .get('.lm-TabBar-tabLabel')
+      .contains('HelloWorld')
+      .should('be.visible')
+    // SVG element is used only in the ColoredCircle component
+    cy.get('svg')
+      .should('not.be.visible')
+
+    cy
+      .get('#add-colored-circle-widget-button')
+      .click()
+    // ColoredCircle is visible
+    cy
+      .get('.lm-TabBar-tabLabel')
+      .contains('ColoredCircle')
+      .should('be.visible')
+    // click the close button
+    cy
+      .get('.lm-TabBar-tabLabel')
+      .contains('ColoredCircle')
+      .parent()
+      .children('.lm-TabBar-tabCloseIcon')
+      .click()
+    // ain't no more now!
+    cy
+      .get('.lm-TabBar-tabLabel')
+      .contains('ColoredCircle')
+      .should('not.be.visible')
+  })
 })
