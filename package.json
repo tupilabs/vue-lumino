@@ -40,7 +40,6 @@
     "@vue/cli-service": "^4.4.6",
     "@vue/test-utils": "^1.0.3",
     "babel-eslint": "^10.1.0",
-    "babel-plugin-istanbul": "^6.0.0",
     "chai": "^4.2.0",
     "eslint": "^7.3.1",
     "eslint-plugin-vue": "^6.2.2",
@@ -51,9 +50,6 @@
     "sass-loader": "^8.0.2",
     "vue-template-compiler": "^2.6.11",
     "webpack": "^4.43.0"
-  },
-  "resolutions": {
-    "istanbul-instrumenter-loader/**/istanbul-lib-instrument": "4.0.1"
   },
   "keywords": [
     "component",
