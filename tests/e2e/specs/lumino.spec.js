@@ -14,34 +14,31 @@
  * limitations under the License.
  */
 
-import HelloWorld from '@/components/example/HelloWorld'
-import ColoredCircle from "@/components/example/ColoredCircle";
-
 describe('Lumino component', () => {
   it('should display the example app loaded and with a default hello world widget', () => {
     cy.visit('/')
     cy
       .get('.lm-TabBar-tabLabel')
-      .contains(HelloWorld.name)
+      .contains('HelloWorld')
       .should('be.visible')
   })
   it('should add a new colored circle widget', () => {
     cy.visit('/')
     cy
       .get('.lm-TabBar-tabLabel')
-      .contains(HelloWorld.name)
+      .contains('HelloWorld')
       .should('be.visible')
 
     cy
       .get('.lm-TabBar-tabLabel')
-      .contains(ColoredCircle.name)
+      .contains('ColoredCircle')
       .should('not.be.visible')
     cy
       .get('#add-colored-circle-widget-button')
       .click()
     cy
       .get('.lm-TabBar-tabLabel')
-      .contains(ColoredCircle.name)
+      .contains('ColoredCircle')
       .should('be.visible')
   })
 })

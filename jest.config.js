@@ -14,13 +14,6 @@
  * limitations under the License.
  */
 
-import { shallowMount } from '@vue/test-utils'
-import Lumino from '@/components/Lumino'
-
-describe('Lumino component', () => {
-  it('should be created correctly', () => {
-    const lumino = shallowMount(Lumino)
-    expect(lumino.main).not.toEqual(null)
-    expect(lumino.dock).not.toEqual(null)
-  })
-})
+module.exports = {
+  preset: '@vue/cli-plugin-unit-jest'
+}

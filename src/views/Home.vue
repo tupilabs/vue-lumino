@@ -67,6 +67,8 @@ import ColoredCircle from '@/components/example/ColoredCircle'
 // to set reactive value
 import Vue from 'vue'
 
+import '@lumino/default-theme/style/index.css';
+
 /**
  * An example view, showing how to use the Lumino component. Not exported, not for external use, for
  * documentation only.

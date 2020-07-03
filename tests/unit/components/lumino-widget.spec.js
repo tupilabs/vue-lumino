@@ -14,7 +14,6 @@
  * limitations under the License.
  */
 
-import { expect } from 'chai'
 import LuminoWidget from '@/components/lumino-widget'
 
 describe('lumino-widget', () => {
@@ -26,12 +25,12 @@ describe('lumino-widget', () => {
     widget = new LuminoWidget(id, name, closable)
   })
   it('should create a widget correctly', () => {
-    expect(widget).to.not.equal(null)
+    expect(widget).not.toEqual(null)
   })
   it('should create the right event details', () => {
     const eventDetails = widget._getEventDetails()
-    expect(eventDetails.detail.id).to.equal(id)
-    expect(eventDetails.detail.name).to.equal(name)
-    expect(eventDetails.detail.closable).to.equal(closable)
+    expect(eventDetails.detail.id).toEqual(id)
+    expect(eventDetails.detail.name).toEqual(name)
+    expect(eventDetails.detail.closable).toEqual(closable)
   })
 })

@@ -29,8 +29,6 @@
 import LuminoWidget from '@/components/lumino-widget'
 import { BoxPanel, DockPanel, Widget } from '@lumino/widgets'
 
-import '@lumino/default-theme/style/index.css';
-
 /**
  * A component to wrap the Lumino application.
  *

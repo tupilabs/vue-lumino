@@ -1,5 +1,12 @@
 {
   "include": ["src/**/*.js", "src/**/*.vue"],
+  "exclude": [
+    "src/App.vue",
+    "src/main.js",
+    "src/components/example",
+    "src/router",
+    "src/views"
+  ],
   "extension": [".js", ".vue"],
   "reporter": ["html", "lcov", "text"],
   "cache": false,
