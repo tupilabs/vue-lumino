@@ -15,5 +15,35 @@
  */
 
 module.exports = {
-  preset: '@vue/cli-plugin-unit-jest'
+  preset: '@vue/cli-plugin-unit-jest',
+  collectCoverage: true,
+  collectCoverageFrom: [
+    '**/*.{js,vue}',
+    '!**/node_modules/**'
+  ],
+  coverageReporters: [
+    'html',
+    'lcov',
+    'text',
+    'text-summary'
+  ],
+  coveragePathIgnorePatterns: [
+    'src/App.vue',
+    'src/main.js',
+    'src/components/example',
+    'src/router',
+    'src/views'
+  ],
+  moduleFileExtensions: [
+    'js',
+    'json',
+    'vue'
+  ],
+  transform: {
+    ".*\\.(vue)$": "vue-jest",
+    "^.+\\.js$": "<rootDir>/node_modules/babel-jest"
+  },
+  moduleNameMapper: {
+    "^@/(.*)$": "<rootDir>/src/$1"
+  }
 }
