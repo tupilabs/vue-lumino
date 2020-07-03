@@ -22,7 +22,7 @@ $ yarn run serve           # run development server
 $ yarn run build           # compiles and minifies for production
 $ yarn run lint            # lint and fix files
 $ yarn run test:unit       # run unit tests
-$ yarn run coverage:unit   # report unit tests coverage
+$ yarn run test:e2e        # run e2e tests
 ```
 
 ## License
