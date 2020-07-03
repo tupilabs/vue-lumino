@@ -47,14 +47,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: e2e
-        uses: cypress-io/github-action@v1
-        with:
-          start: yarn run serve --mode coverage
-          wait-on: http://localhost:8080/
-          config-file: cypress.json
-          spec: "tests/e2e/**/*"
-        env:
-          CYPRESS_baseUrl: http://localhost:8080/
+        run: |
+          yarn run test:e2e --headless --mode coverage
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v1
         with:
