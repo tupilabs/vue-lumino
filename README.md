@@ -34,7 +34,7 @@ tree already. But you will still need to import the Lumino stylesheet as well in
 component or sass or similar code.
 
 The diff below is probably the easiest way to show how to use the component. It was
-created using `vue init` to create a new project using its default values. Then a version
+created using `vue create` to create a new project using its default values. Then a version
 of the library was installed locally, and with the diff applied the component is
 ready to be used.
 
@@ -69,7 +69,7 @@ index 3943904..f04b13d 100644
 +<script>
 +// Import component.
 +import Lumino from '@tupilabs/vue-lumino'
-+// Re-use the component created by the vue init command.
++// Re-use the component created by the vue create command.
 +import HelloWorld from './components/HelloWorld'
 +
 +// Import styles, or customize as necessary.
