@@ -42,7 +42,7 @@ jobs:
     - name: Build
       run: yarn run build
     - name: Build Library
-        run: yarn run build:bundle
+      run: yarn run build:bundle
   e2e-tests:
     runs-on: ubuntu-16.04
     steps:
