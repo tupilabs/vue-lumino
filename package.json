@@ -6,6 +6,10 @@
   "private": false,
   "license": "Apache-2.0",
   "homepage": "https://github.com/kinow/vue-lumino/",
+  "main": "./dist/vue-lumino.js",
+  "files": [
+    "/dist"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/kinow/vue-lumino.git"
@@ -16,6 +20,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "build:bundle": "vue-cli-service build --target lib --name vue-lumino ./src/index.js && rm dist/demo.html",
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit",
     "test:e2e": "vue-cli-service test:e2e"
