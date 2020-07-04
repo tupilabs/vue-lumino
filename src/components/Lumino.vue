@@ -78,6 +78,7 @@ export default {
     const vm = this
     this.$nextTick(() => {
       Widget.attach(vm.main, vm.$refs.main)
+      this.syncWidgets()
     })
   },
 
@@ -89,19 +90,27 @@ export default {
    * The removal is handled via event listeners from Lumino.
    */
   updated () {
-    this.$children
-      .filter(child => !this.widgets.includes(child.$attrs.id))
-      .forEach(newChild => {
-        const id = `${newChild.$attrs.id}`
-        const name = newChild.$options.name
-        this.addWidget(id, name)
-        this.$nextTick(() => {
-          document.getElementById(id).appendChild(newChild.$el)
-        })
-      })
+    this.syncWidgets()
   },
 
   methods: {
+    /**
+     * Iterates through the component children, looking for newly created
+     * components, and then creates a related Lumino Widget for this component.
+     */
+    syncWidgets() {
+      this.$children
+        .filter(child => !this.widgets.includes(child.$attrs.id))
+        .forEach(newChild => {
+          const id = `${newChild.$attrs.id}`
+          const name = newChild.$options.name
+          this.addWidget(id, name)
+          this.$nextTick(() => {
+            document.getElementById(id).appendChild(newChild.$el)
+          })
+        })
+    },
+
     /**
      * Create a widget.
      *
