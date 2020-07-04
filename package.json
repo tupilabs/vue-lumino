@@ -6,7 +6,7 @@
   "private": false,
   "license": "Apache-2.0",
   "homepage": "https://github.com/kinow/vue-lumino/",
-  "main": "./dist/vue-lumino.js",
+  "main": "./dist/vue-lumino.common.js",
   "files": [
     "/dist"
   ],
