@@ -6,7 +6,7 @@
 An example project showing one way to integrate Vue.js and
 [Lumino](https://github.com/jupyterlab/lumino) (née PhosphorJS).
 
-![](./demo.gif)
+![](docs/demo.gif)
 
 Lumino *“is a library for building interactive web applications”*. It is used by JupyterLab to create the
 top menu bar, widgets with close/maximize buttons, and other components that allow users to create
@@ -88,6 +88,8 @@ index 3943904..f04b13d 100644
  #app {
    font-family: Avenir, Helvetica, Arial, sans-serif;
 ```
+
+![](docs/demo2.png)
 
 ## Building
 
