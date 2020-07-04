@@ -1,7 +1,11 @@
-## 0.3 (2020-06-??)
+## 0.3 (2020-07-04)
 
 - Added tests
 - Added CI
+- Made the code into a vue library (target/bundle)
+- Transferred to github.com/tupilabs organization
+- Created tupilabs NPM organization
+- First release to NPM
 
 ## 0.2 (2020-06-27)
 

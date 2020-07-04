@@ -1,7 +1,7 @@
 # vue-lumino
 
-![CI](https://github.com/kinow/vue-lumino/workflows/CI/badge.svg)
-[![codecov](https://codecov.io/gh/kinow/vue-lumino/branch/master/graph/badge.svg)](https://codecov.io/gh/kinow/vue-lumino)
+![CI](https://github.com/tupilabs/vue-lumino/workflows/CI/badge.svg)
+[![codecov](https://codecov.io/gh/tupilabs/vue-lumino/branch/master/graph/badge.svg)](https://codecov.io/gh/tupilabs/vue-lumino)
 
 An example project showing one way to integrate Vue.js and
 [Lumino](https://github.com/jupyterlab/lumino) (née PhosphorJS).
@@ -68,13 +68,13 @@ index 3943904..f04b13d 100644
  
 +<script>
 +// Import component.
-+import Lumino from 'vue-lumino'
++import Lumino from '@tupilabs/vue-lumino'
 +// Re-use the component created by the vue init command.
 +import HelloWorld from './components/HelloWorld'
 +
 +// Import styles, or customize as necessary.
 +import '@lumino/default-theme/style/index.css'
-+import 'vue-lumino/dist/vue-lumino.css'
++import '@tupilabs/vue-lumino/dist/vue-lumino.css'
 +
 +export default {
 +  components: {

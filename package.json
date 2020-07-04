@@ -1,18 +1,18 @@
 {
-  "name": "vue-lumino",
+  "name": "@tupilabs/vue-lumino",
   "description": "A Vue component that integrates with Lumino",
-  "author": "Bruno P. Kinoshita <brunodepaulak@gmail.com> (https://twitter.com/kinow)",
+  "author": "Bruno P. Kinoshita <brunodepaulak@yahoo.com.br> (https://twitter.com/kinow)",
   "version": "0.3.0-SNAPSHOT",
   "private": false,
   "license": "Apache-2.0",
-  "homepage": "https://github.com/kinow/vue-lumino/",
+  "homepage": "https://github.com/tupilabs/vue-lumino/",
   "main": "./dist/vue-lumino.common.js",
   "files": [
     "/dist"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/kinow/vue-lumino.git"
+    "url": "https://github.com/tupilabs/vue-lumino.git"
   },
   "bugs": {
     "url": "https://github.com/kinow/vue-lumino/issues"
