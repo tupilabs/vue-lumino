@@ -3,9 +3,7 @@
   "exclude": [
     "src/App.vue",
     "src/main.js",
-    "src/components/example",
-    "src/router",
-    "src/views"
+    "src/components/example"
   ],
   "extension": [".js", ".vue"],
   "reporter": ["html", "lcov", "text"],
