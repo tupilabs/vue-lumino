@@ -2,6 +2,7 @@
 
 ![CI](https://github.com/tupilabs/vue-lumino/workflows/CI/badge.svg)
 [![codecov](https://codecov.io/gh/tupilabs/vue-lumino/branch/master/graph/badge.svg)](https://codecov.io/gh/tupilabs/vue-lumino)
+[![npm version](https://badge.fury.io/js/%40tupilabs%2Fvue-lumino.svg)](https://badge.fury.io/js/%40tupilabs%2Fvue-lumino)
 
 An example project showing one way to integrate Vue.js and
 [Lumino](https://github.com/jupyterlab/lumino) (née PhosphorJS).
