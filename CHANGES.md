@@ -1,3 +1,8 @@
+## 1.0.1 (2020-07-??)
+
+- Upgraded dependencies via ncu -u (only non-dev dependency updated
+was @lumino/datagrid, from 0.9.1 to 0.10.0)
+
 ## 1.0.0 (2020-07-04)
 
 - Added tests
