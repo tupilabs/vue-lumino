@@ -93,9 +93,7 @@ export default {
        *   Object.<string, string>
        * }
        */
-      widgets: {},
-      helloWorldType: HelloWorld.name,
-      coloredCircleType: ColoredCircle.name
+      widgets: {}
     }
   },
 
