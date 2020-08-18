@@ -114,6 +114,8 @@ export default {
     /**
      * Create a widget.
      *
+     * @param id {String} - widget ID
+     * @param name {String} - widget name
      */
     addWidget(id, name) {
       this.widgets.push(id)
