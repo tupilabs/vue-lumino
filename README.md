@@ -106,7 +106,7 @@ export default {
 It means that the tab title of the component will use the title "VueComponentName".
 
 Alternatively, it is possible to define a `prop` in the `Lumino` component to be used
-for the tab title.
+for the tab title. The default value of that prop is "name".
 
 ```vue
 <Lumino ref="lumino"
