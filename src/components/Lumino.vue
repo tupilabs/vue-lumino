@@ -52,6 +52,13 @@ export default {
    */
   name: 'Lumino',
 
+  props: {
+    tabTitleProp: {
+      type: String,
+      default: 'name'
+    }
+  },
+
   /**
    * Data for the Lumino component
    */
@@ -99,11 +106,12 @@ export default {
      * components, and then creates a related Lumino Widget for this component.
      */
     syncWidgets() {
+      const tabTitleProp = this.$props.tabTitleProp
       this.$children
         .filter(child => !this.widgets.includes(child.$attrs.id))
         .forEach(newChild => {
           const id = `${newChild.$attrs.id}`
-          const name = newChild.$options.name
+          const name = newChild.$attrs[tabTitleProp] ? newChild.$attrs[tabTitleProp] : newChild.$options.name
           this.addWidget(id, name)
           this.$nextTick(() => {
             document.getElementById(id).appendChild(newChild.$el)
