@@ -28,18 +28,19 @@ describe('Lumino component', () => {
       .get('.lm-TabBar-tabLabel')
       .contains('HelloWorld')
       .should('be.visible')
-
-    cy
-      .get('.lm-TabBar-tabLabel')
-      .contains('ColoredCircle')
-      .should('not.be.visible')
     cy
       .get('#add-colored-circle-widget-button')
       .click()
     cy
       .get('.lm-TabBar-tabLabel')
-      .contains('ColoredCircle')
-      .should('be.visible')
+      .should('have.length', 2)
+    cy
+      .get('.lm-TabBar-tabLabel')
+      .then($tabs => {
+        cy
+          .wrap($tabs[1])
+          .should('be.visible')
+      })
   })
   it('should switch correctly to a different widget', () => {
     cy.visit('/')
@@ -50,20 +51,24 @@ describe('Lumino component', () => {
     // SVG element is used only in the ColoredCircle component
     cy.get('svg')
       .should('not.be.visible')
-
     cy
       .get('#add-colored-circle-widget-button')
       .click()
     cy
       .get('.lm-TabBar-tabLabel')
-      .contains('ColoredCircle')
-      .should('be.visible')
+      .should('have.length', 2)
     cy
       .get('.lm-TabBar-tabLabel')
-      .contains('ColoredCircle')
-      .click()
-    cy.get('svg')
-      .should('be.visible')
+      .then($tabs => {
+        cy
+          .wrap($tabs[1])
+          .should('be.visible')
+        cy
+          .wrap($tabs[1])
+          .click()
+        cy.get('svg')
+          .should('be.visible')
+      })
   })
   it('should successfully close a widget', () => {
     cy.visit('/')
@@ -78,22 +83,26 @@ describe('Lumino component', () => {
     cy
       .get('#add-colored-circle-widget-button')
       .click()
-    // ColoredCircle is visible
     cy
       .get('.lm-TabBar-tabLabel')
-      .contains('ColoredCircle')
-      .should('be.visible')
-    // click the close button
+      .should('have.length', 2)
     cy
       .get('.lm-TabBar-tabLabel')
-      .contains('ColoredCircle')
-      .parent()
-      .children('.lm-TabBar-tabCloseIcon')
-      .click()
-    // ain't no more now!
-    cy
-      .get('.lm-TabBar-tabLabel')
-      .contains('ColoredCircle')
-      .should('not.be.visible')
+      .then($tabs => {
+        // ColoredCircle is visible
+        cy
+          .wrap($tabs[1])
+          .should('be.visible')
+        // click the close button
+        cy
+          .wrap($tabs[1])
+          .parent()
+          .children('.lm-TabBar-tabCloseIcon')
+          .click()
+        // ain't no more now!
+        cy
+          .get('.lm-TabBar-tabLabel')
+          .should('have.length', 1)
+      })
   })
 })

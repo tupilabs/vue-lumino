@@ -92,6 +92,62 @@ index 3943904..f04b13d 100644
 
 ![](docs/demo2.png)
 
+### Custom tab title
+
+By default, the component uses the Vue Component name as the tab title. So if the
+component is defined as below.
+
+```js
+export default {
+  name: 'VueComponentName'
+}
+```
+
+It means that the tab title of the component will use the title "VueComponentName".
+
+Alternatively, it is possible to define a `prop` in the `Lumino` component to be used
+for the tab title. The default value of that prop is "name".
+
+```vue
+<Lumino ref="lumino"
+  v-on:lumino:deleted="onWidgetDeletedEvent"
+  v-on:lumino:activated="onWidgetActivatedEvent"
+  tab-title-prop="displayName"
+>
+</Lumino>
+```
+
+The `prop` **MAY** be present in each component rendered by the `Lumino` component. If the
+component does not define the `prop`, then the `Lumino` component will use the default
+value, i.e. the component name.
+
+```vue
+<Lumino ref="lumino"
+  v-on:lumino:deleted="onWidgetDeletedEvent"
+  v-on:lumino:activated="onWidgetActivatedEvent"
+  tab-title-prop="displayName"
+>
+  <!-- HelloWorld tab titles will display TAB-HW-${id} -->
+  <HelloWorld
+    v-for="id of this.helloWorldWidgets"
+    :key="id"
+    :id="id"
+    :display-name="`TAB-HW-${id}`"
+  ></HelloWorld>
+  <!-- ColoredCircle tab titles will display ${ColoredCircle.name}, IOW, `ColoredCircle` -->
+  <ColoredCircle
+    v-for="id of this.coloredCircleWidgets"
+    :key="id"
+    :id="id"
+    :color="'red'"
+  ></ColoredCircle>
+</Lumino>
+```
+
+This is specially useful if you want to display a component is wrapped by another
+component. A common example of this use case, is using a loader component such as
+Vuetify Skeleton Loader.
+
 ## Building
 
 ```bash
