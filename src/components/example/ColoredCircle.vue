@@ -26,6 +26,12 @@ NOTE: Used for example/documentation only. Not intended to be used by users of t
 
 <script>
 export default {
+  /**
+   * This is the component name, which is normally used as the Lumino widget
+   * tab title. In the example app, this actually won't be used. Instead, we
+   * will display a dynamic title to demonstrate how users can do that in their
+   * own code base.
+   */
   name: 'ColoredCircle',
 
   props: {

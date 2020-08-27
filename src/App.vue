@@ -33,6 +33,7 @@ NOTE: Used for example/documentation only. Not intended to be used by users of t
     <Lumino ref="lumino"
             v-on:lumino:deleted="onWidgetDeletedEvent"
             v-on:lumino:activated="onWidgetActivatedEvent"
+            tab-title-prop="tab-title"
     >
       <!-- In this example we are adding two types of elements as tabs. The code
       of this view is using the component name plus a random number for the component
@@ -47,12 +48,14 @@ NOTE: Used for example/documentation only. Not intended to be used by users of t
         v-for="id of this.helloWorldWidgets"
         :key="id"
         :id="id"
-      ></HelloWorld>
+      >
+      </HelloWorld>
       <ColoredCircle
         v-for="id of this.coloredCircleWidgets"
         :key="id"
         :id="id"
         :color="'red'"
+        :tab-title="`${id}`"
       ></ColoredCircle>
     </Lumino>
   </div>
