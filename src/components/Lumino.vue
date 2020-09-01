@@ -53,6 +53,11 @@ export default {
   name: 'Lumino',
 
   props: {
+    /**
+     * Prop to customize the tab title. Defaults to name.
+     * If a component does not have the $component.$tabTitleProp
+     * set, then we still revert to the old default $component.name.
+     */
     tabTitleProp: {
       type: String,
       default: 'name'
