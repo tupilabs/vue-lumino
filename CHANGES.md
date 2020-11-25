@@ -1,3 +1,7 @@
+## 1.1.1 (2020-??-??)
+
+- Bump highlight.js from 9.18.1 to 9.18.5 #19
+
 ## 1.1.0 (2020-08-27)
 
 - Upgraded dependencies via ncu -u (only non-dev dependency updated
