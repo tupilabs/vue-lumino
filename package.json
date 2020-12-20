@@ -1,30 +1,21 @@
 {
   "name": "@tupilabs/vue-lumino",
-  "description": "A Vue component that integrates with Lumino",
-  "author": "Bruno P. Kinoshita <brunodepaulak@yahoo.com.br> (https://twitter.com/kinow)",
   "version": "1.1.1-SNAPSHOT",
   "private": false,
-  "license": "Apache-2.0",
-  "homepage": "https://github.com/tupilabs/vue-lumino/",
+  "description": "A Vue component that integrates with Lumino",
+  "author": "Bruno P. Kinoshita <brunodepaulak@yahoo.com.br> (https://twitter.com/kinow)",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "test:unit": "vue-cli-service test:unit",
+    "test:e2e": "vue-cli-service test:e2e",
+    "lint": "vue-cli-service lint",
+    "build:bundle": "vue-cli-service build --target lib --name vue-lumino ./src/index.js && rm dist/demo.html"
+  },
   "main": "./dist/vue-lumino.common.js",
   "files": [
     "/dist"
   ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/tupilabs/vue-lumino.git"
-  },
-  "bugs": {
-    "url": "https://github.com/kinow/vue-lumino/issues"
-  },
-  "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "build:bundle": "vue-cli-service build --target lib --name vue-lumino ./src/index.js && rm dist/demo.html",
-    "lint": "vue-cli-service lint",
-    "test:unit": "vue-cli-service test:unit",
-    "test:e2e": "vue-cli-service test:e2e"
-  },
   "dependencies": {
     "@lumino/datagrid": "^0.14.0",
     "@lumino/default-theme": "^0.5.0",
@@ -34,11 +25,16 @@
   },
   "devDependencies": {
     "@cypress/code-coverage": "^3.8.2",
+    "@types/jest": "^24.0.19",
+    "@typescript-eslint/eslint-plugin": "^2.33.0",
+    "@typescript-eslint/parser": "^2.33.0",
     "@vue/cli-plugin-babel": "^4.5.8",
     "@vue/cli-plugin-e2e-cypress": "^4.5.8",
     "@vue/cli-plugin-eslint": "^4.5.8",
+    "@vue/cli-plugin-typescript": "~4.5.0",
     "@vue/cli-plugin-unit-jest": "^4.5.8",
     "@vue/cli-service": "^4.5.8",
+    "@vue/eslint-config-typescript": "^5.0.2",
     "@vue/test-utils": "^1.1.0",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.1.0",
@@ -49,15 +45,25 @@
     "eslint-plugin-vue": "^7.1.0",
     "sass": "^1.27.0",
     "sass-loader": "^10.0.4",
+    "typescript": "~3.9.3",
     "vue-jest": "^3.0.7",
     "vue-template-compiler": "^2.6.12",
     "webpack": "^5.2.0"
   },
+  "bugs": {
+    "url": "https://github.com/kinow/vue-lumino/issues"
+  },
+  "homepage": "https://github.com/tupilabs/vue-lumino/",
   "keywords": [
     "component",
     "lumino",
     "tabs",
     "widgets",
     "vue"
-  ]
+  ],
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tupilabs/vue-lumino.git"
+  }
 }
