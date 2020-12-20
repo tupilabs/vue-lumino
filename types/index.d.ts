@@ -17,18 +17,16 @@ import { VueConstructor } from 'vue'
 import { Message } from '@lumino/messaging/types'
 import { Widget } from "@lumino/widgets";
 
-declare module "@tupilabs/vue-lumino" {
+declare module "tupilabs/vue-lumino" {
   const Lumino : VueConstructor
 
-  class LuminoWidget extends Widget {
+  interface LuminoWidget extends Widget {
     $id: string;
     $name: string;
     closable: boolean;
 
     constructor(id: string, name: string, closable: boolean);
     createNode(id: string): HTMLElement;
-    onActivateRequest(msg: Message);
-    onCloseRequest(msg: Message);
     _getEventDetails();
   }
 
