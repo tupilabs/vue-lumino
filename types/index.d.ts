@@ -13,14 +13,18 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+import { VueConstructor } from 'vue'
+import { Message } from '@lumino/messaging/types'
+import { Widget } from "@lumino/widgets";
 
 declare module "@tupilabs/vue-lumino" {
-  import { VueConstructor } from 'vue'
-  import { Message } from '@lumino/messaging/types'
-
   const Lumino : VueConstructor
 
-  class LuminoWidget {
+  class LuminoWidget extends Widget {
+    $id: string;
+    $name: string;
+    closable: boolean;
+
     constructor(id: string, name: string, closable: boolean);
     createNode(id: string): HTMLElement;
     onActivateRequest(msg: Message);
