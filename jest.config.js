@@ -37,11 +37,13 @@ module.exports = {
   moduleFileExtensions: [
     'js',
     'json',
-    'vue'
+    'vue',
+    'ts'
   ],
   transform: {
     ".*\\.(vue)$": "vue-jest",
-    "^.+\\.js$": "<rootDir>/node_modules/babel-jest"
+    "^.+\\.js$": "<rootDir>/node_modules/babel-jest",
+    "^.+\\.ts$": "<rootDir>/node_modules/ts-jest"
   },
   moduleNameMapper: {
     "^@/(.*)$": "<rootDir>/src/$1"
