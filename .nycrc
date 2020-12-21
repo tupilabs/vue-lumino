@@ -1,9 +1,13 @@
 {
   "include": ["src/**/*.js", "src/**/*.vue"],
   "exclude": [
+    "babel.*.js",
+    "jest.*.js",
+    "vue.*.js",
     "src/App.vue",
     "src/main.js",
-    "src/components/example"
+    "src/components/example",
+    "tests/**/*"
   ],
   "extension": [".js", ".vue"],
   "reporter": ["html", "lcov", "text"],
