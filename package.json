@@ -10,7 +10,7 @@
     "test:unit": "vue-cli-service test:unit",
     "test:e2e": "vue-cli-service test:e2e",
     "lint": "vue-cli-service lint",
-    "build:bundle": "vue-cli-service build --target lib --name vue-lumino ./src/index.js && rm dist/demo.html"
+    "build:bundle": "vue-cli-service build --target lib --name vue-lumino ./src/index.ts && rm dist/demo.html"
   },
   "main": "./dist/vue-lumino.common.js",
   "files": [
@@ -38,7 +38,7 @@
     "@vue/test-utils": "^1.1.0",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.1.0",
-    "babel-jest": "^26.6.1",
+    "babel-jest": ">=24.0.0 <25.0.0",
     "babel-loader": "^8.1.0",
     "babel-plugin-istanbul": "^6.0.0",
     "eslint": "^7.12.0",
