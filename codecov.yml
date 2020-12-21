@@ -1,0 +1,28 @@
+codecov:
+  require_ci_to_pass: no
+
+coverage:
+  precision: 2
+  round: down
+  range: "70...100"
+
+ignore:
+  - "*.js"
+  - "*.ts"
+  - ".github"
+  - ".nyc_output"
+  - "coverage"
+  - "cypress"
+  - "dist"
+  - "docs"
+  - "node_modules"
+  - "public"
+  - "tests"
+
+parsers:
+  gcov:
+    branch_detection:
+      conditional: yes
+      loop: yes
+      method: no
+      macro: no
