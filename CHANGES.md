@@ -1,7 +1,8 @@
 ## 1.1.1 (2020-??-??)
 
 - Bump highlight.js from 9.18.1 to 9.18.5 #19
-- Bump ini from 1.3.5 to 1.3.8 #20 
+- Bump ini from 1.3.5 to 1.3.8 #20
+- Add TypeScript support #13
 
 ## 1.1.0 (2020-08-27)
 
