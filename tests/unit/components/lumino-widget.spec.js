@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-import LuminoWidget from '@/components/lumino-widget'
+import LuminoWidget from '@/components/lumino-widget.ts'
 
 describe('lumino-widget', () => {
   let widget, id, name, closable

@@ -15,7 +15,7 @@
  */
 
 import { shallowMount } from '@vue/test-utils'
-import Lumino from '@/components/Lumino'
+import Lumino from '@/components/Lumino.vue'
 
 describe('Lumino component', () => {
   it('should be created correctly', () => {

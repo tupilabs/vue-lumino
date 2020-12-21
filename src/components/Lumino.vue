@@ -25,8 +25,9 @@
   </div>
 </template>
 
-<script>
-import LuminoWidget from '@/components/lumino-widget'
+<script lang="ts">
+import Vue from 'vue'
+import LuminoWidget from '@/components/lumino-widget.ts'
 import { BoxPanel, DockPanel, Widget } from '@lumino/widgets'
 
 /**
@@ -46,7 +47,7 @@ import { BoxPanel, DockPanel, Widget } from '@lumino/widgets'
  *
  * @since 0.2
  */
-export default {
+export default Vue.extend({
   /**
    * Show a useful name in logs/debug/vue-extension
    */
@@ -73,7 +74,7 @@ export default {
       main: new BoxPanel({ direction: 'left-to-right', spacing: 0 }),
       // create dock panel, which holds the widgets
       dock: new DockPanel(),
-      widgets: []
+      widgets: [] as string[]
     }
   },
 
@@ -89,8 +90,10 @@ export default {
     BoxPanel.setStretch(this.dock, 1)
     const vm = this
     this.$nextTick(() => {
-      Widget.attach(vm.main, vm.$refs.main)
-      this.syncWidgets()
+      if (vm.$refs.main instanceof HTMLElement) {
+        Widget.attach(vm.main, vm.$refs.main)
+        this.syncWidgets()
+      }
     })
   },
 
@@ -116,11 +119,13 @@ export default {
         .filter(child => !this.widgets.includes(child.$attrs.id))
         .forEach(newChild => {
           const id = `${newChild.$attrs.id}`
-          const name = newChild.$attrs[tabTitleProp] ? newChild.$attrs[tabTitleProp] : newChild.$options.name
-          this.addWidget(id, name)
-          this.$nextTick(() => {
-            document.getElementById(id).appendChild(newChild.$el)
-          })
+          const name: string|undefined = newChild.$attrs[tabTitleProp] ? newChild.$attrs[tabTitleProp] : newChild.$options.name
+          if (name) {
+            this.addWidget(id, name)
+            this.$nextTick(() => {
+              document.getElementById(id)?.appendChild(newChild.$el)
+            })
+          }
         })
     },
 
@@ -130,16 +135,16 @@ export default {
      * @param id {String} - widget ID
      * @param name {String} - widget name
      */
-    addWidget(id, name) {
+    addWidget(id: string, name: string) {
       this.widgets.push(id)
       const luminoWidget = new LuminoWidget(id, name, /* closable */ true)
       this.dock.addWidget(luminoWidget)
       // give time for Lumino's widget DOM element to be created
       this.$nextTick(() => {
         document.getElementById(id)
-          .addEventListener('lumino:activated', this.onWidgetActivated)
+          ?.addEventListener('lumino:activated', this.onWidgetActivated)
         document.getElementById(id)
-          .addEventListener('lumino:deleted', this.onWidgetDeleted)
+          ?.addEventListener('lumino:deleted', this.onWidgetDeleted)
       })
     },
 
@@ -154,7 +159,7 @@ export default {
      *   }
      * }}
      */
-    onWidgetActivated (customEvent) {
+    onWidgetActivated (customEvent: any) {
       this.$emit('lumino:activated', customEvent.detail)
     },
 
@@ -169,17 +174,17 @@ export default {
      *   }
      * }}
      */
-    onWidgetDeleted (customEvent) {
-      const id = customEvent.detail.id
+    onWidgetDeleted (customEvent: any) {
+      const id: string = customEvent.detail.id
       this.widgets.splice(this.widgets.indexOf(id), 1)
       document.getElementById(id)
-        .removeEventListener('lumino:deleted', this.onWidgetDeleted)
+        ?.removeEventListener('lumino:deleted', this.onWidgetDeleted)
       document.getElementById(id)
-        .removeEventListener('lumino:activated', this.onWidgetActivated)
+        ?.removeEventListener('lumino:activated', this.onWidgetActivated)
       this.$emit('lumino:deleted', customEvent.detail)
     }
   }
-}
+})
 </script>
 
 <style lang="scss">

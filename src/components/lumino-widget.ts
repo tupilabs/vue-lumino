@@ -15,6 +15,7 @@
  */
 
 import { Widget } from "@lumino/widgets";
+import { Message } from "@lumino/messaging";
 
 /**
  * This is a valid Lumino widget, that contains only a dummy div
@@ -28,13 +29,15 @@ import { Widget } from "@lumino/widgets";
  */
 export default class LuminoWidget extends Widget {
 
+  name: string;
+  closable: boolean;
   /**
    * Create a LuminoWidget object.
    * @param id {string} unique ID of the widget
    * @param name {string} text displayed in the widget tab
    * @param closable {boolean} flag that controls whether the tab can be closed or not
    */
-  constructor (id, name, closable = true) {
+  constructor (id: string, name: string, closable: boolean = true) {
     super({ node: LuminoWidget.createNode(id) })
     this.id = id
     this.name = name
@@ -52,25 +55,25 @@ export default class LuminoWidget extends Widget {
    * @param {string} id - widget id
    * @return HTMLElement
    */
-  static createNode (id) {
+  static createNode (id: string) {
     const div = document.createElement('div')
     div.setAttribute('id', id)
     div.setAttribute('class', 'fill-height')
     return div
   }
 
-  onActivateRequest (msg) {
+  onActivateRequest (msg: Message) {
     // Emit an event so that the Vue component knows that it was activated
     const event = new CustomEvent('lumino:activated', this._getEventDetails())
-    document.getElementById(this.id).dispatchEvent(event)
+    document.getElementById(this.id)?.dispatchEvent(event)
     // call super method
     super.onActivateRequest(msg)
   }
 
-  onCloseRequest (msg) {
+  onCloseRequest (msg: Message) {
     // Emit an event so that the Vue component knows that it needs to be removed too
     const event = new CustomEvent('lumino:deleted', this._getEventDetails())
-    document.getElementById(this.id).dispatchEvent(event)
+    document.getElementById(this.id)?.dispatchEvent(event)
     // call super method
     super.onCloseRequest(msg)
   }
