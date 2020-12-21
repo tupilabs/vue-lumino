@@ -159,7 +159,7 @@ $ yarn run test:unit       # run unit tests
 $ yarn run test:e2e        # run e2e tests
 ```
 
-## Notes on Typescript support
+## Notes on TypeScript support
 
 * https://github.com/ffxsam/vue-typescript-cookbook/blob/master/README.md
 
