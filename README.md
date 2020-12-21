@@ -159,6 +159,10 @@ $ yarn run test:unit       # run unit tests
 $ yarn run test:e2e        # run e2e tests
 ```
 
+## Notes on Typescript support
+
+* https://github.com/ffxsam/vue-typescript-cookbook/blob/master/README.md
+
 ## License
 
 Licensed under the Apache License. See LICENSE file for more.
