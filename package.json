@@ -14,10 +14,10 @@
   },
   "main": "./dist/vue-lumino.common.js",
   "files": [
-    "/dist",
+    "dist/*",
     "src/**/*.ts",
     "src/**/*.js",
-    "types/*.d.ts"
+    "types/*"
   ],
   "dependencies": {
     "@lumino/datagrid": "^0.14.0",
@@ -69,5 +69,5 @@
     "type": "git",
     "url": "https://github.com/tupilabs/vue-lumino.git"
   },
-  "types": "types/index.d.ts"
+  "types": "./types/index.d.ts"
 }

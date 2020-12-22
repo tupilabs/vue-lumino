@@ -14,25 +14,21 @@
  * limitations under the License.
  */
 import { VueConstructor } from 'vue'
-import { Message } from '@lumino/messaging/types'
 import { Widget } from "@lumino/widgets";
 
-declare module "tupilabs/vue-lumino" {
-  const Lumino : VueConstructor
+const Lumino: VueConstructor<Vue> | typeof Vue;
 
-  interface LuminoWidget extends Widget {
-    $id: string;
-    $name: string;
-    closable: boolean;
+interface LuminoWidget extends Widget {
+  $id: string;
+  $name: string;
+  closable: boolean;
 
-    constructor(id: string, name: string, closable: boolean);
-    createNode(id: string): HTMLElement;
-    _getEventDetails();
-  }
+  constructor(id: string, name: string, closable: boolean);
+  createNode(id: string): HTMLElement;
+  _getEventDetails();
+}
 
-  export default Lumino;
-  export {
-    Lumino,
-    LuminoWidget
-  }
+export default Lumino;
+export {
+  LuminoWidget
 }
