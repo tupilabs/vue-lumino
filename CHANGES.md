@@ -2,6 +2,7 @@
 
 - Bump highlight.js from 9.18.1 to 9.18.5 #19
 - Bump ini from 1.3.5 to 1.3.8 #20 
+- Bump elliptic from 6.5.3 to 6.5.4 #23
 
 ## 1.1.0 (2020-08-27)
 
