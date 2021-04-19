@@ -4,6 +4,7 @@
 - Bump ini from 1.3.5 to 1.3.8 #20 
 - Bump elliptic from 6.5.3 to 6.5.4 #23
 - Bump y18n from 4.0.0 to 4.0.1 #24
+- Bump ssri from 6.0.1 to 6.0.2 #25
 
 ## 1.1.0 (2020-08-27)
 
