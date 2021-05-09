@@ -5,6 +5,7 @@
 - Bump elliptic from 6.5.3 to 6.5.4 #23
 - Bump y18n from 4.0.0 to 4.0.1 #24
 - Bump ssri from 6.0.1 to 6.0.2 #25
+- Bump url-parse from 1.4.7 to 1.5.1 #26
 
 ## 1.1.0 (2020-08-27)
 
