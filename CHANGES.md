@@ -6,6 +6,7 @@
 - Bump y18n from 4.0.0 to 4.0.1 #24
 - Bump ssri from 6.0.1 to 6.0.2 #25
 - Bump url-parse from 1.4.7 to 1.5.1 #26
+- Bump hosted-git-info from 2.8.8 to 2.8.9 #27
 
 ## 1.1.0 (2020-08-27)
 
