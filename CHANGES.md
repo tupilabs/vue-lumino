@@ -7,6 +7,7 @@
 - Bump ssri from 6.0.1 to 6.0.2 #25
 - Bump url-parse from 1.4.7 to 1.5.1 #26
 - Bump hosted-git-info from 2.8.8 to 2.8.9 #27
+- Bump browserslist from 4.12.2 to 4.16.6 #28
 
 ## 1.1.0 (2020-08-27)
 
