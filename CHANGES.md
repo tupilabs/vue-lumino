@@ -1,4 +1,4 @@
-## 1.1.1 (2020-??-??)
+## 1.1.1 (2021-05-29)
 
 - Bump highlight.js from 9.18.1 to 9.18.5 #19
 - Bump ini from 1.3.5 to 1.3.8 #20 
@@ -8,6 +8,7 @@
 - Bump url-parse from 1.4.7 to 1.5.1 #26
 - Bump hosted-git-info from 2.8.8 to 2.8.9 #27
 - Bump browserslist from 4.12.2 to 4.16.6 #28
+- Bump dns-packet from 1.3.1 to 1.3.4 #29 
 
 ## 1.1.0 (2020-08-27)
 
