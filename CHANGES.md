@@ -2,6 +2,7 @@
 
 - Bump postcss from 7.0.32 to 7.0.36 #30
 - Bump path-parse from 1.0.6 to 1.0.7 #31
+- Bump tmpl from 1.0.4 to 1.0.5 #32
 
 ## 1.1.1 (2021-05-29)
 
