@@ -44,7 +44,7 @@ jobs:
     - name: Build Library
       run: yarn run build:bundle
   e2e-tests:
-    runs-on: ubuntu-16.04
+    runs-on: ubuntu-18.04
     steps:
       - name: Checkout
         uses: actions/checkout@v2
