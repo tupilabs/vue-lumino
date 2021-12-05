@@ -1,7 +1,7 @@
-## 1.1.3 (2021-??-??)
+## 1.1.3 (2021-12-06)
 
 - Bump url-parse from 1.5.1 to 1.5.3 #33
-- Fix release checklist Wiki page, re-release bundle (thanks to @Lee-42 for reporting in #34) #34
+- Fix release checklist Wiki page, re-release now bundle version (thanks to @Lee-42 for reporting in #34) #34
 
 ## 1.1.2 (2021-09-29)
 
