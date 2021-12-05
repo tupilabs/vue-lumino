@@ -2,7 +2,7 @@
 
 - Bump ws from 5.2.2 to 5.2.3 #35
 - Bump color-string from 1.5.3 to 1.9.0 #36
-- Upgrades after `ncu -u`: @lumino/datagrid, @lumino/default-theme, @lumino/widgets, core-js, vue (and other dev-dependencies)
+- Upgrades after `ncu -u`: @lumino/datagrid, @lumino/default-theme, @lumino/widgets, core-js, vue (and other dev-dependencies) #37
 
 ## 1.1.3 (2021-12-06)
 
