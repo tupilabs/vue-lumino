@@ -1,6 +1,6 @@
 # vue-lumino
 
-![CI](https://github.com/tupilabs/vue-lumino/workflows/CI/badge.svg)
+[![CI](https://github.com/tupilabs/vue-lumino/actions/workflows/main.yml/badge.svg)](https://github.com/tupilabs/vue-lumino/actions/workflows/main.yml)
 [![codecov](https://codecov.io/gh/tupilabs/vue-lumino/branch/master/graph/badge.svg)](https://codecov.io/gh/tupilabs/vue-lumino)
 [![npm version](https://badge.fury.io/js/%40tupilabs%2Fvue-lumino.svg)](https://www.npmjs.com/package/@tupilabs/vue-lumino)
 
