@@ -1,5 +1,7 @@
 ## 1.1.5 (2021-??-??)
 
+- Bump follow-redirects from 1.12.1 to 1.14.7 #38
+
 ## 1.1.4 (2021-12-06)
 
 - Bump ws from 5.2.2 to 5.2.3 #35
