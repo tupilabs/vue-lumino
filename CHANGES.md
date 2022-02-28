@@ -4,6 +4,7 @@
 - Bump cached-path-relative from 1.0.2 to 1.1.0 #39
 - Bump follow-redirects from 1.14.7 to 1.14.8 #40
 - Bump url-parse from 1.5.3 to 1.5.7 #42
+- Bump url-parse from 1.5.7 to 1.5.10 #43
 
 ## 1.1.4 (2021-12-06)
 
