@@ -5,6 +5,7 @@
 - Bump follow-redirects from 1.14.7 to 1.14.8 #40
 - Bump url-parse from 1.5.3 to 1.5.7 #42
 - Bump url-parse from 1.5.7 to 1.5.10 #43
+- Bump eventsource from 1.0.7 to 1.1.1 #44
 
 ## 1.1.4 (2021-12-06)
 
