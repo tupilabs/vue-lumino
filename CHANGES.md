@@ -6,6 +6,7 @@
 - Bump url-parse from 1.5.3 to 1.5.7 #42
 - Bump url-parse from 1.5.7 to 1.5.10 #43
 - Bump eventsource from 1.0.7 to 1.1.1 #44
+- Bump shell-quote from 1.7.2 to 1.7.3 #45
 
 ## 1.1.4 (2021-12-06)
 
