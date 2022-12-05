@@ -1,4 +1,4 @@
-## 1.1.5 (2021-??-??)
+## 1.1.5 (2022-??-??)
 
 - Bump follow-redirects from 1.12.1 to 1.14.7 #38
 - Bump cached-path-relative from 1.0.2 to 1.1.0 #39
@@ -8,6 +8,7 @@
 - Bump eventsource from 1.0.7 to 1.1.1 #44
 - Bump shell-quote from 1.7.2 to 1.7.3 #45
 - Bump terser from 4.8.0 to 4.8.1 #46
+- Bump decode-uri-component from 0.2.0 to 0.2.2 #47
 
 ## 1.1.4 (2021-12-06)
 
