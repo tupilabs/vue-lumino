@@ -9,6 +9,7 @@
 - Bump shell-quote from 1.7.2 to 1.7.3 #45
 - Bump terser from 4.8.0 to 4.8.1 #46
 - Bump decode-uri-component from 0.2.0 to 0.2.2 #47
+- Bump minimatch from 3.0.4 to 3.1.2 #48
 
 ## 1.1.4 (2021-12-06)
 
