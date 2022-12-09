@@ -10,6 +10,8 @@
 - Bump terser from 4.8.0 to 4.8.1 #46
 - Bump decode-uri-component from 0.2.0 to 0.2.2 #47
 - Bump minimatch from 3.0.4 to 3.1.2 #48
+- Bump express from 4.17.1 to 4.18.2 #50
+- Bump qs from 6.5.2 to 6.5.3 #49
 
 ## 1.1.4 (2021-12-06)
 
