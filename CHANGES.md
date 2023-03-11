@@ -1,3 +1,7 @@
+## 1.2.0 (202?-??-??)
+
+- Vue3... https://github.com/tupilabs/vue-lumino/issues/51...
+
 ## 1.1.5 (2023-03-11)
 
 - Bump follow-redirects from 1.12.1 to 1.14.7 #38
