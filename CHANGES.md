@@ -12,6 +12,7 @@
 - Bump minimatch from 3.0.4 to 3.1.2 #48
 - Bump express from 4.17.1 to 4.18.2 #50
 - Bump qs from 6.5.2 to 6.5.3 #49
+- Bump ajv from 6.12.2 to 6.12.6 #41
 
 ## 1.1.4 (2021-12-06)
 
