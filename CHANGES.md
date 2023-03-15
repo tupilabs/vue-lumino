@@ -1,6 +1,7 @@
 ## 1.2.0 (202?-??-??)
 
 - Vue3... https://github.com/tupilabs/vue-lumino/issues/51...
+- Bump webpack from 5.64.4 to 5.76.0 #52
 
 ## 1.1.5 (2023-03-11)
 
