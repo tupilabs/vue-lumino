@@ -2,6 +2,7 @@
 
 - Vue3... https://github.com/tupilabs/vue-lumino/issues/51...
 - Bump webpack from 5.64.4 to 5.76.0 #52
+- Bump semver from 5.7.1 to 5.7.2 #54
 
 ## 1.1.5 (2023-03-11)
 
