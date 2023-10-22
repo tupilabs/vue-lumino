@@ -4,6 +4,8 @@
 - Bump webpack from 5.64.4 to 5.76.0 #52
 - Bump semver from 5.7.1 to 5.7.2 #54
 - Bump word-wrap from 1.2.3 to 1.2.4 #55
+- Bump @babel/traverse from 7.10.4 to 7.23.2 #56
+- Upgraded versions of GitHub Actions used, added Node setting it to v14 (due to SSL issues with 18+)
 
 ## 1.1.5 (2023-03-11)
 
