@@ -14,6 +14,7 @@
  * limitations under the License.
  */
 
+import { describe, expect, it, beforeEach } from 'vitest'
 import LuminoWidget from '@/components/lumino-widget'
 
 describe('lumino-widget', () => {

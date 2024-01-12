@@ -17,18 +17,20 @@
 module.exports = {
   root: true,
   env: {
-    node: true
+    node: true,
+    es2021: true,
   },
   extends: [
-    'plugin:vue/essential',
+    'plugin:vue/vue3-recommended',
     'eslint:recommended'
   ],
+  parserOptions: {
+    requireConfigFile: false
+  },
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-    'vue/custom-event-name-casing': 0
-  },
-  parserOptions: {
-    parser: 'babel-eslint'
+    'vue/custom-event-name-casing': 0,
+    'vue/multi-word-component-names': 0
   }
 }

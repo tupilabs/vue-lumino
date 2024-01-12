@@ -18,11 +18,9 @@
  * NOTE: Used for example/documentation only. Not intended to be used by users of this component.
  */
 
-import Vue from 'vue'
+import { createApp } from 'vue'
 import App from './App.vue'
 
-Vue.config.productionTip = false
+const app = createApp(App)
 
-new Vue({
-  render: h => h(App)
-}).$mount('#app')
+app.mount('#app')

@@ -14,12 +14,56 @@
  * limitations under the License.
  */
 
-import { shallowMount } from '@vue/test-utils'
-import Lumino from '@/components/Lumino'
+import {beforeEach, describe, expect, it} from 'vitest'
+import {mount} from '@vue/test-utils'
+import Lumino from '@/components/Lumino.vue'
+
+// @vitest-environment jsdom
 
 describe('Lumino component', () => {
+  beforeEach(() => {
+    global.ResizeObserver = class ResizeObserver {
+      observe() {
+        // do nothing
+      }
+
+      unobserve() {
+        // do nothing
+      }
+
+      disconnect() {
+        // do nothing
+      }
+    }
+  })
   it('should be created correctly', () => {
-    const lumino = shallowMount(Lumino)
+    // We need to have the mounted Lumino component bound
+    // to the DOM, as Lumino checks for `.isConnected`, which
+    // verifies if an HTML node is attached to a DOM.
+    document.body.innerHTML = `
+    <div>
+      <h1>Non Vue app</h1>
+      <div id="app"></div>
+    </div>
+  `
+    /**
+     * Note: We are defining this type as:
+     *   a) We know that these variables exist;
+     *   b) These variables are not in the Vue.js data;
+     *   c) These variables are non-reactive for a reason;
+     *   d) It is hard to play with types "elegantly", so duck quacks it will be!
+     * @type {{
+     *   main: Object,
+     *   dock: Object
+     * }}
+     */
+    const lumino = mount(Lumino, {
+      attachTo: document.getElementById('app'),
+      shallow: true,
+      props: {
+        widgets: ['abc']
+      }
+    })
     expect(lumino.main).not.toEqual(null)
     expect(lumino.dock).not.toEqual(null)
   })
