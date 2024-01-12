@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-import Lumino from '@/components/Lumino'
+import Lumino from '@/components/Lumino.vue'
 
 export default Lumino
 export { Lumino }

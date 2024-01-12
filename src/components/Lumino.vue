@@ -15,13 +15,29 @@
 -->
 
 <template>
-  <div>
-    <div id="workflow-panel">
-      <div ref="main" id="main" class="pa-4 fill-height"></div>
-      <div v-show="false">
-        <slot></slot>
-      </div>
+  <div id="workflow-panel">
+    <div
+      id="main"
+      ref="main"
+      class="pa-4 fill-height"
+    >
+      <!-- Lumino box panel gets inserted here -->
     </div>
+    <div
+      v-show="false"
+      ref="slot"
+    >
+      <slot />
+    </div>
+    <!-- TODO: use teleport later? -->
+    <!--    <template-->
+    <!--      v-for="id in widgets"-->
+    <!--      :key="id"-->
+    <!--    >-->
+    <!--      <Teleport :to="`#${id}`">-->
+    <!--        <slot />-->
+    <!--      </Teleport>-->
+    <!--    </template>-->
   </div>
 </template>
 
@@ -61,38 +77,17 @@ export default {
     tabTitleProp: {
       type: String,
       default: 'name'
+    },
+    widgets: {
+      type: Array,
+      required: true
     }
   },
 
-  /**
-   * Data for the Lumino component
-   */
-  data () {
-    return {
-      // create a box panel, which holds the dock panel, and controls its layout
-      main: new BoxPanel({ direction: 'left-to-right', spacing: 0 }),
-      // create dock panel, which holds the widgets
-      dock: new DockPanel(),
-      widgets: []
-    }
-  },
-
-  /**
-   * Here we define the ID's for the Lumino DOM elements, and add the Dock panel to the main
-   * Box panel. In the next tick of Vue, the DOM element and the Vue element/ref are attached.
-   */
-  created () {
-    this.dock.id = 'dock'
-    this.main.id = 'main'
-    this.main.addWidget(this.dock)
-    window.onresize = () => { this.main.update() }
-    BoxPanel.setStretch(this.dock, 1)
-    const vm = this
-    this.$nextTick(() => {
-      Widget.attach(vm.main, vm.$refs.main)
-      this.syncWidgets()
-    })
-  },
+  emits: [
+    'lumino:activated',
+    'lumino:deleted'
+  ],
 
   /**
    * Every time a new child element is added to the slot, this method will
@@ -101,8 +96,38 @@ export default {
    *
    * The removal is handled via event listeners from Lumino.
    */
-  updated () {
-    this.syncWidgets()
+  watch: {
+    widgets: {
+      deep: false,
+      handler: 'syncWidgets',
+      immediate: true
+    }
+  },
+
+  /**
+   * Here we define the ID's for the Lumino DOM elements, and add the Dock panel to the main
+   * Box panel. In the next tick of Vue, the DOM element and the Vue element/ref are attached.
+   */
+  created () {
+    // create dock panel, which holds the widgets
+    this.dock = new DockPanel()
+    this.dock.id = 'dock'
+
+    // create a box panel, which holds the dock panel, and controls its layout
+    this.main = new BoxPanel({ direction: 'left-to-right', spacing: 0 })
+    this.main.id = 'main'
+    this.main.addWidget(this.dock)
+    BoxPanel.setStretch(this.dock, 1)
+
+    const resizeObserver = new ResizeObserver(() => {
+      this.main.update()
+    })
+
+    this.$nextTick(() => {
+      Widget.attach(this.main, this.$refs.main)
+      // Watch for resize of the main element to trigger re-layout:
+      resizeObserver.observe(this.$refs.main)
+    })
   },
 
   methods: {
@@ -110,18 +135,28 @@ export default {
      * Iterates through the component children, looking for newly created
      * components, and then creates a related Lumino Widget for this component.
      */
-    syncWidgets() {
-      const tabTitleProp = this.$props.tabTitleProp
-      this.$children
-        .filter(child => !this.widgets.includes(child.$attrs.id))
-        .forEach(newChild => {
-          const id = `${newChild.$attrs.id}`
-          const name = newChild.$attrs[tabTitleProp] ? newChild.$attrs[tabTitleProp] : newChild.$options.name
-          this.addWidget(id, name)
-          this.$nextTick(() => {
-            document.getElementById(id).appendChild(newChild.$el)
-          })
+    syncWidgets(newVal, oldVal) {
+      if (newVal instanceof Array) {
+        for (const id of newVal) {
+          if (oldVal !== undefined && !(oldVal.includes(id))) {
+            // TODO: const tabTitleProp = this.$props.tabTitleProp
+            //       const name = newChild.$attrs[tabTitleProp] ? newChild.$attrs[tabTitleProp] : newChild.$options.name
+            this.addWidget(id, id)
+          }
+        }
+        this.$nextTick(() => {
+          // We cannot use Vue 3 Teleport here yet. That's because we
+          // try to make it generic so users can add as many elements
+          // as they want into the default slot. We do not have a way
+          // to selectively teleport each component to the target div.
+          if (this.$refs.slot !== undefined && this.$refs.slot.children !== undefined) {
+            [...this.$refs.slot.children]
+                .forEach(child => {
+                  document.getElementById(child.id).appendChild(child)
+                })
+          }
         })
+      }
     },
 
     /**
@@ -129,30 +164,32 @@ export default {
      *
      * @param id {String} - widget ID
      * @param name {String} - widget name
+     * @param onTop {boolean} - whether to focus on the widget or not
      */
-    addWidget(id, name) {
-      this.widgets.push(id)
+    addWidget(id, name, onTop = true) {
       const luminoWidget = new LuminoWidget(id, name, /* closable */ true)
-      this.dock.addWidget(luminoWidget)
+      this.dock.addWidget(luminoWidget, { mode: 'tab-after' })
       // give time for Lumino's widget DOM element to be created
-      this.$nextTick(() => {
-        document.getElementById(id)
-          .addEventListener('lumino:activated', this.onWidgetActivated)
-        document.getElementById(id)
-          .addEventListener('lumino:deleted', this.onWidgetDeleted)
-      })
+      const widgetEl = document.getElementById(id)
+      widgetEl.addEventListener('lumino:activated', this.onWidgetActivated)
+      widgetEl.addEventListener('lumino:deleted', this.onWidgetDeleted)
+      if (onTop) {
+        this.dock.selectWidget(luminoWidget)
+      }
     },
 
     /**
      * React to a deleted event.
      *
      * @param customEvent {
-     *   detail: {
-     *     id: string,
-     *     name: string,
-     *     closable: boolean
+     *   {
+     *     detail: {
+     *       id: string,
+     *       name: string,
+     *       closable: boolean
+     *     }
      *   }
-     * }}
+     * }
      */
     onWidgetActivated (customEvent) {
       this.$emit('lumino:activated', customEvent.detail)
@@ -162,20 +199,20 @@ export default {
      * React to a deleted event.
      *
      * @param customEvent {
-     *   detail: {
-     *     id: string,
-     *     name: string,
-     *     closable: boolean
+     *   {
+     *     detail: {
+     *       id: string,
+     *       name: string,
+     *       closable: boolean
+     *     }
      *   }
-     * }}
+     * }
      */
     onWidgetDeleted (customEvent) {
-      const id = customEvent.detail.id
-      this.widgets.splice(this.widgets.indexOf(id), 1)
-      document.getElementById(id)
-        .removeEventListener('lumino:deleted', this.onWidgetDeleted)
-      document.getElementById(id)
-        .removeEventListener('lumino:activated', this.onWidgetActivated)
+      const { id } = customEvent.detail
+      const widgetEl = document.getElementById(id)
+      widgetEl.removeEventListener('lumino:deleted', this.onWidgetDeleted)
+      widgetEl.removeEventListener('lumino:activated', this.onWidgetActivated)
       this.$emit('lumino:deleted', customEvent.detail)
     }
   }

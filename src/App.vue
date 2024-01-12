@@ -23,17 +23,23 @@ NOTE: Used for example/documentation only. Not intended to be used by users of t
 <template>
   <div id="app">
     <button
-      @click="onAddHelloWorldButtonClicked"
       id="add-hello-world-widget-button"
-    >Add Hello World</button>
+      @click="onAddHelloWorldButtonClicked"
+    >
+      Add Hello World
+    </button>
     <button
-      @click="onAddColoredCircleButtonClicked"
       id="add-colored-circle-widget-button"
-    >Add Colored Circle</button>
-    <Lumino ref="lumino"
-            v-on:lumino:deleted="onWidgetDeletedEvent"
-            v-on:lumino:activated="onWidgetActivatedEvent"
-            tab-title-prop="tab-title"
+      @click="onAddColoredCircleButtonClicked"
+    >
+      Add Colored Circle
+    </button>
+    <Lumino
+      ref="lumino"
+      :widgets="Object.keys(widgets)"
+      tab-title-prop="tab-title"
+      @lumino:deleted="onWidgetDeletedEvent"
+      @lumino:activated="onWidgetActivatedEvent"
     >
       <!-- In this example we are adding two types of elements as tabs. The code
       of this view is using the component name plus a random number for the component
@@ -45,30 +51,27 @@ NOTE: Used for example/documentation only. Not intended to be used by users of t
       events tries to keep everything in-sync (fingers-crossed).
       -->
       <HelloWorld
-        v-for="id of this.helloWorldWidgets"
-        :key="id"
+        v-for="id of helloWorldWidgets"
         :id="id"
-      >
-      </HelloWorld>
+        :key="id"
+      />
       <ColoredCircle
-        v-for="id of this.coloredCircleWidgets"
-        :key="id"
+        v-for="id of coloredCircleWidgets"
         :id="id"
+        :key="id"
         :color="'red'"
         :tab-title="`${id}`"
-      ></ColoredCircle>
+      />
     </Lumino>
   </div>
 </template>
 
 <script>
 // this should be your only import for this component
-import Lumino from '@/components/Lumino'
+import Lumino from '@/components/Lumino.vue'
 // importing the components we want to display within the Lumino component
-import HelloWorld from '@/components/example/HelloWorld'
-import ColoredCircle from '@/components/example/ColoredCircle'
-// to set reactive value
-import Vue from 'vue'
+import HelloWorld from '@/components/example/HelloWorld.vue'
+import ColoredCircle from '@/components/example/ColoredCircle.vue'
 
 import '@lumino/default-theme/style/index.css';
 
@@ -140,14 +143,14 @@ export default {
     onAddHelloWorldButtonClicked () {
       const id = `${new Date().getTime()}`
       // eslint-disable-next-line no-console
-      console.log(`Adding new widget ${ColoredCircle.name}, ID ${id}`)
-      Vue.set(this.widgets, id, HelloWorld.name)
+      console.log(`Adding new widget ${HelloWorld.name}, ID ${id}`)
+      this.widgets[id] = HelloWorld.name
     },
     onAddColoredCircleButtonClicked () {
       const id = `${new Date().getTime()}`
       // eslint-disable-next-line no-console
       console.log(`Adding new widget ${ColoredCircle.name}, ID ${id}`)
-      Vue.set(this.widgets, id, ColoredCircle.name)
+      this.widgets[id] = ColoredCircle.name
     },
     onWidgetActivatedEvent (event) {
       // eslint-disable-next-line no-console
@@ -156,7 +159,7 @@ export default {
     onWidgetDeletedEvent (event) {
       // eslint-disable-next-line no-console
       console.log(`Deleted widget ${event.id}`)
-      Vue.delete(this.widgets, event.id)
+      delete this.widgets[event.id]
     }
   }
 }
