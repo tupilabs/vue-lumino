@@ -34,7 +34,7 @@
   "devDependencies": {
     "@cypress/code-coverage": "^3.12.18",
     "@cypress/vue": "^6.0.0",
-    "@vitejs/plugin-vue": "^4.4.0",
+    "@vitejs/plugin-vue": "^5.0.3",
     "@vitest/coverage-istanbul": "^1.2.0",
     "@vitest/coverage-v8": "^1.0.2",
     "@vue/compiler-sfc": "^3.3.6",
