@@ -71,7 +71,7 @@ index 3943904..f04b13d 100644
 +// Import component.
 +import Lumino from '@tupilabs/vue-lumino'
 +// Re-use the component created by the vue create command.
-+import HelloWorld from './components/HelloWorld'
++import HelloWorld from './components/HelloWorld.vue'
 +
 +// Import styles, or customize as necessary.
 +import '@lumino/default-theme/style/index.css'
@@ -109,7 +109,8 @@ Alternatively, it is possible to define a `prop` in the `Lumino` component to be
 for the tab title. The default value of that prop is "name".
 
 ```vue
-<Lumino ref="lumino"
+<Lumino
+  ref="lumino"
   v-on:lumino:deleted="onWidgetDeletedEvent"
   v-on:lumino:activated="onWidgetActivatedEvent"
   tab-title-prop="displayName"
@@ -122,7 +123,8 @@ component does not define the `prop`, then the `Lumino` component will use the d
 value, i.e. the component name.
 
 ```vue
-<Lumino ref="lumino"
+<Lumino
+  ref="lumino"
   v-on:lumino:deleted="onWidgetDeletedEvent"
   v-on:lumino:activated="onWidgetActivatedEvent"
   tab-title-prop="displayName"
@@ -132,6 +134,7 @@ value, i.e. the component name.
     v-for="id of this.helloWorldWidgets"
     :key="id"
     :id="id"
+    :ref="id"
     :display-name="`TAB-HW-${id}`"
   ></HelloWorld>
   <!-- ColoredCircle tab titles will display ${ColoredCircle.name}, IOW, `ColoredCircle` -->
@@ -139,6 +142,7 @@ value, i.e. the component name.
     v-for="id of this.coloredCircleWidgets"
     :key="id"
     :id="id"
+    :ref="id"
     :color="'red'"
   ></ColoredCircle>
 </Lumino>
