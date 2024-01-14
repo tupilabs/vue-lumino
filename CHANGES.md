@@ -8,14 +8,20 @@
     that `ref` value to match with the `id`, and locate the element via
     `$parent.$refs`. This means, too, that the caller of `Lumino` must hold the
     `$refs`. See the example code and the `README.md` for an example.
-- Bump webpack from 5.64.4 to 5.76.0 #52
-- Bump semver from 5.7.1 to 5.7.2 #54
-- Bump word-wrap from 1.2.3 to 1.2.4 #55
-- Bump @babel/traverse from 7.10.4 to 7.23.2 #56
+- - Added a dependabot specifying package ecosystems github-actions and npm
 - Upgraded versions of GitHub Actions used, added Node setting it to v14 (due to SSL issues with 18+)
+- Bump @babel/traverse from 7.10.4 to 7.23.2 #56
+- Bump @lumino/datagrid from 0.34.1 to 2.3.0 #64
+- Bump @lumino/default-theme from 0.20.2 to 2.1.4 #62
+- Bump @vitejs/plugin-vue from 4.6.2 to 5.0.3 #66
+- Bump actions/setup-node from 3 to 4 #61
 - Bump browserify-sign from 4.2.0 to 4.2.2 #57
+- Bump codecov/codecov-action from 1 to 3 #60
 - Bump follow-redirects from 1.14.8 to 1.15.4 #58
-- Added a dependabot specifying package ecosystems github-actions and npm
+- Bump semver from 5.7.1 to 5.7.2 #54
+- Bump vite from 4.5.1 to 5.0.11 #65
+- Bump webpack from 5.64.4 to 5.76.0 #52
+- Bump word-wrap from 1.2.3 to 1.2.4 #55
 
 ## 1.1.5 (2023-03-11)
 
