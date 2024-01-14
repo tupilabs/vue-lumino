@@ -229,6 +229,7 @@ $font-size-root: 16px;
   #main {
     display: flex;
     min-height: calc(100vh - 48px);
+    width: 100%;
     .content {
       min-width: 300px;
       min-height: 300px;
