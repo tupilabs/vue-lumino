@@ -1,3 +1,7 @@
+## 1.2.1 (202?-??-??)
+
+- 
+
 ## 1.2.0 (2024-01-14)
 
 - Vue3 https://github.com/tupilabs/vue-lumino/pull/59
