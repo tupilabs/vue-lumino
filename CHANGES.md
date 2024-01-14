@@ -15,6 +15,7 @@
 - Upgraded versions of GitHub Actions used, added Node setting it to v14 (due to SSL issues with 18+)
 - Bump browserify-sign from 4.2.0 to 4.2.2 #57
 - Bump follow-redirects from 1.14.8 to 1.15.4 #58
+- Added a dependabot specifying package ecosystems github-actions and npm
 
 ## 1.1.5 (2023-03-11)
 
