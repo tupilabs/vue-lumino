@@ -77,7 +77,7 @@ export default defineConfig({
       provider: 'istanbul',
       reporter: [
         'html',
-        'xml'
+        'lcov'
       ]
     }
   }
