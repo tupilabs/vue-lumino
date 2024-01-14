@@ -841,7 +841,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@lumino/algorithm@npm:^1.9.1, @lumino/algorithm@npm:^1.9.2":
+"@lumino/algorithm@npm:^1.9.2":
   version: 1.9.2
   resolution: "@lumino/algorithm@npm:1.9.2"
   checksum: 2fe75498bb84d8fc1c844293afaae638a0032a8cc17112b73b7f9d400929d477ade4f1181e95bc71d70bf4bc734b560860556ad744fadac7335f158becbe0e2f
@@ -903,7 +903,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@lumino/coreutils@npm:^1.11.1, @lumino/coreutils@npm:^1.12.1":
+"@lumino/coreutils@npm:^1.12.1":
   version: 1.12.1
   resolution: "@lumino/coreutils@npm:1.12.1"
   peerDependencies:
@@ -919,20 +919,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@lumino/datagrid@npm:^0.34.0":
-  version: 0.34.1
-  resolution: "@lumino/datagrid@npm:0.34.1"
+"@lumino/datagrid@npm:^2.3.0":
+  version: 2.3.0
+  resolution: "@lumino/datagrid@npm:2.3.0"
   dependencies:
-    "@lumino/algorithm": "npm:^1.9.1"
-    "@lumino/coreutils": "npm:^1.11.1"
-    "@lumino/disposable": "npm:^1.10.1"
-    "@lumino/domutils": "npm:^1.8.1"
-    "@lumino/dragdrop": "npm:^1.13.1"
-    "@lumino/keyboard": "npm:^1.8.1"
-    "@lumino/messaging": "npm:^1.10.1"
-    "@lumino/signaling": "npm:^1.10.1"
-    "@lumino/widgets": "npm:^1.30.1"
-  checksum: d64f569984c88820409eb3676b8da62df2492d0c19dd101ced7d44aac57761f4148f6fcce0354f1b307b3db74b206d465a1ad1c7a0b281d16026ca9e8f25646c
+    "@lumino/algorithm": "npm:^2.0.1"
+    "@lumino/coreutils": "npm:^2.1.2"
+    "@lumino/disposable": "npm:^2.1.2"
+    "@lumino/domutils": "npm:^2.0.1"
+    "@lumino/dragdrop": "npm:^2.1.4"
+    "@lumino/keyboard": "npm:^2.0.1"
+    "@lumino/messaging": "npm:^2.0.1"
+    "@lumino/signaling": "npm:^2.1.2"
+    "@lumino/widgets": "npm:^2.3.1"
+  checksum: 2c8cf598dfae00148e71918787d5d863104fd8fc5dc74e28f3ba4baff26a138c755d0d8124398e1f340310da0b99c1ea52e4ad1ecf67740a64612bd4ac3db101
   languageName: node
   linkType: hard
 
@@ -946,7 +946,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@lumino/disposable@npm:^1.10.1, @lumino/disposable@npm:^1.10.4":
+"@lumino/disposable@npm:^1.10.4":
   version: 1.10.4
   resolution: "@lumino/disposable@npm:1.10.4"
   dependencies:
@@ -965,7 +965,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@lumino/domutils@npm:^1.8.1, @lumino/domutils@npm:^1.8.2":
+"@lumino/domutils@npm:^1.8.2":
   version: 1.8.2
   resolution: "@lumino/domutils@npm:1.8.2"
   checksum: 493ed2afdbed314440bd5ae1067a089406d1c20a5507077411766ee87d8ff465ae87fb01d06cedc2911e06a525a7578891336b8847606b4836c476bbcc9a25f4
@@ -979,7 +979,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@lumino/dragdrop@npm:^1.13.1, @lumino/dragdrop@npm:^1.14.5":
+"@lumino/dragdrop@npm:^1.14.5":
   version: 1.14.5
   resolution: "@lumino/dragdrop@npm:1.14.5"
   dependencies:
@@ -999,7 +999,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@lumino/keyboard@npm:^1.8.1, @lumino/keyboard@npm:^1.8.2":
+"@lumino/keyboard@npm:^1.8.2":
   version: 1.8.2
   resolution: "@lumino/keyboard@npm:1.8.2"
   checksum: 223303c1abf76fddea81e0df71b7c6828a4a31566f0136d71daf5d4d6c2ef9307474f3410a713b7217dafdd400d87814eb6354e96e591cc499037723a3924aa5
@@ -1013,7 +1013,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@lumino/messaging@npm:^1.10.1, @lumino/messaging@npm:^1.10.3":
+"@lumino/messaging@npm:^1.10.3":
   version: 1.10.3
   resolution: "@lumino/messaging@npm:1.10.3"
   dependencies:
@@ -1047,7 +1047,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@lumino/signaling@npm:^1.10.1, @lumino/signaling@npm:^1.11.1":
+"@lumino/signaling@npm:^1.11.1":
   version: 1.11.1
   resolution: "@lumino/signaling@npm:1.11.1"
   dependencies:
@@ -1085,7 +1085,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@lumino/widgets@npm:^1.30.0, @lumino/widgets@npm:^1.30.1":
+"@lumino/widgets@npm:^1.30.0":
   version: 1.37.2
   resolution: "@lumino/widgets@npm:1.37.2"
   dependencies:
@@ -1358,7 +1358,7 @@ __metadata:
   dependencies:
     "@cypress/code-coverage": "npm:^3.12.18"
     "@cypress/vue": "npm:^6.0.0"
-    "@lumino/datagrid": "npm:^0.34.0"
+    "@lumino/datagrid": "npm:^2.3.0"
     "@lumino/default-theme": "npm:^2.1.4"
     "@lumino/widgets": "npm:^1.30.0"
     "@vitejs/plugin-vue": "npm:^4.4.0"
