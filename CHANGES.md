@@ -1,6 +1,13 @@
 ## 1.2.0 (202?-??-??)
 
-- Vue3... https://github.com/tupilabs/vue-lumino/issues/51...
+- Vue3 https://github.com/tupilabs/vue-lumino/pull/59
+  - Vue 3 removed `$children`, which was used in this library with Vue 2. To
+    work around that, and to support any kind of component without customization
+    required, now users **must** provide a `:ref="id"` for each component. The
+    `ref` value must match the `id` given to the component. This library uses
+    that `ref` value to match with the `id`, and locate the element via
+    `$parent.$refs`. This means, too, that the caller of `Lumino` must hold the
+    `$refs`. See the example code and the `README.md` for an example.
 - Bump webpack from 5.64.4 to 5.76.0 #52
 - Bump semver from 5.7.1 to 5.7.2 #54
 - Bump word-wrap from 1.2.3 to 1.2.4 #55
