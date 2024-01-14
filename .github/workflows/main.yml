@@ -25,7 +25,8 @@ jobs:
     - name: Lint
       run: |
         yarn run lint --no-fix
-        DEBUG="lockfile-lint,validate-host-manager" npx lockfile-lint --path yarn.lock --validate-https --allowed-hosts npm --allowed-hosts registry.yarnpkg.com
+        # --validate-https, fails with Yarn 4 due to protocol=npm
+        DEBUG="lockfile-lint,validate-host-manager" npx lockfile-lint --path yarn.lock --allowed-hosts npm --allowed-hosts registry.yarnpkg.com
     - name: Test
       run: |
         NODE_ENV=test yarn run coverage:unit
