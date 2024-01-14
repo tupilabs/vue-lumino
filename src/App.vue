@@ -54,11 +54,13 @@ NOTE: Used for example/documentation only. Not intended to be used by users of t
         v-for="id of helloWorldWidgets"
         :id="id"
         :key="id"
+        :ref="id"
       />
       <ColoredCircle
         v-for="id of coloredCircleWidgets"
         :id="id"
         :key="id"
+        :ref="id"
         :color="'red'"
         :tab-title="`${id}`"
       />
@@ -95,6 +97,9 @@ export default {
     return {
       // the widgets added to the view
       /**
+       * This dictionary holds the component ID as key,
+       * and the component type as value (string).
+       *
        * @type {
        *   Object.<string, string>
        * }

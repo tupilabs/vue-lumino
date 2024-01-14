@@ -33,8 +33,9 @@ export default defineConfig({
         "coverage",
       ],
       extension: [".js", ".jsx", ".ts", ".vue"],
-      requireEnv: true,
-      cypress: true
+      requireEnv: false,
+      cypress: true,
+      forceBuildInstrument: true
     }),
   ],
   resolve: {
