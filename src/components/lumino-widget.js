@@ -79,7 +79,13 @@ export default class LuminoWidget extends Widget {
    * Event details returned for a `CustomEvent`.
    *
    * @link https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Creating_and_triggering_events
-   * @returns {{closable: boolean, name: string, id: string}}
+   * @returns {{
+   *   detail: {
+   *    closable: boolean,
+   *    name: string,
+   *    id: string
+   *   }
+   * }}
    * @private
    */
   _getEventDetails () {

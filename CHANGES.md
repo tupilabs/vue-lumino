@@ -91,7 +91,7 @@ dynamic tab titles
 and syncing components and DOM elements via events
 - Code now is almost ready to be used as a component directly, without
 the need to copy it and adapt to other projects (which should still
-be possible afterwards too)
+be possible afterward too)
 
 ## 0.1 (2020-02-22)
 
