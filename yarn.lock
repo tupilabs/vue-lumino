@@ -1210,8 +1210,10 @@ __metadata:
     "@vitejs/plugin-vue": "npm:^5.0.3"
     "@vitest/coverage-istanbul": "npm:^1.2.0"
     "@vitest/coverage-v8": "npm:^1.0.2"
+    "@vue/compiler-dom": "npm:^3.4.13"
     "@vue/compiler-sfc": "npm:^3.3.6"
     "@vue/eslint-config-standard": "npm:^8.0.1"
+    "@vue/server-renderer": "npm:^3.4.13"
     "@vue/test-utils": "npm:^2.4.1"
     concurrently: "npm:^8.2.2"
     cypress: "npm:^13.3.2"
@@ -1415,7 +1417,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vue/compiler-dom@npm:3.4.13":
+"@vue/compiler-dom@npm:3.4.13, @vue/compiler-dom@npm:^3.4.13":
   version: 3.4.13
   resolution: "@vue/compiler-dom@npm:3.4.13"
   dependencies:
@@ -1499,7 +1501,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vue/server-renderer@npm:3.4.13":
+"@vue/server-renderer@npm:3.4.13, @vue/server-renderer@npm:^3.4.13":
   version: 3.4.13
   resolution: "@vue/server-renderer@npm:3.4.13"
   dependencies:
