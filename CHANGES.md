@@ -1,4 +1,4 @@
-## 1.2.0 (202?-??-??)
+## 1.2.0 (2024-01-14)
 
 - Vue3 https://github.com/tupilabs/vue-lumino/pull/59
   - Vue 3 removed `$children`, which was used in this library with Vue 2. To
