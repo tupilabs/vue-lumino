@@ -47,7 +47,7 @@ jobs:
         uses: actions/checkout@v4
       - uses: actions/setup-node@v3
         with:
-          node-version: 14
+          node-version: 20
       - name: Cache node modules
         uses: actions/cache@v3
         with:
@@ -57,7 +57,7 @@ jobs:
         run: yarn install
       - name: e2e
         run: |
-          yarn run test:e2e --headless --mode development
+          VITE_COVERAGE=1 yarn run test:e2e --headless
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v1
         with:

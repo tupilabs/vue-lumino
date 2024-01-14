@@ -50,7 +50,7 @@ describe('Lumino component', () => {
       .should('be.visible')
     // SVG element is used only in the ColoredCircle component
     cy.get('svg')
-      .should('not.be.visible')
+      .should('not.exist')
     cy
       .get('#add-colored-circle-widget-button')
       .click()
@@ -78,7 +78,7 @@ describe('Lumino component', () => {
       .should('be.visible')
     // SVG element is used only in the ColoredCircle component
     cy.get('svg')
-      .should('not.be.visible')
+      .should('not.exist')
 
     cy
       .get('#add-colored-circle-widget-button')

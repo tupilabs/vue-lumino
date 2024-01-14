@@ -139,9 +139,12 @@ export default {
       if (newVal instanceof Array) {
         for (const id of newVal) {
           if (oldVal !== undefined && !(oldVal.includes(id))) {
-            // TODO: const tabTitleProp = this.$props.tabTitleProp
-            //       const name = newChild.$attrs[tabTitleProp] ? newChild.$attrs[tabTitleProp] : newChild.$options.name
-            this.addWidget(id, id)
+            this.$nextTick(() => {
+              const tabTitleProp = this.$props.tabTitleProp
+              const component = Array.isArray(this.$parent.$refs[id]) ? this.$parent.$refs[id][0] : this.$parent.$refs[id]
+              const name = component.$attrs[tabTitleProp] ? component.$attrs[tabTitleProp] : component.$options.name
+              this.addWidget(id, name)
+            })
           }
         }
         this.$nextTick(() => {
