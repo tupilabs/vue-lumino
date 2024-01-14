@@ -28,7 +28,7 @@ jobs:
         DEBUG="lockfile-lint,validate-host-manager" npx lockfile-lint --path yarn.lock --validate-https --allowed-hosts npm --allowed-hosts registry.yarnpkg.com
     - name: Test
       run: |
-        NODE_ENV=test yarn run test:unit
+        NODE_ENV=test yarn run coverage:unit
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v1
       with:
