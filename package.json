@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "@lumino/datagrid": "^0.34.0",
-    "@lumino/default-theme": "^0.20.1",
+    "@lumino/default-theme": "^2.1.4",
     "@lumino/widgets": "^1.30.0",
     "vue": "^3.3.6"
   },
