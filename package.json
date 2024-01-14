@@ -29,7 +29,7 @@
     "@lumino/datagrid": "^2.3.0",
     "@lumino/default-theme": "^2.1.4",
     "@lumino/widgets": "^1.30.0",
-    "vue": "^3.3.6"
+    "vue": "^3.4.13"
   },
   "devDependencies": {
     "@cypress/code-coverage": "^3.12.18",
