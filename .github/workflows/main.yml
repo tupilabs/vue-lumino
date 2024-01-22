@@ -16,7 +16,7 @@ jobs:
       with:
         node-version: 20
     - name: Cache node modules
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         path: node_modules
         key: ${{ runner.OS }}-build-${{ hashFiles('**/yarn.lock') }}
@@ -50,7 +50,7 @@ jobs:
         with:
           node-version: 20
       - name: Cache node modules
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: node_modules
           key: ${{ runner.OS }}-build-${{ hashFiles('**/yarn.lock') }}
