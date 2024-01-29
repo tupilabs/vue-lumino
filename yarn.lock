@@ -1561,8 +1561,8 @@ __metadata:
   linkType: hard
 
 "@vue/test-utils@npm:^2.4.1":
-  version: 2.4.3
-  resolution: "@vue/test-utils@npm:2.4.3"
+  version: 2.4.4
+  resolution: "@vue/test-utils@npm:2.4.4"
   dependencies:
     js-beautify: "npm:^1.14.9"
     vue-component-type-helpers: "npm:^1.8.21"
@@ -1572,7 +1572,7 @@ __metadata:
   peerDependenciesMeta:
     "@vue/server-renderer":
       optional: true
-  checksum: 5ae466bfc77738ae3abfeedc832e5e393ba8b06de9d29048013ec6488ccd097bc0a5d06742ecf9fad63e119ee55fa2300bc31ae2430ce89897bb2fa8032645b6
+  checksum: fa213b6733bbc0249f5ab5c98e669d63f77aa57a18985382e146c20380fffda687668c570dd6002f0f969efa24900d67f8ff607f7dfaf41179d75cd24f1b3e53
   languageName: node
   linkType: hard
 
