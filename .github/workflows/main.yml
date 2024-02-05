@@ -31,7 +31,7 @@ jobs:
       run: |
         NODE_ENV=test yarn run coverage:unit
     - name: Upload coverage to Codecov
-      uses: codecov/codecov-action@v3
+      uses: codecov/codecov-action@v4
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
         file: ./coverage/lcov.info
@@ -60,7 +60,7 @@ jobs:
         run: |
           VITE_COVERAGE=1 yarn run test:e2e --headless
       - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v3
+        uses: codecov/codecov-action@v4
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           file: ./coverage/lcov.info
