@@ -1,11 +1,11 @@
 ## 1.2.1 (202?-??-??)
 
-- Bump @cypress/code-coverage from 3.12.18 to 3.12.21
+- Bump @cypress/code-coverage from 3.12.18 to 3.12.23
 - Bump @vitest/coverage-v8 from 1.2.0 to 1.2.2
 - Bump @vitest/coverage-istanbul from 1.2.0 to 1.2.2
-- Bump @vue/compiler-dom from 3.4.13 to 3.4.18
+- Bump @vue/compiler-dom from 3.4.13 to 3.4.19
 - Bump @vue/compiler-sfc from 3.4.13 to 3.4.15
-- Bump @vue/server-renderer from 3.4.13 to 3.4.15
+- Bump @vue/server-renderer from 3.4.13 to 3.4.19
 - Bump @vue/test-utils from 2.4.3 to 2.4.4
 - Bump actions/cache from 3 to 4
 - Bump codecov/codecov-action from 3 to 4
@@ -15,8 +15,8 @@
 - Bump jsdom from 23.2.0 to 24.0.0
 - Bump sass from 1.69.7 to 1.70.0
 - Bump vite from 5.0.11 to 5.1.1
-- Bump vitest from 1.2.0 to 1.2.2
-- Bump vue from 3.4.13 to 3.4.18
+- Bump vitest from 1.2.0 to 1.3.0
+- Bump vue from 3.4.13 to 3.4.19
 
 ## 1.2.0 (2024-01-14)
 
