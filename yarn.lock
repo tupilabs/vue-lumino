@@ -1582,7 +1582,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vue/server-renderer@npm:3.4.19":
+"@vue/server-renderer@npm:3.4.19, @vue/server-renderer@npm:^3.4.13":
   version: 3.4.19
   resolution: "@vue/server-renderer@npm:3.4.19"
   dependencies:
@@ -1591,18 +1591,6 @@ __metadata:
   peerDependencies:
     vue: 3.4.19
   checksum: 2156362185d62222db060c66d7fa31d2420708f22e491fe1b616008e931be7fcf9cf47e9cca5135359839c269389b475492657948ea3d6756f6a790fcddc34bf
-  languageName: node
-  linkType: hard
-
-"@vue/server-renderer@npm:^3.4.13":
-  version: 3.4.15
-  resolution: "@vue/server-renderer@npm:3.4.15"
-  dependencies:
-    "@vue/compiler-ssr": "npm:3.4.15"
-    "@vue/shared": "npm:3.4.15"
-  peerDependencies:
-    vue: 3.4.15
-  checksum: 43f86060774b8fa7331c672c564402ec58363642f0457147492b7b69c44fb1c26515968dc72d2ca0be053e838e9c2cf8f274356f982bb2bf9e886b1f4916ecaf
   languageName: node
   linkType: hard
 
