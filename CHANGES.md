@@ -13,6 +13,7 @@
 - Bump cypress from 13.6.2 to 13.6.6
 - Bump eslint from 7.32.0 to 8.56.0
 - Bump eslint-plugin-vue from 9.20.1 to 9.22.0
+- Bump follow-redirects from 1.15.5 to 1.15.6
 - Bump ip from 2.0.0 to 2.0.1
 - Bump jsdom from 23.2.0 to 24.0.0
 - Bump sass from 1.69.7 to 1.71.1
