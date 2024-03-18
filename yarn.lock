@@ -1710,18 +1710,12 @@ __metadata:
   linkType: hard
 
 "@vue/test-utils@npm:^2.4.1":
-  version: 2.4.4
-  resolution: "@vue/test-utils@npm:2.4.4"
+  version: 2.4.5
+  resolution: "@vue/test-utils@npm:2.4.5"
   dependencies:
     js-beautify: "npm:^1.14.9"
-    vue-component-type-helpers: "npm:^1.8.21"
-  peerDependencies:
-    "@vue/server-renderer": ^3.0.1
-    vue: ^3.0.1
-  peerDependenciesMeta:
-    "@vue/server-renderer":
-      optional: true
-  checksum: fa213b6733bbc0249f5ab5c98e669d63f77aa57a18985382e146c20380fffda687668c570dd6002f0f969efa24900d67f8ff607f7dfaf41179d75cd24f1b3e53
+    vue-component-type-helpers: "npm:^2.0.0"
+  checksum: a4f452068adba3fe0f079023d2f6424b837959a56790341681e7b8ae9d75f12fc422ec7146e0fc3c9229b759d7fac2376af53d0517d372c36d20132a43ca1972
   languageName: node
   linkType: hard
 
@@ -7239,10 +7233,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vue-component-type-helpers@npm:^1.8.21":
-  version: 1.8.27
-  resolution: "vue-component-type-helpers@npm:1.8.27"
-  checksum: 3403d70951e422162321e810f54f23f11ee5d2642631d2ca2cb1de18e5d35a0b7b05dd1f9bd02a0ae77dfa0b80751d826865d98f928ae6d6fbce9303406c9820
+"vue-component-type-helpers@npm:^2.0.0":
+  version: 2.0.6
+  resolution: "vue-component-type-helpers@npm:2.0.6"
+  checksum: 02c0c9e69eb446e17953d78bf9f858418ac3343b4704b65a7ae0b66018f1594d8d4b6b156955c30e635ae78dace8083929c9ea05b8e40cad01d77b792fc26a2b
   languageName: node
   linkType: hard
 
