@@ -3,6 +3,8 @@
 - Bump @cypress/code-coverage from 3.12.18 to 3.12.29
 - Bump @lumino/datagrid from 2.3.0 to 2.3.1
 - Bump @lumino/default-theme from 2.1.4 to 2.1.5
+- Bump @lumino/widgets from 1.37.2 to 2.3.2
+- Move from jsdom to happy-dom due to missing DragEvent (used in Lumino) in JSDom #125
 - Bump @vitejs/plugin-vue from 5.0.3 to 5.0.4
 - Bump @vitest/coverage-v8 from 1.2.0 to 1.4.0
 - Bump @vitest/coverage-istanbul from 1.2.0 to 1.4.0
