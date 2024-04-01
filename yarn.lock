@@ -852,6 +852,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@lumino/commands@npm:^2.3.0":
+  version: 2.3.0
+  resolution: "@lumino/commands@npm:2.3.0"
+  dependencies:
+    "@lumino/algorithm": "npm:^2.0.1"
+    "@lumino/coreutils": "npm:^2.1.2"
+    "@lumino/disposable": "npm:^2.1.2"
+    "@lumino/domutils": "npm:^2.0.1"
+    "@lumino/keyboard": "npm:^2.0.1"
+    "@lumino/signaling": "npm:^2.1.2"
+    "@lumino/virtualdom": "npm:^2.0.1"
+  checksum: a80871efd68ccc725e0306be8325cd26c7675c6fc52f016ee232805d02fbc9bf1e57ef535034cf5ad67c2584bb6df1b423d679460119f562cc2d71cc939cf66c
+  languageName: node
+  linkType: hard
+
 "@lumino/coreutils@npm:^1.12.1":
   version: 1.12.1
   resolution: "@lumino/coreutils@npm:1.12.1"
@@ -869,8 +884,8 @@ __metadata:
   linkType: hard
 
 "@lumino/datagrid@npm:^2.3.0":
-  version: 2.3.0
-  resolution: "@lumino/datagrid@npm:2.3.0"
+  version: 2.3.1
+  resolution: "@lumino/datagrid@npm:2.3.1"
   dependencies:
     "@lumino/algorithm": "npm:^2.0.1"
     "@lumino/coreutils": "npm:^2.1.2"
@@ -880,8 +895,8 @@ __metadata:
     "@lumino/keyboard": "npm:^2.0.1"
     "@lumino/messaging": "npm:^2.0.1"
     "@lumino/signaling": "npm:^2.1.2"
-    "@lumino/widgets": "npm:^2.3.1"
-  checksum: 2c8cf598dfae00148e71918787d5d863104fd8fc5dc74e28f3ba4baff26a138c755d0d8124398e1f340310da0b99c1ea52e4ad1ecf67740a64612bd4ac3db101
+    "@lumino/widgets": "npm:^2.3.2"
+  checksum: 40bb3b37c7d7277d1616656ab82e818fea689860b19e7bfb9eb6762f3745978b0ce2649aa6fe8bd6d071a1f385f8b5daf393d36167000345d125b7da5a2dcaa2
   languageName: node
   linkType: hard
 
@@ -1069,6 +1084,25 @@ __metadata:
     "@lumino/signaling": "npm:^2.1.2"
     "@lumino/virtualdom": "npm:^2.0.1"
   checksum: 369f72f64650af05d2cdda97521178ec7a04d07b52956601568c817201ce24dc832d71872b4d65f626a3d0f8af5f40d3336bd102a8cde95c710ca4717671acb3
+  languageName: node
+  linkType: hard
+
+"@lumino/widgets@npm:^2.3.2":
+  version: 2.3.2
+  resolution: "@lumino/widgets@npm:2.3.2"
+  dependencies:
+    "@lumino/algorithm": "npm:^2.0.1"
+    "@lumino/commands": "npm:^2.3.0"
+    "@lumino/coreutils": "npm:^2.1.2"
+    "@lumino/disposable": "npm:^2.1.2"
+    "@lumino/domutils": "npm:^2.0.1"
+    "@lumino/dragdrop": "npm:^2.1.4"
+    "@lumino/keyboard": "npm:^2.0.1"
+    "@lumino/messaging": "npm:^2.0.1"
+    "@lumino/properties": "npm:^2.0.1"
+    "@lumino/signaling": "npm:^2.1.2"
+    "@lumino/virtualdom": "npm:^2.0.1"
+  checksum: 217511fc8c86fd1c742e5cd74ab1d32eb010ff09ddc389cadf7eff6b5065094b0c0aef04606a52fca425bb56ba8873e2d410b9db585cf16f1d77fbcf824f6c6e
   languageName: node
   linkType: hard
 
