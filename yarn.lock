@@ -901,12 +901,12 @@ __metadata:
   linkType: hard
 
 "@lumino/default-theme@npm:^2.1.4":
-  version: 2.1.4
-  resolution: "@lumino/default-theme@npm:2.1.4"
+  version: 2.1.5
+  resolution: "@lumino/default-theme@npm:2.1.5"
   dependencies:
     "@lumino/dragdrop": "npm:^2.1.4"
-    "@lumino/widgets": "npm:^2.3.1"
-  checksum: f2c287804d4c1aaed129c429c834e1b0b01a104118b570bb26fff5c6fb3faf4919ae3ad5e9917dbda5720581fe66d82a639c3095c0a2d6adf879878792d00784
+    "@lumino/widgets": "npm:^2.3.2"
+  checksum: c9e15623d2d53ea754b7f71b9fef3ae6ee9e16aac88aa04c1764ac4f16ba8d00fbc487126cac6c11d8e6cee7925ffc3124e10e51cbe2153f1d6d999bdb355e19
   languageName: node
   linkType: hard
 
