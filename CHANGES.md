@@ -1,9 +1,11 @@
 ## 1.2.1 (202?-??-??)
 
 - Bump @cypress/code-coverage from 3.12.18 to 3.12.29
+- Bump @lumino/datagrid from 2.3.0 to 2.3.1
+- Bump @lumino/default-theme from 2.1.4 to 2.1.5
 - Bump @vitejs/plugin-vue from 5.0.3 to 5.0.4
 - Bump @vitest/coverage-v8 from 1.2.0 to 1.4.0
-- Bump @vitest/coverage-istanbul from 1.2.0 to 1.3.1
+- Bump @vitest/coverage-istanbul from 1.2.0 to 1.4.0
 - Bump @vue/compiler-dom from 3.4.13 to 3.4.21
 - Bump @vue/compiler-sfc from 3.4.13 to 3.4.21
 - Bump @vue/server-renderer from 3.4.13 to 3.4.21
