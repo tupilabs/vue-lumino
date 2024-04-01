@@ -18,8 +18,9 @@ import {beforeEach, describe, expect, it} from 'vitest'
 import {mount} from '@vue/test-utils'
 import Lumino from '@/components/Lumino.vue'
 
-// @vitest-environment jsdom
-
+/**
+ * @vitest-environment happy-dom
+ */
 describe('Lumino component', () => {
   beforeEach(() => {
     global.ResizeObserver = class ResizeObserver {

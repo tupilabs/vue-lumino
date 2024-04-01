@@ -68,7 +68,7 @@ export default defineConfig({
     port: process.env.PORT || 8080,
   },
   test: {
-    environment: 'jsdom',
+    environment: 'happy-dom',
     clearMocks: true,
     restoreMocks: true,
     mockReset: true,

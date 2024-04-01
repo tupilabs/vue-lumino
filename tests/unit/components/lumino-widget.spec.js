@@ -17,6 +17,9 @@
 import { describe, expect, it, beforeEach } from 'vitest'
 import LuminoWidget from '@/components/lumino-widget'
 
+/**
+ * @vitest-environment happy-dom
+ */
 describe('lumino-widget', () => {
   let widget, id, name, closable
   beforeEach(() => {
