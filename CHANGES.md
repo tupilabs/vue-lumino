@@ -4,7 +4,6 @@
 - Bump @lumino/datagrid from 2.3.0 to 2.3.1
 - Bump @lumino/default-theme from 2.1.4 to 2.1.5
 - Bump @lumino/widgets from 1.37.2 to 2.3.2
-- Move from jsdom to happy-dom due to missing DragEvent (used in Lumino) in JSDom #125
 - Bump @vitejs/plugin-vue from 5.0.3 to 5.0.4
 - Bump @vitest/coverage-v8 from 1.2.0 to 1.4.0
 - Bump @vitest/coverage-istanbul from 1.2.0 to 1.4.0
@@ -21,10 +20,11 @@
 - Bump ip from 2.0.0 to 2.0.1
 - Bump jsdom from 23.2.0 to 24.0.0
 - Bump sass from 1.69.7 to 1.72.0
-- Bump vite from 5.0.11 to 5.1.6
+- Bump vite from 5.0.11 to 5.1.7
 - Bump vite-plugin-istanbul from 5.0.0 to 6.0.0
 - Bump vitest from 1.2.0 to 1.4.0
 - Bump vue from 3.4.13 to 3.4.21
+- Move from jsdom to happy-dom due to missing DragEvent (used in Lumino) in JSDom #125
 
 ## 1.2.0 (2024-01-14)
 
