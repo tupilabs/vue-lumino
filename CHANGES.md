@@ -25,6 +25,7 @@
 - Bump vite-plugin-istanbul from 5.0.0 to 6.0.0
 - Bump vitest from 1.2.0 to 1.4.0
 - Bump vue from 3.4.13 to 3.4.21
+- Marked the project type as module in `package.json`
 - Migrated eslint configuration to flat configuration (eslint 9.0.0 requirement)
 - Move from jsdom to happy-dom due to missing DragEvent (used in Lumino) in JSDom #125
 
