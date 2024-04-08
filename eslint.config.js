@@ -22,6 +22,7 @@ export default [
   ...pluginVue.configs["flat/recommended"],
   {
     "files": [
+      "**/*.mjs",
       "**/*.js",
       "**/*.vue"
     ],
