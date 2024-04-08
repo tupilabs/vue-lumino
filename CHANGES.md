@@ -1,4 +1,4 @@
-## 1.2.1 (202?-??-??)
+## 1.2.1 (2024-04-08)
 
 - Bump @cypress/code-coverage from 3.12.18 to 3.12.29
 - Bump @lumino/datagrid from 2.3.0 to 2.3.1
