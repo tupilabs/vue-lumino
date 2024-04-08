@@ -6,6 +6,7 @@
   "license": "Apache-2.0",
   "homepage": "https://github.com/tupilabs/vue-lumino/",
   "main": "./dist/vue-lumino.common.js",
+  "type": "module",
   "files": [
     "/dist"
   ],
@@ -20,7 +21,7 @@
     "dev": "vite",
     "serve": "vite preview",
     "build": "vite build",
-    "lint": "eslint --ext .js,.vue --ignore-path .gitignore --fix src",
+    "lint": "eslint src --fix",
     "test:unit": "vitest run ./tests/unit",
     "test:e2e": "concurrently --names 'SERVER,CLIENT' --prefix-colors 'yellow,blue' --success 'first' --kill-others 'yarn run dev' 'yarn wait-on http://localhost:8080/index.html && cypress run --e2e $@'",
     "coverage:unit": "vitest run --coverage"
@@ -34,6 +35,7 @@
   "devDependencies": {
     "@cypress/code-coverage": "^3.12.18",
     "@cypress/vue": "^6.0.0",
+    "@eslint/js": "^9.0.0",
     "@vitejs/plugin-vue": "^5.0.3",
     "@vitest/coverage-istanbul": "^1.2.0",
     "@vitest/coverage-v8": "^1.0.2",
