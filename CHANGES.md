@@ -13,17 +13,19 @@
 - Bump @vue/test-utils from 2.4.3 to 2.4.5
 - Bump actions/cache from 3 to 4
 - Bump codecov/codecov-action from 3 to 4
-- Bump cypress from 13.6.2 to 13.7.0
-- Bump eslint from 7.32.0 to 8.57.0
-- Bump eslint-plugin-vue from 9.20.1 to 9.23.0
+- Bump cypress from 13.6.2 to 13.7.2
+- Bump eslint from 7.32.0 to 9.0.0
+- Bump eslint-plugin-vue from 9.20.1 to 9.24.0
 - Bump follow-redirects from 1.15.5 to 1.15.6
+- Bump happy-dom from 14.3.9 to 14.7.1
 - Bump ip from 2.0.0 to 2.0.1
 - Bump jsdom from 23.2.0 to 24.0.0
-- Bump sass from 1.69.7 to 1.72.0
+- Bump sass from 1.69.7 to 1.74.1
 - Bump vite from 5.0.11 to 5.1.7
 - Bump vite-plugin-istanbul from 5.0.0 to 6.0.0
 - Bump vitest from 1.2.0 to 1.4.0
 - Bump vue from 3.4.13 to 3.4.21
+- Migrated eslint configuration to flat configuration (eslint 9.0.0 requirement)
 - Move from jsdom to happy-dom due to missing DragEvent (used in Lumino) in JSDom #125
 
 ## 1.2.0 (2024-01-14)
