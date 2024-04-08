@@ -147,22 +147,22 @@ export default {
   methods: {
     onAddHelloWorldButtonClicked () {
       const id = `${new Date().getTime()}`
-      // eslint-disable-next-line no-console
+       
       console.log(`Adding new widget ${HelloWorld.name}, ID ${id}`)
       this.widgets[id] = HelloWorld.name
     },
     onAddColoredCircleButtonClicked () {
       const id = `${new Date().getTime()}`
-      // eslint-disable-next-line no-console
+       
       console.log(`Adding new widget ${ColoredCircle.name}, ID ${id}`)
       this.widgets[id] = ColoredCircle.name
     },
     onWidgetActivatedEvent (event) {
-      // eslint-disable-next-line no-console
+       
       console.log(`Activated widget ${event.id}`)
     },
     onWidgetDeletedEvent (event) {
-      // eslint-disable-next-line no-console
+       
       console.log(`Deleted widget ${event.id}`)
       delete this.widgets[event.id]
     }
