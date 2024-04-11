@@ -1,5 +1,7 @@
 ## 1.2.2 (202?-??-??)
 
+- Bump tar from 6.2.0 to 6.2.1
+
 ## 1.2.1 (2024-04-08)
 
 - Bump @cypress/code-coverage from 3.12.18 to 3.12.29
