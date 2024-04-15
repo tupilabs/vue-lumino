@@ -1,6 +1,11 @@
 ## 1.2.2 (202?-??-??)
 
+- Bump @cypress/code-coverage from 3.12.29 to 3.12.34
+- Bump @vitest/coverage-istanbul from 1.4.0 to 1.5.0
+- Bump @vitest/coverage-v8 from 1.4.0 to 1.5.0
+- Bump eslint-plugin-vue from 9.24.0 to 9.25.0
 - Bump tar from 6.2.0 to 6.2.1
+- Bump vitest from 1.4.0 to 1.5.0
 
 ## 1.2.1 (2024-04-08)
 
