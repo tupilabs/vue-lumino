@@ -3,8 +3,12 @@
 - Bump @cypress/code-coverage from 3.12.29 to 3.12.34
 - Bump @vitest/coverage-istanbul from 1.4.0 to 1.5.0
 - Bump @vitest/coverage-v8 from 1.4.0 to 1.5.0
+- Bump @vue/compiler-sfc from 3.4.21 to 3.4.23
+- Bump @vue/server-renderer from 3.4.21 to 3.4.23
 - Bump eslint-plugin-vue from 9.24.0 to 9.25.0
+- Bump sass from 1.74.1 to 1.75.0
 - Bump tar from 6.2.0 to 6.2.1
+- Bump vite from 5.2.8 to 5.2.10
 - Bump vitest from 1.4.0 to 1.5.0
 
 ## 1.2.1 (2024-04-08)
