@@ -1224,7 +1224,7 @@ __metadata:
     cypress: "npm:^13.3.2"
     cypress-vite: "npm:^1.4.2"
     eslint: "npm:^9.0.0"
-    eslint-plugin-cypress: "npm:^2.15.1"
+    eslint-plugin-cypress: "npm:^3.2.0"
     eslint-plugin-import: "npm:^2.28.1"
     eslint-plugin-node: "npm:^11.1.0"
     eslint-plugin-promise: "npm:^6.1.1"
@@ -3022,14 +3022,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-cypress@npm:^2.15.1":
-  version: 2.15.1
-  resolution: "eslint-plugin-cypress@npm:2.15.1"
+"eslint-plugin-cypress@npm:^3.2.0":
+  version: 3.2.0
+  resolution: "eslint-plugin-cypress@npm:3.2.0"
   dependencies:
     globals: "npm:^13.20.0"
   peerDependencies:
-    eslint: ">= 3.2.1"
-  checksum: f404adf415ef6b986d3480397a26eb73976a9156bbf786f2d22b8df28bbf0e50d4b3c699caefd230f0de9d6e8850596ab1bcc471b173aede05373d2a5ae3c624
+    eslint: ">=7"
+  checksum: c422a5c3a45e5a968bbfb0265cc377f99dd4835325b2ef1519674eb4dae855b81c1d6db7117603f5ff6e9c63ca72138c444810c7404e492926de2f32e596c780
   languageName: node
   linkType: hard
 
