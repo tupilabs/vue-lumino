@@ -9,11 +9,11 @@
 - Bump @vue/server-renderer from 3.4.21 to 3.4.26
 - Bump cypress from 13.7.2 to 13.8.1
 - Bump eslint from 9.0.0 to 9.2.0
-- Bump eslint-plugin-vue from 9.24.0 to 9.25.0
-- Bump sass from 1.74.1 to 1.76.0
+- Bump eslint-plugin-vue from 9.24.0 to 9.26.0
+- Bump sass from 1.74.1 to 1.77.1
 - Bump tar from 6.2.0 to 6.2.1
 - Bump vite from 5.2.8 to 5.2.10
-- Bump vitest from 1.4.0 to 1.5.2
+- Bump vitest from 1.4.0 to 1.6.0
 
 ## 1.2.1 (2024-04-08)
 
