@@ -7,13 +7,16 @@
 - Bump @vue/compiler-dom from 3.4.21 to 3.4.26
 - Bump @vue/compiler-sfc from 3.4.21 to 3.4.25
 - Bump @vue/server-renderer from 3.4.21 to 3.4.26
-- Bump cypress from 13.7.2 to 13.8.1
+- Bump cypress from 13.7.2 to 13.9.0
 - Bump eslint from 9.0.0 to 9.2.0
 - Bump eslint-plugin-vue from 9.24.0 to 9.26.0
+- Bump happy-dom from 14.7.1 to 14.11.0
 - Bump sass from 1.74.1 to 1.77.1
 - Bump tar from 6.2.0 to 6.2.1
 - Bump vite from 5.2.8 to 5.2.10
+- Bump vite-plugin-istanbul from 6.0.0 to 6.0.2
 - Bump vitest from 1.4.0 to 1.6.0
+- Bump vue from 3.4.21 to 3.4.27
 
 ## 1.2.1 (2024-04-08)
 
