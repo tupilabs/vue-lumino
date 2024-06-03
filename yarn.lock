@@ -2951,13 +2951,13 @@ __metadata:
   linkType: hard
 
 "eslint-plugin-cypress@npm:^3.2.0":
-  version: 3.2.0
-  resolution: "eslint-plugin-cypress@npm:3.2.0"
+  version: 3.3.0
+  resolution: "eslint-plugin-cypress@npm:3.3.0"
   dependencies:
     globals: "npm:^13.20.0"
   peerDependencies:
     eslint: ">=7"
-  checksum: c422a5c3a45e5a968bbfb0265cc377f99dd4835325b2ef1519674eb4dae855b81c1d6db7117603f5ff6e9c63ca72138c444810c7404e492926de2f32e596c780
+  checksum: d149f853c7a57527b204475159c447da2c21aaca44cf602fea9ced45a1cc795d469bff8db14cc9502744ea9b3dbba7363e6ea8391140c7f7f324e2bac7a7031d
   languageName: node
   linkType: hard
 
