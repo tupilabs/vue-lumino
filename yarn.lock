@@ -1400,19 +1400,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vue/compiler-core@npm:3.4.26":
-  version: 3.4.26
-  resolution: "@vue/compiler-core@npm:3.4.26"
-  dependencies:
-    "@babel/parser": "npm:^7.24.4"
-    "@vue/shared": "npm:3.4.26"
-    entities: "npm:^4.5.0"
-    estree-walker: "npm:^2.0.2"
-    source-map-js: "npm:^1.2.0"
-  checksum: 3591fda1b07e929b2b83eaaee67c21075d0c7676ecb8d65c9d800d0b2db5afcf1c44a98fd7ac3d00c737de5462a74fe6788672f739a998769244dfb319bacaae
-  languageName: node
-  linkType: hard
-
 "@vue/compiler-core@npm:3.4.27":
   version: 3.4.27
   resolution: "@vue/compiler-core@npm:3.4.27"
@@ -1426,23 +1413,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vue/compiler-dom@npm:3.4.27":
+"@vue/compiler-dom@npm:3.4.27, @vue/compiler-dom@npm:^3.4.13":
   version: 3.4.27
   resolution: "@vue/compiler-dom@npm:3.4.27"
   dependencies:
     "@vue/compiler-core": "npm:3.4.27"
     "@vue/shared": "npm:3.4.27"
   checksum: ceb8aef314b6b7df1ab6cd3c7c1290e5b60363a6092bbffc3ee6aca42f6f5247a070b0dcbe71530751e840d01beec00a6268e3663abcf4a6ac297a32bfb90e49
-  languageName: node
-  linkType: hard
-
-"@vue/compiler-dom@npm:^3.4.13":
-  version: 3.4.26
-  resolution: "@vue/compiler-dom@npm:3.4.26"
-  dependencies:
-    "@vue/compiler-core": "npm:3.4.26"
-    "@vue/shared": "npm:3.4.26"
-  checksum: 3b39c5586ba0029ccef8cd6d7f7b98e1522ca8f52edba056bc46a8ec27764a6fdec2619bbe089484586cf440c07249631c9c18efe91633306cf0047f4d76d72f
   languageName: node
   linkType: hard
 
@@ -1529,13 +1506,6 @@ __metadata:
   peerDependencies:
     vue: 3.4.27
   checksum: 5e6761ecd74c0a9ca9fd991f7a980140d2e09427712dbdc74b536bc5a9b97c06825ca4fa006b4a7cd6ba224fdb13c1c6a600e7d039d2a40f036b13ed611aa20f
-  languageName: node
-  linkType: hard
-
-"@vue/shared@npm:3.4.26":
-  version: 3.4.26
-  resolution: "@vue/shared@npm:3.4.26"
-  checksum: 8b002badc842d94b47cf78630ca51403a8a8981bc20c35f5b669c299413f81ed5fd97dbd763d0c00fe4614c615991214bc06d709d0b57d1e5836d0262cfbebdb
   languageName: node
   linkType: hard
 
