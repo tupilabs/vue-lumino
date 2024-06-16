@@ -9,6 +9,7 @@
 - Bump @vue/compiler-sfc from 3.4.21 to 3.4.25
 - Bump @vue/server-renderer from 3.4.21 to 3.4.27
 - Bump @vue/test-utils from 2.4.5 to 2.4.6
+- Bump braces from 3.0.2 to 3.0.3
 - Bump cypress from 13.7.2 to 13.11.0
 - Bump eslint from 9.0.0 to 9.4.0
 - Bump eslint-plugin-cypress from 3.2.0 to 3.3.0
