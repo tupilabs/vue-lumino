@@ -2,12 +2,12 @@
 
 - Bump @cypress/code-coverage from 3.12.29 to 3.12.39
 - Bump @cypress/vue from 6.0.0 to 6.0.1
-- Bump @eslint/js from 9.1.1 to 9.4.0
+- Bump @eslint/js from 9.1.1 to 9.5.0
 - Bump @vitest/coverage-istanbul from 1.4.0 to 1.6.0
 - Bump @vitest/coverage-v8 from 1.4.0 to 1.5.0
 - Bump @vitejs/plugin-vue from 5.0.4 to 5.0.5
 - Bump @vue/compiler-dom from 3.4.21 to 3.4.27
-- Bump @vue/compiler-sfc from 3.4.21 to 3.4.25
+- Bump @vue/compiler-sfc from 3.4.21 to 3.4.30
 - Bump @vue/server-renderer from 3.4.21 to 3.4.27
 - Bump @vue/test-utils from 2.4.5 to 2.4.6
 - Bump braces from 3.0.2 to 3.0.3
@@ -16,14 +16,14 @@
 - Bump eslint-plugin-cypress from 3.2.0 to 3.3.0
 - Bump eslint-plugin-promise from 6.1.1 to 6.2.0
 - Bump eslint-plugin-vue from 9.24.0 to 9.26.0
-- Bump happy-dom from 14.7.1 to 14.12.0
-- Bump sass from 1.74.1 to 1.77.2
+- Bump happy-dom from 14.7.1 to 14.12.3
+- Bump sass from 1.74.1 to 1.77.6
 - Bump sinon from 17.0.1 to 18.0.0
 - Bump tar from 6.2.0 to 6.2.1
 - Bump vite from 5.2.8 to 5.3.1
 - Bump vite-plugin-istanbul from 6.0.0 to 6.0.2
 - Bump vitest from 1.4.0 to 1.6.0
-- Bump vue from 3.4.21 to 3.4.29
+- Bump vue from 3.4.21 to 3.4.30
 
 ## 1.2.1 (2024-04-08)
 
