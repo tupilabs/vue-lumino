@@ -3,12 +3,14 @@
 - Bump @cypress/code-coverage from 3.12.29 to 3.12.39
 - Bump @cypress/vue from 6.0.0 to 6.0.1
 - Bump @eslint/js from 9.1.1 to 9.5.0
+- Bump @lumino/default-theme from 2.1.5 to 2.1.6
+- Bump @lumino/widgets from 2.3.2 to 2.4.0
 - Bump @vitest/coverage-istanbul from 1.4.0 to 1.6.0
 - Bump @vitest/coverage-v8 from 1.4.0 to 1.5.0
 - Bump @vitejs/plugin-vue from 5.0.4 to 5.0.5
 - Bump @vue/compiler-dom from 3.4.21 to 3.4.27
-- Bump @vue/compiler-sfc from 3.4.21 to 3.4.30
-- Bump @vue/server-renderer from 3.4.21 to 3.4.27
+- Bump @vue/compiler-sfc from 3.4.21 to 3.4.31
+- Bump @vue/server-renderer from 3.4.21 to 3.4.31
 - Bump @vue/test-utils from 2.4.5 to 2.4.6
 - Bump braces from 3.0.2 to 3.0.3
 - Bump cypress from 13.7.2 to 13.11.0
@@ -23,7 +25,7 @@
 - Bump vite from 5.2.8 to 5.3.1
 - Bump vite-plugin-istanbul from 6.0.0 to 6.0.2
 - Bump vitest from 1.4.0 to 1.6.0
-- Bump vue from 3.4.21 to 3.4.30
+- Bump vue from 3.4.21 to 3.4.31
 
 ## 1.2.1 (2024-04-08)
 
