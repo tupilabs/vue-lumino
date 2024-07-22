@@ -37,7 +37,7 @@
     "@cypress/vue": "^6.0.0",
     "@eslint/js": "^9.0.0",
     "@vitejs/plugin-vue": "^5.0.3",
-    "@vitest/coverage-istanbul": "^1.2.0",
+    "@vitest/coverage-istanbul": "^2.0.3",
     "@vitest/coverage-v8": "^2.0.2",
     "@vue/compiler-dom": "^3.4.13",
     "@vue/compiler-sfc": "^3.3.6",
