@@ -17,25 +17,12 @@
 import { resolve } from 'path'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import istanbul from "vite-plugin-istanbul";
 import path from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     vue(),
-    istanbul({
-      include: "src/*",
-      exclude: [
-        "node_modules",
-        "tests",
-        "coverage",
-      ],
-      extension: [".js", ".jsx", ".ts", ".vue"],
-      requireEnv: false,
-      cypress: true,
-      forceBuildInstrument: true
-    }),
   ],
   resolve: {
     alias: {
@@ -74,10 +61,9 @@ export default defineConfig({
     mockReset: true,
     watch: false,
     coverage: {
-      provider: 'istanbul',
+      provider: 'v8',
       reporter: [
         'html',
-        'lcov'
       ]
     }
   }
