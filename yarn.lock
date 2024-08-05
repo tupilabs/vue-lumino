@@ -1486,7 +1486,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vue/compiler-dom@npm:3.4.31, @vue/compiler-dom@npm:^3.4.13":
+"@vue/compiler-dom@npm:3.4.31":
   version: 3.4.31
   resolution: "@vue/compiler-dom@npm:3.4.31"
   dependencies:
@@ -1506,7 +1506,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vue/compiler-dom@npm:3.4.35":
+"@vue/compiler-dom@npm:3.4.35, @vue/compiler-dom@npm:^3.4.13":
   version: 3.4.35
   resolution: "@vue/compiler-dom@npm:3.4.35"
   dependencies:
