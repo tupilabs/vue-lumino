@@ -1187,7 +1187,7 @@ __metadata:
     eslint-plugin-promise: "npm:^7.0.0"
     eslint-plugin-standard: "npm:^5.0.0"
     eslint-plugin-vue: "npm:^9.17.0"
-    happy-dom: "npm:^14.3.9"
+    happy-dom: "npm:^15.7.3"
     sass: "npm:^1.69.4"
     sinon: "npm:^18.0.0"
     vite: "npm:^5.3.5"
@@ -3818,14 +3818,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"happy-dom@npm:^14.3.9":
-  version: 14.12.3
-  resolution: "happy-dom@npm:14.12.3"
+"happy-dom@npm:^15.7.3":
+  version: 15.7.3
+  resolution: "happy-dom@npm:15.7.3"
   dependencies:
     entities: "npm:^4.5.0"
     webidl-conversions: "npm:^7.0.0"
     whatwg-mimetype: "npm:^3.0.0"
-  checksum: 72e817bc9d03c4c0dbb794f8fb5b69aac4b4dbe0ee789a6b6a02a60298a9aa99bac766967a5c642153e5c95c02489437f878de5641ed64fd13b2271c56805df5
+  checksum: e64a9ae67ae73a24fe77e61e939b20764509197c9fbaa537c6955ac699aca5a02e26b5995c3234047abe43668d1df37fbeff837e41f7af981966ce81d73b25a6
   languageName: node
   linkType: hard
 
