@@ -1,8 +1,8 @@
 ## 1.2.2 (202?-??-??)
 
-- Bump @cypress/code-coverage from 3.12.29 to 3.12.45
+- Bump @cypress/code-coverage from 3.12.29 to 3.12.46
 - Bump @cypress/vue from 6.0.0 to 6.0.1
-- Bump @eslint/js from 9.1.1 to 9.8.0
+- Bump @eslint/js from 9.1.1 to 9.9.1
 - Bump @lumino/datagrid from 2.3.1 to 2.4.1
 - Bump @lumino/default-theme from 2.1.5 to 2.1.6
 - Bump @lumino/widgets from 2.3.2 to 2.5.0
@@ -15,12 +15,12 @@
 - Bump @vue/test-utils from 2.4.5 to 2.4.6
 - Bump axios from 1.6.5 to 1.7.4
 - Bump braces from 3.0.2 to 3.0.3
-- Bump cypress from 13.7.2 to 13.13.2
-- Bump eslint from 9.0.0 to 9.9.0
+- Bump cypress from 13.7.2 to 13.14.1
+- Bump eslint from 9.0.0 to 9.10.0
 - Bump eslint-plugin-cypress from 3.2.0 to 3.5.0
 - Bump eslint-plugin-promise from 6.1.1 to 7.1.0
 - Bump eslint-plugin-vue from 9.24.0 to 9.27.0
-- Bump happy-dom from 14.7.1 to 14.12.3
+- Bump happy-dom from 14.7.1 to 15.7.3
 - Bump micromatch from 4.0.5 to 4.0.8
 - Bump sass from 1.74.1 to 1.77.8
 - Bump sinon from 17.0.1 to 18.0.0
