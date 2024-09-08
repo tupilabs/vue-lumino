@@ -1,4 +1,4 @@
-## 1.2.2 (202?-??-??)
+## 1.2.2 (2024-09-08)
 
 - Bump @cypress/code-coverage from 3.12.29 to 3.12.46
 - Bump @cypress/vue from 6.0.0 to 6.0.1
