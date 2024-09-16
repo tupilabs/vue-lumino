@@ -1,11 +1,16 @@
 ## 1.2.3 (202?-??-??)
 
-- Bump vite from 5.4.1 to 5.4.3
-- Bump cypress from 13.14.1 to 13.14.2
+- Bump @cypress/code-coverage from 3.12.46 to 3.12.48
+- Bump @eslint/js from 9.9.1 to 9.10.0
 - Bump @vitejs/plugin-vue from 5.1.2 to 5.1.3
-- Bump sass from 1.77.8 to 1.78.0
+- Bump @vue/compiler-dom from 3.4.38 to 3.5.5
+- Bump cypress from 13.14.1 to 13.14.2
 - Bump eslint-plugin-vue from 9.27.0 to 9.28.0
+- Bump happy-dom from 15.7.3 to 15.7.4
 - Bump path-to-regexp from 6.2.1 to 6.3.0
+- Bump sass from 1.77.8 to 1.78.0
+- Bump vite from 5.4.1 to 5.4.3
+- Bump vue from 3.4.38 to 3.5.5
 
 ## 1.2.2 (2024-09-08)
 
