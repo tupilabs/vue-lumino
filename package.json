@@ -55,7 +55,7 @@
     "eslint-plugin-vue": "^9.17.0",
     "happy-dom": "^15.7.3",
     "sass": "^1.69.4",
-    "sinon": "^18.0.0",
+    "sinon": "^19.0.2",
     "vite": "^5.3.5",
     "vitest": "^2.0.5",
     "wait-on": "^7.0.1"
