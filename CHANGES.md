@@ -1,13 +1,15 @@
 ## 1.2.3 (202?-??-??)
 
-- Bump @cypress/code-coverage from 3.12.46 to 3.13.1
+- Bump @cypress/code-coverage from 3.12.46 to 3.13.4
 - Bump @eslint/js from 9.9.1 to 9.10.0
 - Bump @lumino/default-theme from 2.1.6 to 2.1.7
 - Bump @vitejs/plugin-vue from 5.1.2 to 5.1.4
 - Bump @vue/compiler-dom from 3.4.38 to 3.5.10
-- Bump @vue/compiler-sfc from 3.4.38 to 3.5.10
+- Bump @vue/compiler-sfc from 3.4.38 to 3.5.11
+- Bump @vue/server-renderer from 3.4.38 to 3.5.11
 - Bump cypress from 13.14.1 to 13.15.0
 - Bump eslint from 9.10.0 to 9.11.0
+- Bump eslint-plugin-import from 2.29.1 to 2.31.0
 - Bump eslint-plugin-vue from 9.27.0 to 9.28.0
 - Bump happy-dom from 15.7.3 to 15.7.4
 - Bump jekyll from 4.3.3 to 4.3.4
@@ -15,7 +17,7 @@
 - Bump rollup from 4.21.2 to 4.22.4
 - Bump sass from 1.77.8 to 1.79.4
 - Bump sinon from 18.0.0 to 19.0.2
-- Bump vite from 5.4.1 to 5.4.6
+- Bump vite from 5.4.1 to 5.4.8
 - Bump vue from 3.4.38 to 3.5.5
 
 ## 1.2.2 (2024-09-08)
