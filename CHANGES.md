@@ -4,14 +4,15 @@
 - Bump @eslint/js from 9.9.1 to 9.10.0
 - Bump @lumino/default-theme from 2.1.6 to 2.1.7
 - Bump @vitejs/plugin-vue from 5.1.2 to 5.1.4
-- Bump @vue/compiler-dom from 3.4.38 to 3.5.10
+- Bump @vue/compiler-dom from 3.4.38 to 3.5.12
 - Bump @vue/compiler-sfc from 3.4.38 to 3.5.11
 - Bump @vue/server-renderer from 3.4.38 to 3.5.12
 - Bump concurrently from 8.2.2 to 9.0.1
 - Bump cypress from 13.14.1 to 13.15.0
 - Bump eslint from 9.10.0 to 9.12.0
+- Bump eslint-plugin-cypress from 3.5.0 to 4.0.0
 - Bump eslint-plugin-import from 2.29.1 to 2.31.0
-- Bump eslint-plugin-vue from 9.27.0 to 9.28.0
+- Bump eslint-plugin-vue from 9.27.0 to 9.29.1
 - Bump happy-dom from 15.7.3 to 15.7.4
 - Bump jekyll from 4.3.3 to 4.3.4
 - Bump path-to-regexp from 6.2.1 to 6.3.0
