@@ -3,6 +3,7 @@
 - Bump @cypress/code-coverage from 3.12.46 to 3.13.4
 - Bump @eslint/js from 9.9.1 to 9.10.0
 - Bump @lumino/default-theme from 2.1.6 to 2.1.7
+- Bump @vitest/coverage-v8 from 2.0.5 to 2.1.3
 - Bump @vitejs/plugin-vue from 5.1.2 to 5.1.4
 - Bump @vue/compiler-dom from 3.4.38 to 3.5.12
 - Bump @vue/compiler-sfc from 3.4.38 to 3.5.11
@@ -20,7 +21,7 @@
 - Bump sass from 1.77.8 to 1.79.5
 - Bump sinon from 18.0.0 to 19.0.2
 - Bump vite from 5.4.1 to 5.4.8
-- Bump vitest from 2.0.5 to 2.1.2
+- Bump vitest from 2.0.5 to 2.1.3
 - Bump vue from 3.4.38 to 3.5.5
 
 ## 1.2.2 (2024-09-08)
