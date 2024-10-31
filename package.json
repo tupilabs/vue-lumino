@@ -2,7 +2,7 @@
   "name": "@tupilabs/vue-lumino",
   "description": "A Vue component that integrates with Lumino",
   "author": "Bruno P. Kinoshita <brunodepaulak@yahoo.com.br> (https://twitter.com/kinow)",
-  "version": "1.2.3-SNAPSHOT",
+  "version": "1.2.3",
   "license": "Apache-2.0",
   "homepage": "https://github.com/tupilabs/vue-lumino/",
   "main": "./dist/vue-lumino.js",
