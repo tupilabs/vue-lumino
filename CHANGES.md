@@ -1,16 +1,16 @@
 ## 1.2.3 (202?-??-??)
 
 - Bump @cypress/code-coverage from 3.12.46 to 3.13.4
-- Bump @eslint/js from 9.9.1 to 9.10.0
+- Bump @eslint/js from 9.9.1 to 9.13.0
 - Bump @lumino/default-theme from 2.1.6 to 2.1.7
 - Bump @vitest/coverage-v8 from 2.0.5 to 2.1.3
 - Bump @vitejs/plugin-vue from 5.1.2 to 5.1.4
 - Bump @vue/compiler-dom from 3.4.38 to 3.5.12
-- Bump @vue/compiler-sfc from 3.4.38 to 3.5.11
+- Bump @vue/compiler-sfc from 3.4.38 to 3.5.12
 - Bump @vue/server-renderer from 3.4.38 to 3.5.12
 - Bump concurrently from 8.2.2 to 9.0.1
 - Bump cypress from 13.14.1 to 13.15.0
-- Bump eslint from 9.10.0 to 9.12.0
+- Bump eslint from 9.10.0 to 9.13.0
 - Bump eslint-plugin-cypress from 3.5.0 to 4.0.0
 - Bump eslint-plugin-import from 2.29.1 to 2.31.0
 - Bump eslint-plugin-vue from 9.27.0 to 9.29.1
@@ -20,9 +20,10 @@
 - Bump rollup from 4.21.2 to 4.22.4
 - Bump sass from 1.77.8 to 1.79.5
 - Bump sinon from 18.0.0 to 19.0.2
-- Bump vite from 5.4.1 to 5.4.8
+- Bump vite from 5.4.1 to 5.4.10
 - Bump vitest from 2.0.5 to 2.1.3
 - Bump vue from 3.4.38 to 3.5.5
+- Bump wait-on from 7.2.0 to 8.0.1
 - Update package.json: Fix property "main" (thanks to @BobLiu0518 #291)
 
 ## 1.2.2 (2024-09-08)
