@@ -23,6 +23,7 @@
 - Bump vite from 5.4.1 to 5.4.8
 - Bump vitest from 2.0.5 to 2.1.3
 - Bump vue from 3.4.38 to 3.5.5
+- Update package.json: Fix property "main" (thanks to @BobLiu0518 #291)
 
 ## 1.2.2 (2024-09-08)
 
