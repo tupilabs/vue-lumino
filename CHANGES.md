@@ -1,5 +1,7 @@
 ## 1.2.4 (202?-??-??)
 
+- Bump happy-dom from 15.7.4 to 15.10.2 #298
+
 ## 1.2.3 (2024-10-31)
 
 - Bump @cypress/code-coverage from 3.12.46 to 3.13.4
