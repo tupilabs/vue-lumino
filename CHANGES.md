@@ -1,5 +1,10 @@
 ## 1.2.4 (202?-??-??)
 
+- Bump @eslint/js from 9.13.0 to 9.14.0 #293
+- Bump cypress from 13.15.0 to 13.15.2 #299
+- Bump eslint from 9.13.0 to 9.14.0 #295
+- Bump eslint-plugin-cypress from 4.0.0 to 4.1.0 #294
+- Bump eslint-plugin-vue from 9.29.1 to 9.30.0 #292
 - Bump happy-dom from 15.7.4 to 15.10.2 #298
 
 ## 1.2.3 (2024-10-31)
