@@ -1,8 +1,10 @@
 ## 1.2.4 (202?-??-??)
 
 - Bump @eslint/js from 9.13.0 to 9.14.0 #293
+- Bump @eslint/plugin-kit from 0.2.0 to 0.2.3 #305
 - Bump @vitejs/plugin-vue from 5.1.4 to 5.1.5 #303
 - Bump concurrently from 9.0.1 to 9.1.0 #301
+- Bump cross-spawn from 7.0.3 to 7.0.5 #306
 - Bump cypress from 13.15.0 to 13.15.2 #299
 - Bump eslint from 9.13.0 to 9.14.0 #295
 - Bump eslint-plugin-cypress from 4.0.0 to 4.1.0 #294
