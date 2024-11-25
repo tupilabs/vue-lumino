@@ -3,7 +3,10 @@
 - Bump @eslint/js from 9.13.0 to 9.14.0 #293
 - Bump @eslint/plugin-kit from 0.2.0 to 0.2.3 #305
 - Bump @vitejs/plugin-vue from 5.1.4 to 5.1.5 #303
+- Bump @vue/compiler-dom from 3.5.12 to 3.5.13 #308
 - Bump @vue/compiler-sfc from 3.5.12 to 3.5.13 #313
+- Bump @vue/server-renderer from 3.5.12 to 3.5.13 #309
+- Bump codecov/codecov-action from 4 to 5 #307
 - Bump concurrently from 9.0.1 to 9.1.0 #301
 - Bump cross-spawn from 7.0.3 to 7.0.5 #306
 - Bump cypress from 13.15.0 to 13.15.2 #299
@@ -12,6 +15,7 @@
 - Bump eslint-plugin-vue from 9.29.1 to 9.31.0 #292 #312
 - Bump happy-dom from 15.7.4 to 15.11.6 #298 #310
 - Bump sass from 1.79.5 to 1.80.6 #302
+- Bump vite from 5.4.10 to 5.4.11 #311
 - Bump vitest from 2.1.3 to 2.1.4 #304
 - Bump vue from 3.5.5 to 3.5.12 #300
 
