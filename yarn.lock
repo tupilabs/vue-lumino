@@ -3410,11 +3410,13 @@ __metadata:
   linkType: hard
 
 "eslint-plugin-promise@npm:^7.0.0":
-  version: 7.1.0
-  resolution: "eslint-plugin-promise@npm:7.1.0"
+  version: 7.2.1
+  resolution: "eslint-plugin-promise@npm:7.2.1"
+  dependencies:
+    "@eslint-community/eslint-utils": "npm:^4.4.0"
   peerDependencies:
     eslint: ^7.0.0 || ^8.0.0 || ^9.0.0
-  checksum: bbc3406139715dfa5f48d04f6d5b5e82f68929d954b0fa3821eb8cd6dc381b210512cedd2d874e5de5381005d316566f4ae046a4750ce3f5f5cbf28a14cc0ab2
+  checksum: d494982faeeafbd2aa5fae9cbceca546169a8399000f72d5d940fa5c4ba554612903bcafbb8033647179e5d21ccf1d621b433d089695f7f47ce3d9fcf4cd0abf
   languageName: node
   linkType: hard
 
