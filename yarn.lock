@@ -2842,8 +2842,8 @@ __metadata:
   linkType: hard
 
 "concurrently@npm:^9.0.1":
-  version: 9.1.0
-  resolution: "concurrently@npm:9.1.0"
+  version: 9.1.1
+  resolution: "concurrently@npm:9.1.1"
   dependencies:
     chalk: "npm:^4.1.2"
     lodash: "npm:^4.17.21"
@@ -2855,7 +2855,7 @@ __metadata:
   bin:
     conc: dist/bin/concurrently.js
     concurrently: dist/bin/concurrently.js
-  checksum: f2f42f94dde508bfbaf47b5ac654db9e8a4bf07d3d7b6267dd058ae6f362eec677ae7c8ede398d081e5fd0d1de5811dc9a53e57d3f1f68e72ac6459db9e0896b
+  checksum: 19e906b2d21a35fe98ce4d90e5ab905a1fb9eeecdb9eafde1f6905395f791e6ec902d7efca02b4bd3579480a615b4c127087eaba8c0718b87997b5812d227f5e
   languageName: node
   linkType: hard
 
