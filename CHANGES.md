@@ -1,7 +1,7 @@
 ## 1.2.4 (202?-??-??)
 
 - Bump @cypress/code-coverage from 3.13.4 to 3.13.9 #334
-- Bump @eslint/js from 9.13.0 to 9.17.0 #293 #316 #325
+- Bump @eslint/js from 9.13.0 to 9.18.0 #293 #316 #325 #346
 - Bump @eslint/plugin-kit from 0.2.0 to 0.2.3 #305
 - Bump @vitejs/plugin-vue from 5.1.4 to 5.2.1 #303 #323
 - Bump @vitest/coverage-v8 from 2.1.3 to 2.1.8 #315 #322
@@ -13,7 +13,7 @@
 - Bump cross-spawn from 7.0.3 to 7.0.5 #306
 - Bump cypress from 13.15.0 to 13.17.0 #299 #331
 - Bump cypress-vite from 1.5.0 to 1.6.0 #341
-- Bump eslint from 9.13.0 to 9.17.0 #295 #317 #335
+- Bump eslint from 9.13.0 to 9.18.0 #295 #317 #335 #342
 - Bump eslint-plugin-cypress from 4.0.0 to 4.1.0 #294
 - Bump eslint-plugin-promise from 7.1.0 to 7.2.1 #320
 - Bump eslint-plugin-vue from 9.29.1 to 9.32.0 #292 #312 #318
