@@ -1692,7 +1692,7 @@ __metadata:
     "@vue/server-renderer": "npm:^3.4.13"
     "@vue/test-utils": "npm:^2.4.1"
     concurrently: "npm:^9.0.1"
-    cypress: "npm:^13.3.2"
+    cypress: "npm:^14.0.0"
     cypress-vite: "npm:^1.4.2"
     eslint: "npm:^9.0.0"
     eslint-plugin-cypress: "npm:^4.0.0"
@@ -2943,9 +2943,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cypress@npm:^13.3.2":
-  version: 13.17.0
-  resolution: "cypress@npm:13.17.0"
+"cypress@npm:^14.0.0":
+  version: 14.0.0
+  resolution: "cypress@npm:14.0.0"
   dependencies:
     "@cypress/request": "npm:^3.0.6"
     "@cypress/xvfb": "npm:^1.2.4"
@@ -2992,7 +2992,7 @@ __metadata:
     yauzl: "npm:^2.10.0"
   bin:
     cypress: bin/cypress
-  checksum: 159ce620e32d2785082aaa1f4f30f203dcec466df4a8e80dfa299035358772fd513c35820070ba8db52e2bf58078a372ff7009068e26967f993656e7da62e221
+  checksum: 231af826d394b9a9f35200ab56e531e911f774b86b2ecb17a3183685982ac93d534e7c80cfe24ca36f74c99525025472fe28a3ccf2f246c8e67f85ecb768086b
   languageName: node
   linkType: hard
 
