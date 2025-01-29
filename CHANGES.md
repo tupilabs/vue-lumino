@@ -1,28 +1,31 @@
 ## 1.2.4 (202?-??-??)
 
-- Bump @cypress/code-coverage from 3.13.4 to 3.13.9 #334
-- Bump @eslint/js from 9.13.0 to 9.18.0 #293 #316 #325 #346
+- Bump @cypress/code-coverage from 3.13.4 to 3.13.10 #334 #344
+- Bump @cypress/vue from 6.0.1 to 6.0.2 #345
+- Bump @eslint/js from 9.13.0 to 9.19.0 #293 #316 #325 #346 #350
 - Bump @eslint/plugin-kit from 0.2.0 to 0.2.3 #305
 - Bump @vitejs/plugin-vue from 5.1.4 to 5.2.1 #303 #323
 - Bump @vitest/coverage-v8 from 2.1.3 to 2.1.8 #315 #322
 - Bump @vue/compiler-dom from 3.5.12 to 3.5.13 #308
 - Bump @vue/compiler-sfc from 3.5.12 to 3.5.13 #313
+- Bump @vue/eslint-config-standard from 8.0.1 to 9.0.0 #354
 - Bump @vue/server-renderer from 3.5.12 to 3.5.13 #309
 - Bump codecov/codecov-action from 4 to 5 #307
 - Bump concurrently from 9.0.1 to 9.1.2 #301 #336 #340
 - Bump cross-spawn from 7.0.3 to 7.0.5 #306
 - Bump cypress from 13.15.0 to 14.0.0 #299 #331 #347
 - Bump cypress-vite from 1.5.0 to 1.6.0 #341
-- Bump eslint from 9.13.0 to 9.18.0 #295 #317 #335 #342
+- Bump eslint from 9.13.0 to 9.19.0 #295 #317 #335 #342 #352
 - Bump eslint-plugin-cypress from 4.0.0 to 4.1.0 #294
 - Bump eslint-plugin-promise from 7.1.0 to 7.2.1 #320
 - Bump eslint-plugin-vue from 9.29.1 to 9.32.0 #292 #312 #318
-- Bump happy-dom from 15.7.4 to 16.6.0 #298 #310 #321 #333 #338 #348
+- Bump happy-dom from 15.7.4 to 16.7.3 #298 #310 #321 #333 #338 #348 #353
 - Bump nanoid from 3.3.7 to 3.3.8 #324
-- Bump sass from 1.79.5 to 1.83.1 #302 #314 #326 #337
+- Bump sass from 1.79.5 to 1.83.4 #302 #314 #326 #337 #351
 - Bump vite from 5.4.10 to 6.0.9 #311 #330 #332 #339 #349
 - Bump vitest from 2.1.3 to 2.1.8 #304 #327
 - Bump vue from 3.5.5 to 3.5.13 #300 #319
+- Bump wait-on from 8.0.1 to 8.0.2 #343
 
 ## 1.2.3 (2024-10-31)
 
