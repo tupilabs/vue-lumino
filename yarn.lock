@@ -1187,8 +1187,8 @@ __metadata:
   linkType: hard
 
 "@lumino/widgets@npm:^2.3.2, @lumino/widgets@npm:^2.5.0":
-  version: 2.5.0
-  resolution: "@lumino/widgets@npm:2.5.0"
+  version: 2.6.0
+  resolution: "@lumino/widgets@npm:2.6.0"
   dependencies:
     "@lumino/algorithm": "npm:^2.0.2"
     "@lumino/commands": "npm:^2.3.1"
@@ -1201,7 +1201,7 @@ __metadata:
     "@lumino/properties": "npm:^2.0.2"
     "@lumino/signaling": "npm:^2.1.3"
     "@lumino/virtualdom": "npm:^2.0.2"
-  checksum: a8071e806b822de46a738b8d944b75157e78eaeca18a09db813c6ad9334c56efa006e6d0ba09298333e7ed1fd4d15f2580380953750ba0f33f217f0ad9474611
+  checksum: f4c33359357175fb7124f7003778ff34cd2e86f5448b00ee43f79d560aa9e4a9c5320af6a7cdea4458535143a838e10d4e48c5499717f835a47f1e247866c65d
   languageName: node
   linkType: hard
 
