@@ -23,7 +23,7 @@
 - Bump nanoid from 3.3.7 to 3.3.8 #324
 - Bump sass from 1.79.5 to 1.83.4 #302 #314 #326 #337 #351
 - Bump vite from 5.4.10 to 6.0.9 #311 #330 #332 #339 #349
-- Bump vitest from 2.1.3 to 2.1.8 #304 #327
+- Bump vitest from 2.1.3 to 2.1.9 #304 #327 #360
 - Bump vue from 3.5.5 to 3.5.13 #300 #319
 - Bump wait-on from 8.0.1 to 8.0.2 #343
 
