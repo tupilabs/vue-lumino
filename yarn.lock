@@ -343,8 +343,8 @@ __metadata:
   linkType: hard
 
 "@cypress/code-coverage@npm:^3.12.18":
-  version: 3.13.11
-  resolution: "@cypress/code-coverage@npm:3.13.11"
+  version: 3.13.12
+  resolution: "@cypress/code-coverage@npm:3.13.12"
   dependencies:
     "@cypress/webpack-preprocessor": "npm:^6.0.0"
     chalk: "npm:4.1.2"
@@ -361,7 +361,7 @@ __metadata:
     babel-loader: ^8.3 || ^9
     cypress: "*"
     webpack: ^4 || ^5
-  checksum: d7f76c2563ea2a44a3eba0e9c451cb7065c3587405de9d10e8c6211f64554a86d8e2034ef5a32b86a016826705cf9ceaaf871d7f78f55acbd8f88bf75ac40328
+  checksum: 6ec9c618a38d4b0f2a7e415588cf618fd016da56250cc1ac2228b09a9a9be874370168875720c0c157d08a01da00690c65ca51e7656089200027fd2cc1a8e7d2
   languageName: node
   linkType: hard
 
