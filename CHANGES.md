@@ -13,6 +13,7 @@
 - Bump @vue/compiler-sfc from 3.5.12 to 3.5.13 #313
 - Bump @vue/eslint-config-standard from 8.0.1 to 9.0.0 #354
 - Bump @vue/server-renderer from 3.5.12 to 3.5.13 #309
+- Bump axios from 1.7.9 to 1.8.2 #381
 - Bump codecov/codecov-action from 4 to 5 #307
 - Bump concurrently from 9.0.1 to 9.1.2 #301 #336 #340
 - Bump cross-spawn from 7.0.3 to 7.0.5 #306
@@ -25,8 +26,8 @@
 - Bump happy-dom from 15.7.4 to 17.1.4 #298 #310 #321 #333 #338 #348 #353 #364 #372
 - Bump nanoid from 3.3.7 to 3.3.8 #324
 - Bump sass from 1.79.5 to 1.85.0 #302 #314 #326 #337 #351 #367
-- Bump vite from 5.4.10 to 6.1.0 #311 #330 #332 #339 #349 #365
-- Bump vitest from 2.1.3 to 3.0.5 #304 #327 #360 #361
+- Bump vite from 5.4.10 to 6.2.1 #311 #330 #332 #339 #349 #365 #380
+- Bump vitest from 2.1.3 to 3.0.8 #304 #327 #360 #361 #379
 - Bump vue from 3.5.5 to 3.5.13 #300 #319
 - Bump wait-on from 8.0.1 to 8.0.2 #343
 
