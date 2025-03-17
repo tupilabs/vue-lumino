@@ -38,7 +38,13 @@ export default [
       "vue/multi-word-component-names": 0
     },
     "languageOptions": {
-      "ecmaVersion": 2021
+      "ecmaVersion": 2021,
+      "globals": {
+        "console": true,
+        "document": true,
+        "CustomEvent": true,
+        "ResizeObserver": true
+      }
     }
   }
 ];
