@@ -2330,14 +2330,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"axios@npm:^1.7.9":
-  version: 1.8.2
-  resolution: "axios@npm:1.8.2"
+"axios@npm:^1.8.2":
+  version: 1.8.4
+  resolution: "axios@npm:1.8.4"
   dependencies:
     follow-redirects: "npm:^1.15.6"
     form-data: "npm:^4.0.0"
     proxy-from-env: "npm:^1.1.0"
-  checksum: d8c2969e4642dc6d39555ac58effe06c051ba7aac2bd40cad7a9011c019fb2f16ee011c5a6906cb25b8a4f87258c359314eb981f852e60ad445ecaeb793c7aa2
+  checksum: 450993c2ba975ffccaf0d480b68839a3b2435a5469a71fa2fb0b8a55cdb2c2ae47e609360b9c1e2b2534b73dfd69e2733a1cf9f8215bee0bcd729b72f801b0ce
   languageName: node
   linkType: hard
 
@@ -6780,6 +6780,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"rxjs@npm:^7.8.2":
+  version: 7.8.2
+  resolution: "rxjs@npm:7.8.2"
+  dependencies:
+    tslib: "npm:^2.1.0"
+  checksum: 1fcd33d2066ada98ba8f21fcbbcaee9f0b271de1d38dc7f4e256bfbc6ffcdde68c8bfb69093de7eeb46f24b1fb820620bf0223706cff26b4ab99a7ff7b2e2c45
+  languageName: node
+  linkType: hard
+
 "safe-array-concat@npm:^1.0.1":
   version: 1.0.1
   resolution: "safe-array-concat@npm:1.0.1"
@@ -7960,17 +7969,17 @@ __metadata:
   linkType: hard
 
 "wait-on@npm:^8.0.1":
-  version: 8.0.2
-  resolution: "wait-on@npm:8.0.2"
+  version: 8.0.3
+  resolution: "wait-on@npm:8.0.3"
   dependencies:
-    axios: "npm:^1.7.9"
+    axios: "npm:^1.8.2"
     joi: "npm:^17.13.3"
     lodash: "npm:^4.17.21"
     minimist: "npm:^1.2.8"
-    rxjs: "npm:^7.8.1"
+    rxjs: "npm:^7.8.2"
   bin:
     wait-on: bin/wait-on
-  checksum: 7a2a2193f601eb30d3125595fbed1abeb3ce0c9e164146aed27d12469d9b665273dc8e508a3a869c997f37b92d93478c202b38253a95c5c29e6fc64d0a317f5b
+  checksum: 7f14086c3bb6fc055207ab591d2faefc045f718aa7c959353a54af05cf08c53c25d9af80d4d5f6934a169cc0d97ebd1dcf024b13583d09b9a935c36bd745bd7b
   languageName: node
   linkType: hard
 
