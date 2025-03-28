@@ -2,16 +2,16 @@
 
 - Bump @cypress/code-coverage from 3.13.4 to 3.13.12 #334 #344 #355 #374
 - Bump @cypress/vue from 6.0.1 to 6.0.2 #345
-- Bump @eslint/js from 9.13.0 to 9.22.0 #293 #316 #325 #346 #350 #362 #385
+- Bump @eslint/js from 9.13.0 to 9.23.0 #293 #316 #325 #346 #350 #362 #385 #389
 - Bump @eslint/plugin-kit from 0.2.0 to 0.2.3 #305
 - Bump @lumino/datagrid from 2.4.1 to 2.5.0 #369
 - Bump @lumino/default-theme from 2.1.7 to 2.1.8 #357
 - Bump @lumino/widgets from 2.5.0 to 2.6.0 #359
 - Bump @vitejs/plugin-vue from 5.1.4 to 5.2.1 #303 #323
-- Bump @vitest/coverage-v8 from 2.1.3 to 3.0.5 #315 #322 #363
+- Bump @vitest/coverage-v8 from 2.1.3 to 3.0.9 #315 #322 #363 #387
 - Bump @vue/compiler-dom from 3.5.12 to 3.5.13 #308
 - Bump @vue/compiler-sfc from 3.5.12 to 3.5.13 #313
-- Bump @vue/eslint-config-standard from 8.0.1 to 9.0.0 #354
+- Bump @vue/eslint-config-standard from 8.0.1 to 9.0.1 #354 #388
 - Bump @vue/server-renderer from 3.5.12 to 3.5.13 #309
 - Bump axios from 1.7.9 to 1.8.2 #381
 - Bump codecov/codecov-action from 4 to 5 #307
@@ -26,10 +26,10 @@
 - Bump happy-dom from 15.7.4 to 17.4.4 #298 #310 #321 #333 #338 #348 #353 #364 #372 #382
 - Bump nanoid from 3.3.7 to 3.3.8 #324
 - Bump sass from 1.79.5 to 1.85.1 #302 #314 #326 #337 #351 #367 #375
-- Bump vite from 5.4.10 to 6.2.1 #311 #330 #332 #339 #349 #365 #380
-- Bump vitest from 2.1.3 to 3.0.8 #304 #327 #360 #361 #379
+- Bump vite from 5.4.10 to 6.2.3 #311 #330 #332 #339 #349 #365 #380 #392
+- Bump vitest from 2.1.3 to 3.0.9 #304 #327 #360 #361 #379 #391
 - Bump vue from 3.5.5 to 3.5.13 #300 #319
-- Bump wait-on from 8.0.1 to 8.0.2 #343
+- Bump wait-on from 8.0.1 to 8.0.3 #343 #390
 
 ## 1.2.3 (2024-10-31)
 
