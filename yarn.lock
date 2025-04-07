@@ -917,15 +917,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@lumino/collections@npm:^2.0.2":
-  version: 2.0.2
-  resolution: "@lumino/collections@npm:2.0.2"
-  dependencies:
-    "@lumino/algorithm": "npm:^2.0.2"
-  checksum: 67ee3e5781bde2d3dab9152701c7a9b4916b6e002f1b4b6299e043c58d36ac9a602f9df53bae4151dc622cb07320225b4d215cfe7f2894f237c276c3302417c3
-  languageName: node
-  linkType: hard
-
 "@lumino/collections@npm:^2.0.3":
   version: 2.0.3
   resolution: "@lumino/collections@npm:2.0.3"
@@ -969,19 +960,19 @@ __metadata:
   linkType: hard
 
 "@lumino/datagrid@npm:^2.3.0":
-  version: 2.5.0
-  resolution: "@lumino/datagrid@npm:2.5.0"
+  version: 2.5.1
+  resolution: "@lumino/datagrid@npm:2.5.1"
   dependencies:
-    "@lumino/algorithm": "npm:^2.0.2"
-    "@lumino/coreutils": "npm:^2.2.0"
-    "@lumino/disposable": "npm:^2.1.3"
-    "@lumino/domutils": "npm:^2.0.2"
-    "@lumino/dragdrop": "npm:^2.1.5"
-    "@lumino/keyboard": "npm:^2.0.2"
-    "@lumino/messaging": "npm:^2.0.2"
-    "@lumino/signaling": "npm:^2.1.3"
-    "@lumino/widgets": "npm:^2.6.0"
-  checksum: 03a8731897471de9e6fc5ebee8fb3295e54930ef52064140d96cf4aa0c9820fdccc55113bde5ca09e1e210e3f37765a49d28fc03f67dbce9102b354eefaa32ed
+    "@lumino/algorithm": "npm:^2.0.3"
+    "@lumino/coreutils": "npm:^2.2.1"
+    "@lumino/disposable": "npm:^2.1.4"
+    "@lumino/domutils": "npm:^2.0.3"
+    "@lumino/dragdrop": "npm:^2.1.6"
+    "@lumino/keyboard": "npm:^2.0.3"
+    "@lumino/messaging": "npm:^2.0.3"
+    "@lumino/signaling": "npm:^2.1.4"
+    "@lumino/widgets": "npm:^2.7.0"
+  checksum: 46acb396ec5aeffa8ab5ba19912e530e89411be1425b44630b550c638534d7d30708fbd2b75c1124042e2093085bcf980effc7c80fed84692629b6c285e322ce
   languageName: node
   linkType: hard
 
@@ -1013,13 +1004,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@lumino/domutils@npm:^2.0.2":
-  version: 2.0.2
-  resolution: "@lumino/domutils@npm:2.0.2"
-  checksum: 8176afd071c71dcd1d5938cb9cff62480096f013a5fc9852b15388e48d20137b778c5d65d036d432e6d2393f4694f8eee264725846f3efd203c1b802771d82a0
-  languageName: node
-  linkType: hard
-
 "@lumino/domutils@npm:^2.0.3":
   version: 2.0.3
   resolution: "@lumino/domutils@npm:2.0.3"
@@ -1047,27 +1031,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@lumino/keyboard@npm:^2.0.2":
-  version: 2.0.2
-  resolution: "@lumino/keyboard@npm:2.0.2"
-  checksum: becdbc31f2d7b6b3a25d3d7668f2da1388e703105b803e494bab60590e143f7772a444b5d04b989dc7b805ae518bb96a7ed8b7aacfccf59d836c0f2d48e1f6a5
-  languageName: node
-  linkType: hard
-
 "@lumino/keyboard@npm:^2.0.3":
   version: 2.0.3
   resolution: "@lumino/keyboard@npm:2.0.3"
   checksum: 98f72d9d51f6daeab3535d0c0d829b120ce8c462ef11cabf94df99c313c89d8f920b7a9d8fffd7ec77efaef121b49a13318ffe77dfae6c2e37c839510fa270a6
-  languageName: node
-  linkType: hard
-
-"@lumino/messaging@npm:^2.0.2":
-  version: 2.0.2
-  resolution: "@lumino/messaging@npm:2.0.2"
-  dependencies:
-    "@lumino/algorithm": "npm:^2.0.2"
-    "@lumino/collections": "npm:^2.0.2"
-  checksum: 716141aba9b5772b4430804ae64cf5895010de31710e735a2f5fe872730028b6b870ec2f3d6a313c848157d6df10ef007a8a44a74c882697cb0a5a4d50d5bc41
   languageName: node
   linkType: hard
 
@@ -1117,7 +1084,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@lumino/widgets@npm:^2.3.2, @lumino/widgets@npm:^2.6.0":
+"@lumino/widgets@npm:^2.3.2, @lumino/widgets@npm:^2.6.0, @lumino/widgets@npm:^2.7.0":
   version: 2.7.0
   resolution: "@lumino/widgets@npm:2.7.0"
   dependencies:
