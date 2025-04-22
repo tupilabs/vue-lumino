@@ -19,7 +19,7 @@
 - Bump cross-spawn from 7.0.3 to 7.0.5 #306
 - Bump cypress from 13.15.0 to 14.3.1 #299 #331 #347 #356 #368 #378 #396 #408 #413
 - Bump cypress-vite from 1.5.0 to 1.6.0 #341
-- Bump eslint from 9.13.0 to 9.23.0 #295 #317 #335 #342 #352 #366 #373 #383 #397
+- Bump eslint from 9.13.0 to 9.25.0 #295 #317 #335 #342 #352 #366 #373 #383 #397 #415
 - Bump eslint-plugin-cypress from 4.0.0 to 4.2.1 #294 #384 #411
 - Bump eslint-plugin-promise from 7.1.0 to 7.2.1 #320
 - Bump eslint-plugin-vue from 9.29.1 to 10.0.0 #292 #312 #318 #386
