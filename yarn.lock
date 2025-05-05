@@ -4948,12 +4948,12 @@ __metadata:
   linkType: hard
 
 "happy-dom@npm:^17.0.2":
-  version: 17.4.4
-  resolution: "happy-dom@npm:17.4.4"
+  version: 17.4.6
+  resolution: "happy-dom@npm:17.4.6"
   dependencies:
     webidl-conversions: "npm:^7.0.0"
     whatwg-mimetype: "npm:^3.0.0"
-  checksum: a84d36fc633ab5e5a36ae55d82b8955d1e65394242b4dba551ab447579e47f8565de61c361920c248ed2823883715dfa513ce46666800ad53c21dbde858048c2
+  checksum: 9df8af242ae879d6cb2381a3842cb474c97002c0449e467a938e27db76638728f776d65d0d4241064c2e14ae3047185310b2a939ec4873111d45a06d0a7b9b2e
   languageName: node
   linkType: hard
 
