@@ -23,7 +23,7 @@
 - Bump eslint-plugin-cypress from 4.0.0 to 4.3.0 #294 #384 #411 #418
 - Bump eslint-plugin-promise from 7.1.0 to 7.2.1 #320
 - Bump eslint-plugin-vue from 9.29.1 to 10.0.0 #292 #312 #318 #386
-- Bump happy-dom from 15.7.4 to 17.4.4 #298 #310 #321 #333 #338 #348 #353 #364 #372 #382
+- Bump happy-dom from 15.7.4 to 17.4.6 #298 #310 #321 #333 #338 #348 #353 #364 #372 #382 #426
 - Bump nanoid from 3.3.7 to 3.3.8 #324
 - Bump sass from 1.79.5 to 1.87.0 #302 #314 #326 #337 #351 #367 #375 #393 #410 #419
 - Bump sinon from 19.0.2 to 20.0.0 #394
