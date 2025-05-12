@@ -937,8 +937,8 @@ __metadata:
   linkType: hard
 
 "@lumino/datagrid@npm:^2.3.0":
-  version: 2.5.1
-  resolution: "@lumino/datagrid@npm:2.5.1"
+  version: 2.5.2
+  resolution: "@lumino/datagrid@npm:2.5.2"
   dependencies:
     "@lumino/algorithm": "npm:^2.0.3"
     "@lumino/coreutils": "npm:^2.2.1"
@@ -948,8 +948,8 @@ __metadata:
     "@lumino/keyboard": "npm:^2.0.3"
     "@lumino/messaging": "npm:^2.0.3"
     "@lumino/signaling": "npm:^2.1.4"
-    "@lumino/widgets": "npm:^2.7.0"
-  checksum: 46acb396ec5aeffa8ab5ba19912e530e89411be1425b44630b550c638534d7d30708fbd2b75c1124042e2093085bcf980effc7c80fed84692629b6c285e322ce
+    "@lumino/widgets": "npm:^2.7.1"
+  checksum: b1464084e4b3e228ae235bd1b3c7bb01c76fe65339273b7885e813baa19558a069898cb7ef7cfd5772470012b148be1594502c89607b813c04ee0b6811d0d139
   languageName: node
   linkType: hard
 
@@ -1032,7 +1032,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@lumino/widgets@npm:^2.3.2, @lumino/widgets@npm:^2.7.0, @lumino/widgets@npm:^2.7.1":
+"@lumino/widgets@npm:^2.3.2, @lumino/widgets@npm:^2.7.1":
   version: 2.7.1
   resolution: "@lumino/widgets@npm:2.7.1"
   dependencies:
