@@ -7,7 +7,7 @@
 - Bump @lumino/datagrid from 2.4.1 to 2.5.2 #369 #403 #430
 - Bump @lumino/default-theme from 2.1.7 to 2.1.10 #357 #407 #424
 - Bump @lumino/widgets from 2.5.0 to 2.7.1 #359 #400 #423
-- Bump @vitejs/plugin-vue from 5.1.4 to 5.2.3 #303 #323 #401
+- Bump @vitejs/plugin-vue from 5.1.4 to 5.2.4 #303 #323 #401 #440
 - Bump @vitest/coverage-v8 from 2.1.3 to 3.1.3 #315 #322 #363 #387 #405 #435
 - Bump @vue/compiler-dom from 3.5.12 to 3.5.13 #308
 - Bump @vue/compiler-sfc from 3.5.12 to 3.5.14 #313 #433
@@ -17,18 +17,18 @@
 - Bump codecov/codecov-action from 4 to 5 #307
 - Bump concurrently from 9.0.1 to 9.1.2 #301 #336 #340
 - Bump cross-spawn from 7.0.3 to 7.0.5 #306
-- Bump cypress from 13.15.0 to 14.3.3 #299 #331 #347 #356 #368 #378 #396 #408 #413 #416 #428
+- Bump cypress from 13.15.0 to 14.4.0 #299 #331 #347 #356 #368 #378 #396 #408 #413 #416 #428 #441
 - Bump cypress-vite from 1.5.0 to 1.6.0 #341
-- Bump eslint from 9.13.0 to 9.26.0 #295 #317 #335 #342 #352 #366 #373 #383 #397 #415 #420 #422
+- Bump eslint from 9.13.0 to 9.27.0 #295 #317 #335 #342 #352 #366 #373 #383 #397 #415 #420 #422 #438
 - Bump eslint-plugin-cypress from 4.0.0 to 4.3.0 #294 #384 #411 #418
 - Bump eslint-plugin-promise from 7.1.0 to 7.2.1 #320
-- Bump eslint-plugin-vue from 9.29.1 to 10.0.0 #292 #312 #318 #386
+- Bump eslint-plugin-vue from 9.29.1 to 10.1.0 #292 #312 #318 #386 #437
 - Bump happy-dom from 15.7.4 to 17.4.7 #298 #310 #321 #333 #338 #348 #353 #364 #372 #382 #426 #429
 - Bump nanoid from 3.3.7 to 3.3.8 #324
 - Bump sass from 1.79.5 to 1.89.0 #302 #314 #326 #337 #351 #367 #375 #393 #410 #419 #431 #432
 - Bump sinon from 19.0.2 to 20.0.0 #394
 - Bump vite from 5.4.10 to 6.3.5 #311 #330 #332 #339 #349 #365 #380 #392 #398 #399 #406 #414 #421 #427
-- Bump vitest from 2.1.3 to 3.1.2 #304 #327 #360 #361 #379 #391 #404 #417
+- Bump vitest from 2.1.3 to 3.1.4 #304 #327 #360 #361 #379 #391 #404 #417 #439
 - Bump vue from 3.5.5 to 3.5.14 #300 #319 #434
 - Bump vue-eslint-parser from 10.1.1 to 10.1.3 #409
 - Bump wait-on from 8.0.1 to 8.0.3 #343 #390
