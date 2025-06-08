@@ -34,7 +34,7 @@ jobs:
       uses: codecov/codecov-action@v5
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
-        file: ./coverage/lcov.info
+        files: ./coverage/lcov.info
         flags: unittests
         fail_ci_if_error: false
     - name: Build
@@ -63,7 +63,7 @@ jobs:
         uses: codecov/codecov-action@v5
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
-          file: ./coverage/lcov.info
+          files: ./coverage/lcov.info
           flags: e2e
           fail_ci_if_error: false
 

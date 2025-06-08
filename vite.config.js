@@ -64,6 +64,7 @@ export default defineConfig({
       provider: 'v8',
       reporter: [
         'html',
+        'lcov'
       ]
     }
   }
