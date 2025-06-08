@@ -1,4 +1,4 @@
-## 1.2.5 (22??-??-??)
+## 1.2.5 (20??-??-??)
 
 - Fix coverage: Use files instead of file for lociv.info, reporter set to lcov #447
 
