@@ -1,6 +1,6 @@
 ## 1.2.5 (22??-??-??)
 
--
+- Fix coverage: Use files instead of file for lociv.info, reporter set to lcov #447
 
 ## 1.2.4 (2025-06-08)
 
