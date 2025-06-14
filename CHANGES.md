@@ -1,5 +1,10 @@
 ## 1.2.5 (20??-??-??)
 
+- Bump @vue/compiler-dom from 3.5.13 to 3.5.16 #450
+- Bump @vue/server-renderer from 3.5.14 to 3.5.16 #451
+- Bump cypress from 14.4.0 to 14.4.1 #452
+- Bump eslint-plugin-vue from 10.1.0 to 10.2.0 #449
+- Bump sass from 1.89.0 to 1.89.1 #448
 - Fix coverage: Use files instead of file for lociv.info, reporter set to lcov #447
 
 ## 1.2.4 (2025-06-08)
