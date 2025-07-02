@@ -1,14 +1,17 @@
 ## 1.2.5 (20??-??-??)
 
 - Bump @eslint/js from 9.28.0 to 9.29.0 #455
-- Bump @vue/compiler-dom from 3.5.13 to 3.5.16 #450
-- Bump @vue/server-renderer from 3.5.14 to 3.5.16 #451
+- Bump @vitest/coverage-v8 from 3.1.4 to 3.2.4 #462
+- Bump @vue/compiler-dom from 3.5.13 to 3.5.17 #450 #463
+- Bump @vue/server-renderer from 3.5.14 to 3.5.17 #451 #460
 - Bump cypress from 14.4.0 to 14.4.1 #452
 - Bump eslint from 9.28.0 to 9.29.0 #453
+- Bump eslint-plugin-cypress from 4.3.0 to 5.1.0 #461
 - Bump eslint-plugin-vue from 10.1.0 to 10.2.0 #449
 - Bump happy-dom from 17.5.6 to 18.0.1 #456
 - Bump sass from 1.89.0 to 1.89.2 #448 #457
 - Bump vitest from 3.1.4 to 3.2.4 #458
+- Bump vue from 3.5.16 to 3.5.17 #459
 - Fix coverage: Use files instead of file for lociv.info, reporter set to lcov #447
 
 ## 1.2.4 (2025-06-08)
