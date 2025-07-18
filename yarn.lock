@@ -6688,7 +6688,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:^8.5.5, postcss@npm:^8.5.6":
+"postcss@npm:^8.5.6":
   version: 8.5.6
   resolution: "postcss@npm:8.5.6"
   dependencies:
@@ -8187,64 +8187,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite@npm:^5.0.0 || ^6.0.0 || ^7.0.0-0":
-  version: 7.0.0-beta.2
-  resolution: "vite@npm:7.0.0-beta.2"
-  dependencies:
-    esbuild: "npm:^0.25.0"
-    fdir: "npm:^6.4.6"
-    fsevents: "npm:~2.3.3"
-    picomatch: "npm:^4.0.2"
-    postcss: "npm:^8.5.5"
-    rollup: "npm:^4.40.0"
-    tinyglobby: "npm:^0.2.14"
-  peerDependencies:
-    "@types/node": ^20.19.0 || >=22.12.0
-    jiti: ">=1.21.0"
-    less: ^4.0.0
-    lightningcss: ^1.21.0
-    sass: ^1.70.0
-    sass-embedded: ^1.70.0
-    stylus: ">=0.54.8"
-    sugarss: ^5.0.0
-    terser: ^5.16.0
-    tsx: ^4.8.1
-    yaml: ^2.4.2
-  dependenciesMeta:
-    fsevents:
-      optional: true
-  peerDependenciesMeta:
-    "@types/node":
-      optional: true
-    jiti:
-      optional: true
-    less:
-      optional: true
-    lightningcss:
-      optional: true
-    sass:
-      optional: true
-    sass-embedded:
-      optional: true
-    stylus:
-      optional: true
-    sugarss:
-      optional: true
-    terser:
-      optional: true
-    tsx:
-      optional: true
-    yaml:
-      optional: true
-  bin:
-    vite: bin/vite.js
-  checksum: 2cd51b6749171e255e478329c3f5c6fad9a3de0f36731396d1bebd77411bd93b5d835d0d8549fe707ddf5fb0e0c2f562e29b04d095d73408e4d340464182d140
-  languageName: node
-  linkType: hard
-
-"vite@npm:^7.0.2":
-  version: 7.0.2
-  resolution: "vite@npm:7.0.2"
+"vite@npm:^5.0.0 || ^6.0.0 || ^7.0.0-0, vite@npm:^7.0.2":
+  version: 7.0.5
+  resolution: "vite@npm:7.0.5"
   dependencies:
     esbuild: "npm:^0.25.0"
     fdir: "npm:^6.4.6"
@@ -8293,7 +8238,7 @@ __metadata:
       optional: true
   bin:
     vite: bin/vite.js
-  checksum: a68c0302c820b39fe1119c2bc9dda865f48f6abd1629346c189e4983aef7d30e698c55ffff879d4ca6858cb3650c94b085a822215af9bd74d1eb8ceb2ce3e8c6
+  checksum: 95fb7f393adc2d2428e0e033ed4ea599323118f645415c35db3df40bd2c5a2962b0b4c967f35cfb80ca04efb1eb51bdb5f4b63529bb5f9aa3603d9fbeb50543f
   languageName: node
   linkType: hard
 
