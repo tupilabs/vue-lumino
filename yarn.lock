@@ -3050,8 +3050,8 @@ __metadata:
   linkType: hard
 
 "cypress@npm:^14.2.0":
-  version: 14.4.1
-  resolution: "cypress@npm:14.4.1"
+  version: 14.5.2
+  resolution: "cypress@npm:14.5.2"
   dependencies:
     "@cypress/request": "npm:^3.0.8"
     "@cypress/xvfb": "npm:^1.2.4"
@@ -3079,6 +3079,7 @@ __metadata:
     figures: "npm:^3.2.0"
     fs-extra: "npm:^9.1.0"
     getos: "npm:^3.2.1"
+    hasha: "npm:5.2.2"
     is-installed-globally: "npm:~0.4.0"
     lazy-ass: "npm:^1.6.0"
     listr2: "npm:^3.8.3"
@@ -3098,7 +3099,7 @@ __metadata:
     yauzl: "npm:^2.10.0"
   bin:
     cypress: bin/cypress
-  checksum: 56926fc8e5d250b5025f2ce035a261ffa65dec25c6e98539d497633363bfae963799771196ded4b8609d35a48c06208d1cdf72e209191abf873a064c8e9001a3
+  checksum: 55d1ba4773dc7d22769e6566bbdd5a78fd16dde4a4806d474de18a2713ed313db3d0734486f774fe11b3078c66d6b03703dfac05c26746ee3d704317734ebc0e
   languageName: node
   linkType: hard
 
@@ -4948,7 +4949,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"hasha@npm:^5.0.0":
+"hasha@npm:5.2.2, hasha@npm:^5.0.0":
   version: 5.2.2
   resolution: "hasha@npm:5.2.2"
   dependencies:
