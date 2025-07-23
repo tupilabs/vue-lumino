@@ -10,7 +10,9 @@
 - Bump cypress from 14.4.0 to 14.4.1 #452
 - Bump eslint from 9.28.0 to 9.29.0 9.31.0 #453 #465 #472 #471
 - Bump eslint-plugin-cypress from 4.3.0 to 5.1.0 #461
+- Bump eslint-plugin-import from 2.31.0 to 2.32.0 #476
 - Bump eslint-plugin-vue from 10.1.0 to 10.3.0 #449 #467
+- Bump form-data from 4.0.0 to 4.0.4 #478
 - Bump happy-dom from 17.5.6 to 18.0.1 #456
 - Bump sass from 1.89.0 to 1.89.2 #448 #457
 - Bump vite from 6.3.5 to 7.0.4 #468 #469
