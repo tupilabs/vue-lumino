@@ -8,17 +8,17 @@
 - Bump @vue/compiler-sfc from 3.5.16 to 3.5.18 #473 #4487
 - Bump @vue/server-renderer from 3.5.14 to 3.5.18 #451 #460 #481
 - Bump concurrently from 9.1.2 to 9.2.0 #464
-- Bump cypress from 14.4.0 to 14.5.3 #452 #477 #479
+- Bump cypress from 14.4.0 to 14.5.4 #452 #477 #479 #491
 - Bump eslint from 9.28.0 to 9.33.0 #453 #465 #472 #471 #482 #490
-- Bump eslint-plugin-cypress from 4.3.0 to 5.1.0 #461
+- Bump eslint-plugin-cypress from 4.3.0 to 5.1.1 #461 #493
 - Bump eslint-plugin-import from 2.31.0 to 2.32.0 #476
 - Bump eslint-plugin-vue from 10.1.0 to 10.4.0 #449 #467 #485
 - Bump form-data from 4.0.0 to 4.0.4 #478
 - Bump happy-dom from 17.5.6 to 18.0.1 #456
-- Bump sass from 1.89.0 to 1.89.2 #448 #457
+- Bump sass from 1.89.0 to 1.90.0 #448 #457 #492
 - Bump sinon from 20.0.0 to 21.0.0 #475
 - Bump tmp from 0.2.3 to 0.2.4 #489
-- Bump vite from 6.3.5 to 7.0.6 #468 #469 #483
+- Bump vite from 6.3.5 to 7.1.2 #468 #469 #483 #494
 - Bump vitest from 3.1.4 to 3.2.4 #458
 - Bump vue from 3.5.16 to 3.5.18 #459 #480
 - Bump vue-eslint-parser from 10.1.3 to 10.2.0 #470
