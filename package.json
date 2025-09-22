@@ -59,7 +59,7 @@
     "vite": "^7.0.2",
     "vitest": "^3.0.5",
     "vue-eslint-parser": "^10.1.1",
-    "wait-on": "^8.0.1"
+    "wait-on": "^9.0.1"
   },
   "keywords": [
     "component",
