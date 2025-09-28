@@ -4,14 +4,14 @@
 - Bump @eslint/js from 9.28.0 to 9.32.0 #455 #488
 - Bump @vitest/coverage-v8 from 3.1.4 to 3.2.4 #462
 - Bump @vitejs/plugin-vue from 5.2.4 to 6.0.1 #474 #486
-- Bump @vue/compiler-dom from 3.5.13 to 3.5.20 #450 #463 #501
+- Bump @vue/compiler-dom from 3.5.13 to 3.5.21 #450 #463 #501 #511
 - Bump @vue/compiler-sfc from 3.5.16 to 3.5.20 #473 #4487 #500
-- Bump @vue/server-renderer from 3.5.14 to 3.5.20 #451 #460 #481 #498
+- Bump @vue/server-renderer from 3.5.14 to 3.5.21 #451 #460 #481 #498 #510
 - Bump actions/checkout from 4 to 5 #496
 - Bump actions/setup-node from 4 to 5 #507
 - Bump concurrently from 9.1.2 to 9.2.1 #464 #503
 - Bump cypress from 14.4.0 to 15.0.0 #452 #477 #479 #491 #499
-- Bump eslint from 9.28.0 to 9.35.0 #453 #465 #472 #471 #482 #490 #502
+- Bump eslint from 9.28.0 to 9.36.0 #453 #465 #472 #471 #482 #490 #502 #513
 - Bump eslint-plugin-cypress from 4.3.0 to 5.1.1 #461 #493
 - Bump eslint-plugin-import from 2.31.0 to 2.32.0 #476
 - Bump eslint-plugin-vue from 10.1.0 to 10.4.0 #449 #467 #485
@@ -20,11 +20,11 @@
 - Bump sass from 1.89.0 to 1.90.0 #448 #457 #492
 - Bump sinon from 20.0.0 to 21.0.0 #475
 - Bump tmp from 0.2.3 to 0.2.4 #489
-- Bump vite from 6.3.5 to 7.1.5 #468 #469 #483 #494 #508
+- Bump vite from 6.3.5 to 7.1.7 #468 #469 #483 #494 #508 #512
 - Bump vitest from 3.1.4 to 3.2.4 #458
 - Bump vue from 3.5.16 to 3.5.21 #459 #480 #497 #505
 - Bump vue-eslint-parser from 10.1.3 to 10.2.0 #470
-- Bump wait-on from 8.0.3 to 8.0.4 #484
+- Bump wait-on from 8.0.3 to 9.0.1 #484 #509
 - Fix coverage: Use files instead of file for lociv.info, reporter set to lcov #447
 
 ## 1.2.4 (2025-06-08)
