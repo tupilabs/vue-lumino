@@ -3180,14 +3180,14 @@ __metadata:
   linkType: hard
 
 "cypress-vite@npm:^1.4.2":
-  version: 1.6.0
-  resolution: "cypress-vite@npm:1.6.0"
+  version: 1.8.0
+  resolution: "cypress-vite@npm:1.8.0"
   dependencies:
     chokidar: "npm:^3.5.3"
     debug: "npm:^4.3.4"
   peerDependencies:
-    vite: ^2.9.0 || ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0
-  checksum: 0ea175b1cd5580046f76014138cc126f757789cae59c278cec029e95d704cb1cf48c46cb28e894c97bd87a252e5156a4923bbea51d71c347ff85b96668e458a4
+    vite: ^2.9.0 || ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0
+  checksum: 8b8660ef93e0f1be0cc4af6a852266c760b57c603199ccb726400918f4cb2aa954ec1a6b8905e82e492a24343f49291beed582297ac59089b1afddd1840fbab7
   languageName: node
   linkType: hard
 
