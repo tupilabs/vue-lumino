@@ -2075,7 +2075,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vue/compiler-dom@npm:^3.4.13":
+"@vue/compiler-dom@npm:3.5.22, @vue/compiler-dom@npm:^3.4.13":
   version: 3.5.22
   resolution: "@vue/compiler-dom@npm:3.5.22"
   dependencies:
@@ -2139,6 +2139,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@vue/compiler-ssr@npm:3.5.22":
+  version: 3.5.22
+  resolution: "@vue/compiler-ssr@npm:3.5.22"
+  dependencies:
+    "@vue/compiler-dom": "npm:3.5.22"
+    "@vue/shared": "npm:3.5.22"
+  checksum: d27721b96784d078e410d978ed5e7c0a2fca10b8a8087d7cfc832baedf79de8b3d34d05def3e54d7baaca0f7583c7261628dca482ba4e8b3c908302e44a53b2f
+  languageName: node
+  linkType: hard
+
 "@vue/eslint-config-standard@npm:^9.0.0":
   version: 9.0.1
   resolution: "@vue/eslint-config-standard@npm:9.0.1"
@@ -2187,7 +2197,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vue/server-renderer@npm:3.5.21, @vue/server-renderer@npm:^3.4.13":
+"@vue/server-renderer@npm:3.5.21":
   version: 3.5.21
   resolution: "@vue/server-renderer@npm:3.5.21"
   dependencies:
@@ -2196,6 +2206,18 @@ __metadata:
   peerDependencies:
     vue: 3.5.21
   checksum: 4899387eb9885b17315ddfafd1e28d362a3dba0f781812fc8dc2a2f323789b8b193b8e9a0b7f9610a6fbbf4a2e83620b26c0f9e229598413fb220ba02e56a7df
+  languageName: node
+  linkType: hard
+
+"@vue/server-renderer@npm:^3.4.13":
+  version: 3.5.22
+  resolution: "@vue/server-renderer@npm:3.5.22"
+  dependencies:
+    "@vue/compiler-ssr": "npm:3.5.22"
+    "@vue/shared": "npm:3.5.22"
+  peerDependencies:
+    vue: 3.5.22
+  checksum: 154ea79c4735c02bf4788b6338495e60c1bf7d5ba69bfbd26a92ecb677ed653baafc276fe08249c441a784d2d03dd85d420ea8ed6803150d34b84ce8318362ba
   languageName: node
   linkType: hard
 
