@@ -18,7 +18,7 @@
 - Bump eslint-plugin-vue from 10.1.0 to 10.5.0 #449 #467 #485 #516
 - Bump form-data from 4.0.0 to 4.0.4 #478
 - Bump happy-dom from 17.5.6 to 20.0.0 #456 #519 #524
-- Bump sass from 1.89.0 to 1.90.0 #448 #457 #492
+- Bump sass from 1.89.0 to 1.93.2 #448 #457 #492 #521
 - Bump sinon from 20.0.0 to 21.0.0 #475
 - Bump tmp from 0.2.3 to 0.2.4 #489
 - Bump vite from 6.3.5 to 7.1.9 #468 #469 #483 #494 #508 #512 #523
