@@ -1,23 +1,23 @@
 ## 1.2.5 (20??-??-??)
 
 - Bump @cypress/code-coverage from 3.14.0 to 3.14.17 #466 #506 #525
-- Bump @eslint/js from 9.28.0 to 9.36.0 #455 #488 #514
+- Bump @eslint/js from 9.28.0 to 9.38.0 #455 #488 #514 #534
 - Bump @vitest/coverage-v8 from 3.1.4 to 3.2.4 #462
 - Bump @vitejs/plugin-vue from 5.2.4 to 6.0.1 #474 #486
 - Bump @vue/compiler-dom from 3.5.13 to 3.5.22 #450 #463 #501 #511 #517
-- Bump @vue/compiler-sfc from 3.5.16 to 3.5.20 #473 #4487 #500
+- Bump @vue/compiler-sfc from 3.5.16 to 3.5.22 #473 #4487 #500 #528
 - Bump @vue/server-renderer from 3.5.14 to 3.5.22 #451 #460 #481 #498 #510 #520
 - Bump actions/checkout from 4 to 5 #496
-- Bump actions/setup-node from 4 to 5 #507
+- Bump actions/setup-node from 4 to 6 #507 #535
 - Bump concurrently from 9.1.2 to 9.2.1 #464 #503
 - Bump cypress from 14.4.0 to 15.4.0 #452 #477 #479 #491 #499 #515 #526
 - Bump cypress-vite from 1.6.0 to 1.8.0 #518
-- Bump eslint from 9.28.0 to 9.37.0 #453 #465 #472 #471 #482 #490 #502 #513 #522
-- Bump eslint-plugin-cypress from 4.3.0 to 5.1.1 #461 #493
+- Bump eslint from 9.28.0 to 9.38.0 #453 #465 #472 #471 #482 #490 #502 #513 #522 #533
+- Bump eslint-plugin-cypress from 4.3.0 to 5.2.0 #461 #493 #531
 - Bump eslint-plugin-import from 2.31.0 to 2.32.0 #476
 - Bump eslint-plugin-vue from 10.1.0 to 10.5.0 #449 #467 #485 #516
 - Bump form-data from 4.0.0 to 4.0.4 #478
-- Bump happy-dom from 17.5.6 to 20.0.2 #456 #519 #524 #530
+- Bump happy-dom from 17.5.6 to 20.0.7 #456 #519 #524 #530 #532
 - Bump sass from 1.89.0 to 1.93.2 #448 #457 #492 #521
 - Bump sinon from 20.0.0 to 21.0.0 #475
 - Bump tmp from 0.2.3 to 0.2.4 #489
