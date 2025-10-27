@@ -712,14 +712,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eslint/js@npm:9.38.0":
-  version: 9.38.0
-  resolution: "@eslint/js@npm:9.38.0"
-  checksum: b4a0d561ab93f0b1bc6a3f5e3f83764c9cccade59f2c54f1d718c1dcc71ac4d1be97bef7300cca641932d72e7555c79a7bf07e4e4ce1d0a1ddccc84d6440d2a6
-  languageName: node
-  linkType: hard
-
-"@eslint/js@npm:^9.0.0":
+"@eslint/js@npm:9.38.0, @eslint/js@npm:^9.0.0":
   version: 9.38.0
   resolution: "@eslint/js@npm:9.38.0"
   checksum: b4a0d561ab93f0b1bc6a3f5e3f83764c9cccade59f2c54f1d718c1dcc71ac4d1be97bef7300cca641932d72e7555c79a7bf07e4e4ce1d0a1ddccc84d6440d2a6
@@ -5056,13 +5049,13 @@ __metadata:
   linkType: hard
 
 "happy-dom@npm:^20.0.0":
-  version: 20.0.7
-  resolution: "happy-dom@npm:20.0.7"
+  version: 20.0.8
+  resolution: "happy-dom@npm:20.0.8"
   dependencies:
     "@types/node": "npm:^20.0.0"
     "@types/whatwg-mimetype": "npm:^3.0.2"
     whatwg-mimetype: "npm:^3.0.0"
-  checksum: 55783eb6a8b660d5dd093ed40bd4e5a7da0ec6827ffee544c7697cc753c23f29a432de09f5dfa3e9e8d99b10be26a630975689ad92522686a83b27811990532e
+  checksum: 2b83fabd256d032a8c2e58c17d5bd1752c87de6d8f978da69bd9399b51ddc98d948b86a7ca82ba91419f8138bc562305cad482fce6b3bb7b196585af27b6c378
   languageName: node
   linkType: hard
 
