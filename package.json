@@ -37,7 +37,7 @@
     "@cypress/vue": "^6.0.0",
     "@eslint/js": "^9.0.0",
     "@vitejs/plugin-vue": "^6.0.0",
-    "@vitest/coverage-v8": "^3.0.5",
+    "@vitest/coverage-v8": "^4.0.13",
     "@vue/compiler-dom": "^3.4.13",
     "@vue/compiler-sfc": "^3.3.6",
     "@vue/eslint-config-standard": "^9.0.0",
