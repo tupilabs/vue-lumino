@@ -5,10 +5,10 @@
 - Bump @lumino/datagrid from 2.5.2 to 2.5.3 #552
 - Bump @lumino/widgets from 2.7.1 to 2.7.2 #558
 - Bump @vitest/coverage-v8 from 3.1.4 to 3.2.4 #462
-- Bump @vitejs/plugin-vue from 5.2.4 to 6.0.1 #474 #486
-- Bump @vue/compiler-dom from 3.5.13 to 3.5.24 #450 #463 #501 #511 #517 #547
-- Bump @vue/compiler-sfc from 3.5.16 to 3.5.22 #473 #4487 #500 #528
-- Bump @vue/server-renderer from 3.5.14 to 3.5.22 #451 #460 #481 #498 #510 #520
+- Bump @vitejs/plugin-vue from 5.2.4 to 6.0.3 #474 #486 #567
+- Bump @vue/compiler-dom from 3.5.13 to 3.5.25 #450 #463 #501 #511 #517 #547 #563
+- Bump @vue/compiler-sfc from 3.5.16 to 3.5.25 #473 #4487 #500 #528 #564
+- Bump @vue/server-renderer from 3.5.14 to 3.5.25 #451 #460 #481 #498 #510 #520 #562
 - Bump actions/checkout from 4 to 6  #496 #561
 - Bump actions/setup-node from 4 to 6 #507 #535
 - Bump concurrently from 9.1.2 to 9.2.1 #464 #503
