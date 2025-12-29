@@ -3236,8 +3236,8 @@ __metadata:
   linkType: hard
 
 "cypress@npm:^15.0.0":
-  version: 15.6.0
-  resolution: "cypress@npm:15.6.0"
+  version: 15.8.1
+  resolution: "cypress@npm:15.8.1"
   dependencies:
     "@cypress/request": "npm:^3.0.9"
     "@cypress/xvfb": "npm:^1.2.4"
@@ -3275,16 +3275,15 @@ __metadata:
     process: "npm:^0.11.10"
     proxy-from-env: "npm:1.0.0"
     request-progress: "npm:^3.0.0"
-    semver: "npm:^7.7.1"
     supports-color: "npm:^8.1.1"
-    systeminformation: "npm:5.27.7"
+    systeminformation: "npm:^5.27.14"
     tmp: "npm:~0.2.4"
     tree-kill: "npm:1.2.2"
     untildify: "npm:^4.0.0"
     yauzl: "npm:^2.10.0"
   bin:
     cypress: bin/cypress
-  checksum: 55534a2ee8e86bb9c7adaf42aaa4160cbafb3f52f78f5d288cba48230e431565ef1654d0c626238e2122a6fb08765db7447725516e6c28c05b05b7c51f5e4624
+  checksum: 6c5a5dba566b7bd939c3aa0fec23814ee16ca40a28f3a1b3a64ab18fc5e9c31725c9a128a45fcca9d2e1d9be3cbca7fbfbcc95a4be00157942b440a987b2e9a8
   languageName: node
   linkType: hard
 
@@ -7786,15 +7785,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"semver@npm:^7.7.1":
-  version: 7.7.1
-  resolution: "semver@npm:7.7.1"
-  bin:
-    semver: bin/semver.js
-  checksum: fd603a6fb9c399c6054015433051bdbe7b99a940a8fb44b85c2b524c4004b023d7928d47cb22154f8d054ea7ee8597f586605e05b52047f048278e4ac56ae958
-  languageName: node
-  linkType: hard
-
 "set-blocking@npm:^2.0.0":
   version: 2.0.0
   resolution: "set-blocking@npm:2.0.0"
@@ -8350,12 +8340,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"systeminformation@npm:5.27.7":
-  version: 5.27.7
-  resolution: "systeminformation@npm:5.27.7"
+"systeminformation@npm:^5.27.14":
+  version: 5.28.3
+  resolution: "systeminformation@npm:5.28.3"
   bin:
     systeminformation: lib/cli.js
-  checksum: 92a9f3a2f37e135422da745be8e51984d66ae4c411e3d5c0ffdab9aef5cd8abc45d0d476bfa28c4bfee30a6e73722649544a88c4b6fa82b426c291adbfcdd8f9
+  checksum: bd2d8fc170dd8c4e5c5fc39e473ce7dc9676b67f8460a7df4a8e49b6880469984dc2a3e840f93e55221d7464a96b02bd473631ed7473a4eb4e91fae906f0da3d
   conditions: (os=darwin | os=linux | os=win32 | os=freebsd | os=openbsd | os=netbsd | os=sunos | os=android)
   languageName: node
   linkType: hard
