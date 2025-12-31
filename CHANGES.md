@@ -12,7 +12,7 @@
 - Bump actions/checkout from 4 to 6  #496 #561
 - Bump actions/setup-node from 4 to 6 #507 #535
 - Bump concurrently from 9.1.2 to 9.2.1 #464 #503
-- Bump cypress from 14.4.0 to 15.6.0 #452 #477 #479 #491 #499 #515 #526 #538 #553
+- Bump cypress from 14.4.0 to 15.8.1 #452 #477 #479 #491 #499 #515 #526 #538 #553 #577
 - Bump cypress-vite from 1.6.0 to 1.8.0 #518
 - Bump eslint from 9.28.0 to 9.39.1.0 #453 #465 #472 #471 #482 #490 #502 #513 #522 #533 #551
 - Bump eslint-plugin-cypress from 4.3.0 to 5.2.0 #461 #493 #531
@@ -20,8 +20,8 @@
 - Bump eslint-plugin-vue from 10.1.0 to 10.6.0 #449 #467 #485 #516 #540 #557
 - Bump form-data from 4.0.0 to 4.0.4 #478
 - Bump happy-dom from 17.5.6 to 20.0.10 #456 #519 #524 #530 #532 #539 #545
-- Bump sass from 1.89.0 to 1.93.2 #448 #457 #492 #521
-- Bump sinon from 20.0.0 to 21.0.0 #475
+- Bump sass from 1.89.0 to 1.97.1 #448 #457 #492 #521 #576
+- Bump sinon from 20.0.0 to 21.0.1 #475 #573
 - Bump tmp from 0.2.3 to 0.2.4 #489
 - Bump vite from 6.3.5 to 7.1.11 #468 #469 #483 #494 #508 #512 #523 #536
 - Bump vitest from 3.1.4 to 3.2.4 #458
