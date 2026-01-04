@@ -9,6 +9,7 @@
 - Bump @vue/compiler-dom from 3.5.13 to 3.5.25 #450 #463 #501 #511 #517 #547 #563
 - Bump @vue/compiler-sfc from 3.5.16 to 3.5.25 #473 #4487 #500 #528 #564
 - Bump @vue/server-renderer from 3.5.14 to 3.5.25 #451 #460 #481 #498 #510 #520 #562
+- Bump actions/cache from 4 to 5 #572
 - Bump actions/checkout from 4 to 6  #496 #561
 - Bump actions/setup-node from 4 to 6 #507 #535
 - Bump concurrently from 9.1.2 to 9.2.1 #464 #503
