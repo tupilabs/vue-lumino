@@ -6,8 +6,8 @@
 - Bump @lumino/widgets from 2.7.1 to 2.7.2 #558
 - Bump @vitest/coverage-v8 from 3.1.4 to 3.2.4 #462
 - Bump @vitejs/plugin-vue from 5.2.4 to 6.0.3 #474 #486 #567
-- Bump @vue/compiler-dom from 3.5.13 to 3.5.25 #450 #463 #501 #511 #517 #547 #563
-- Bump @vue/compiler-sfc from 3.5.16 to 3.5.25 #473 #4487 #500 #528 #564
+- Bump @vue/compiler-dom from 3.5.13 to 3.5.26 #450 #463 #501 #511 #517 #547 #563 #580
+- Bump @vue/compiler-sfc from 3.5.16 to 3.5.26 #473 #4487 #500 #528 #564 #578
 - Bump @vue/server-renderer from 3.5.14 to 3.5.25 #451 #460 #481 #498 #510 #520 #562
 - Bump actions/cache from 4 to 5 #572
 - Bump actions/checkout from 4 to 6  #496 #561
@@ -18,7 +18,7 @@
 - Bump eslint from 9.28.0 to 9.39.1.0 #453 #465 #472 #471 #482 #490 #502 #513 #522 #533 #551
 - Bump eslint-plugin-cypress from 4.3.0 to 5.2.0 #461 #493 #531
 - Bump eslint-plugin-import from 2.31.0 to 2.32.0 #476
-- Bump eslint-plugin-vue from 10.1.0 to 10.6.0 #449 #467 #485 #516 #540 #557
+- Bump eslint-plugin-vue from 10.1.0 to 10.6.2 #449 #467 #485 #516 #540 #557 #579
 - Bump form-data from 4.0.0 to 4.0.4 #478
 - Bump happy-dom from 17.5.6 to 20.0.10 #456 #519 #524 #530 #532 #539 #545
 - Bump sass from 1.89.0 to 1.97.1 #448 #457 #492 #521 #576
