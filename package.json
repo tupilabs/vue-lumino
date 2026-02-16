@@ -35,7 +35,7 @@
   "devDependencies": {
     "@cypress/code-coverage": "^3.12.18",
     "@cypress/vue": "^6.0.0",
-    "@eslint/js": "^9.0.0",
+    "@eslint/js": "^10.0.1",
     "@vitejs/plugin-vue": "^6.0.0",
     "@vitest/coverage-v8": "^4.0.18",
     "@vue/compiler-dom": "^3.4.13",
