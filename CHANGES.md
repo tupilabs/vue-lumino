@@ -3,7 +3,7 @@
 - Bump @cypress/code-coverage from 3.14.0 to 3.14.17 #466 #506 #525
 - Bump @eslint/js from 9.28.0 to 9.39.0 #455 #488 #514 #534 #544
 - Bump @lumino/datagrid from 2.5.2 to 2.5.3 #552
-- Bump @lumino/widgets from 2.7.1 to 2.7.2 #558
+- Bump @lumino/widgets from 2.7.1 to 2.7.3 #558 #590
 - Bump @vitest/coverage-v8 from 3.1.4 to 4.0.18 #462 #586
 - Bump @vitejs/plugin-vue from 5.2.4 to 6.0.3 #474 #486 #567
 - Bump @vue/compiler-dom from 3.5.13 to 3.5.26 #450 #463 #501 #511 #517 #547 #563 #580
@@ -16,12 +16,13 @@
 - Bump cypress from 14.4.0 to 15.8.2 #452 #477 #479 #491 #499 #515 #526 #538 #553 #577 #581
 - Bump cypress-vite from 1.6.0 to 1.8.0 #518
 - Bump eslint from 9.28.0 to 9.39.2 #453 #465 #472 #471 #482 #490 #502 #513 #522 #533 #551 #584
-- Bump eslint-plugin-cypress from 4.3.0 to 5.2.0 #461 #493 #531
+- Bump eslint-plugin-cypress from 4.3.0 to 5.2.1 #461 #493 #531 #595
 - Bump eslint-plugin-import from 2.31.0 to 2.32.0 #476
 - Bump eslint-plugin-vue from 10.1.0 to 10.7.0 #449 #467 #485 #516 #540 #557 #579 #585
 - Bump form-data from 4.0.0 to 4.0.4 #478
-- Bump happy-dom from 17.5.6 to 20.0.10 #456 #519 #524 #530 #532 #539 #545
+- Bump happy-dom from 17.5.6 to 20.6.1 #456 #519 #524 #530 #532 #539 #545 #601
 - Bump lodash from 4.17.21 to 4.17.23 #589
+- Bump qs from 6.14.1 to 6.14.2 #597
 - Bump sass from 1.89.0 to 1.97.1 #448 #457 #492 #521 #576
 - Bump sinon from 20.0.0 to 21.0.1 #475 #573
 - Bump tmp from 0.2.3 to 0.2.4 #489
