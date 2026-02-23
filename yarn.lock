@@ -3194,8 +3194,8 @@ __metadata:
   linkType: hard
 
 "cypress@npm:^15.0.0":
-  version: 15.8.2
-  resolution: "cypress@npm:15.8.2"
+  version: 15.10.0
+  resolution: "cypress@npm:15.10.0"
   dependencies:
     "@cypress/request": "npm:^3.0.10"
     "@cypress/xvfb": "npm:^1.2.4"
@@ -3225,7 +3225,7 @@ __metadata:
     hasha: "npm:5.2.2"
     is-installed-globally: "npm:~0.4.0"
     listr2: "npm:^3.8.3"
-    lodash: "npm:^4.17.21"
+    lodash: "npm:^4.17.23"
     log-symbols: "npm:^4.0.0"
     minimist: "npm:^1.2.8"
     ospath: "npm:^1.2.2"
@@ -3241,7 +3241,7 @@ __metadata:
     yauzl: "npm:^2.10.0"
   bin:
     cypress: bin/cypress
-  checksum: 7e66fb43cc5e021be933a3365ef827929e190255c9c7ab229e247c5f9532e938e88ade880b4e3ac895aad3def35ccaeffa762c3f38c85578f0dc29ec6bb79ade
+  checksum: 0041a6baad4ce3a70c1bb5d872636eb1dd4d49a199a322162b79f11e7cef41dc1e53c7002ee55d7d2c59a5587f36aa015989803e912074f54fe13a94fe7c574d
   languageName: node
   linkType: hard
 
@@ -6209,7 +6209,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lodash@npm:^4.17.20, lodash@npm:^4.17.21":
+"lodash@npm:^4.17.20, lodash@npm:^4.17.21, lodash@npm:^4.17.23":
   version: 4.17.23
   resolution: "lodash@npm:4.17.23"
   checksum: 1264a90469f5bb95d4739c43eb6277d15b6d9e186df4ac68c3620443160fc669e2f14c11e7d8b2ccf078b81d06147c01a8ccced9aab9f9f63d50dcf8cace6bf6
