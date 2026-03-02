@@ -1026,6 +1026,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@lumino/dragdrop@npm:^2.1.8":
+  version: 2.1.8
+  resolution: "@lumino/dragdrop@npm:2.1.8"
+  dependencies:
+    "@lumino/coreutils": "npm:^2.2.2"
+    "@lumino/disposable": "npm:^2.1.5"
+  checksum: c0210f46f132446037d4af74d52d568937884b180a5eb7b0e05832a4e344bcbdd7b755cdc194c7d7d70eb583dd866dea2fc02434e13cd95df742a3181265956d
+  languageName: node
+  linkType: hard
+
 "@lumino/keyboard@npm:^2.0.4":
   version: 2.0.4
   resolution: "@lumino/keyboard@npm:2.0.4"
@@ -1080,21 +1090,21 @@ __metadata:
   linkType: hard
 
 "@lumino/widgets@npm:^2.3.2, @lumino/widgets@npm:^2.7.1, @lumino/widgets@npm:^2.7.2":
-  version: 2.7.3
-  resolution: "@lumino/widgets@npm:2.7.3"
+  version: 2.7.5
+  resolution: "@lumino/widgets@npm:2.7.5"
   dependencies:
     "@lumino/algorithm": "npm:^2.0.4"
     "@lumino/commands": "npm:^2.3.3"
     "@lumino/coreutils": "npm:^2.2.2"
     "@lumino/disposable": "npm:^2.1.5"
     "@lumino/domutils": "npm:^2.0.4"
-    "@lumino/dragdrop": "npm:^2.1.7"
+    "@lumino/dragdrop": "npm:^2.1.8"
     "@lumino/keyboard": "npm:^2.0.4"
     "@lumino/messaging": "npm:^2.0.4"
     "@lumino/properties": "npm:^2.0.4"
     "@lumino/signaling": "npm:^2.1.5"
     "@lumino/virtualdom": "npm:^2.0.4"
-  checksum: dba0901730acd115b951e8db630ae34679b715041bb288f08bfcbed32531d6e30b6ce0b6c4406071f9fac0f995a8dd029162473ecaf25d1570bb23214b304ef6
+  checksum: b96ac139279346528a3db33e022427c5e40ad2ee7782a4b77e0e939c57d130f2d09296419fdc733aaa1c564e703a31f4369f70f405a9654da9656e4fa2f600f7
   languageName: node
   linkType: hard
 
