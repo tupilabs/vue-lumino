@@ -3,6 +3,7 @@
 - Bump @cypress/code-coverage from 3.14.0 to 3.14.17 #466 #506 #525
 - Bump @eslint/js from 9.28.0 to 10.0.1 #455 #488 #514 #534 #544 #599
 - Bump @lumino/datagrid from 2.5.2 to 2.5.3 #552
+- Bump @lumino/default-theme from 2.1.10 to 2.1.14 #613
 - Bump @lumino/widgets from 2.7.1 to 2.7.5 #558 #590 #609
 - Bump @vitest/coverage-v8 from 3.1.4 to 4.0.18 #462 #586
 - Bump @vitejs/plugin-vue from 5.2.4 to 6.0.3 #474 #486 #567
@@ -13,9 +14,9 @@
 - Bump actions/checkout from 4 to 6  #496 #561
 - Bump actions/setup-node from 4 to 6 #507 #535
 - Bump concurrently from 9.1.2 to 9.2.1 #464 #503
-- Bump cypress from 14.4.0 to 15.10.0 #452 #477 #479 #491 #499 #515 #526 #538 #553 #577 #581 #606
+- Bump cypress from 14.4.0 to 15.11.0 #452 #477 #479 #491 #499 #515 #526 #538 #553 #577 #581 #606 #614
 - Bump cypress-vite from 1.6.0 to 1.8.0 #518
-- Bump eslint from 9.28.0 to 10.0.0 #453 #465 #472 #471 #482 #490 #502 #513 #522 #533 #551 #584 #598
+- Bump eslint from 9.28.0 to 10.0.2 #453 #465 #472 #471 #482 #490 #502 #513 #522 #533 #551 #584 #598 #611
 - Bump eslint-plugin-cypress from 4.3.0 to 5.2.1 #461 #493 #531 #595
 - Bump eslint-plugin-import from 2.31.0 to 2.32.0 #476
 - Bump eslint-plugin-vue from 10.1.0 to 10.7.0 #449 #467 #485 #516 #540 #557 #579 #585
@@ -26,7 +27,7 @@
 - Bump qs from 6.14.1 to 6.14.2 #597
 - Bump rollup from 4.46.3 to 4.59.0 #608
 - Bump sass from 1.89.0 to 1.97.3 #448 #457 #492 #521 #576 #593
-- Bump sinon from 20.0.0 to 21.0.1 #475 #573
+- Bump sinon from 20.0.0 to 21.0.2 #475 #573 #615
 - Bump systeminformation from 5.28.3 to 5.31.1 #602
 - Bump tmp from 0.2.3 to 0.2.4 #489
 - Bump vite from 6.3.5 to 7.3.1 #468 #469 #483 #494 #508 #512 #523 #536 #582
