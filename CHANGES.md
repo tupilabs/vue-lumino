@@ -2,7 +2,7 @@
 
 - Bump @cypress/code-coverage from 3.14.0 to 3.14.17 #466 #506 #525
 - Bump @eslint/js from 9.28.0 to 10.0.1 #455 #488 #514 #534 #544 #599
-- Bump @lumino/datagrid from 2.5.2 to 2.5.3 #552
+- Bump @lumino/datagrid from 2.5.2 to 2.5.6 #552 #633
 - Bump @lumino/default-theme from 2.1.10 to 2.1.14 #613
 - Bump @lumino/widgets from 2.7.1 to 2.7.5 #558 #590 #609
 - Bump @vitest/coverage-v8 from 3.1.4 to 4.0.18 #462 #586
@@ -33,7 +33,7 @@
 - Bump sinon from 20.0.0 to 21.0.2 #475 #573 #615
 - Bump systeminformation from 5.28.3 to 5.31.1 #602
 - Bump tmp from 0.2.3 to 0.2.4 #489
-- Bump vite from 6.3.5 to 7.3.1 #468 #469 #483 #494 #508 #512 #523 #536 #582
+- Bump vite from 6.3.5 to 7.3.2 #468 #469 #483 #494 #508 #512 #523 #536 #582 #635
 - Bump vitest from 3.1.4 to 4.1.2 #458 #586 #629
 - Bump vue from 3.5.16 to 3.5.27 #459 #480 #497 #505 #527 #548 #587
 - Bump vue-eslint-parser from 10.1.3 to 10.2.0 #470
