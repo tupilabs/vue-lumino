@@ -2187,6 +2187,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@vue/compiler-core@npm:3.5.32":
+  version: 3.5.32
+  resolution: "@vue/compiler-core@npm:3.5.32"
+  dependencies:
+    "@babel/parser": "npm:^7.29.2"
+    "@vue/shared": "npm:3.5.32"
+    entities: "npm:^7.0.1"
+    estree-walker: "npm:^2.0.2"
+    source-map-js: "npm:^1.2.1"
+  checksum: 46133e028609bfe5be21ebf0857b260825cb1aa715e854dab7e2dd26916d9a5b75fbf3dd2add320255b8161973f4db2dc056a653a1bb67296cc81dd0dc5028ff
+  languageName: node
+  linkType: hard
+
 "@vue/compiler-dom@npm:3.5.27":
   version: 3.5.27
   resolution: "@vue/compiler-dom@npm:3.5.27"
@@ -2197,13 +2210,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vue/compiler-dom@npm:3.5.31, @vue/compiler-dom@npm:^3.4.13":
+"@vue/compiler-dom@npm:3.5.31":
   version: 3.5.31
   resolution: "@vue/compiler-dom@npm:3.5.31"
   dependencies:
     "@vue/compiler-core": "npm:3.5.31"
     "@vue/shared": "npm:3.5.31"
   checksum: 9896356028fbd57666358a90288f6c0f83e7ccf16d501a1cea750f18c576f606a46e727556487f4337ab2fd486cf14c6746ed042639e2d4749c5b194f49cd768
+  languageName: node
+  linkType: hard
+
+"@vue/compiler-dom@npm:^3.4.13":
+  version: 3.5.32
+  resolution: "@vue/compiler-dom@npm:3.5.32"
+  dependencies:
+    "@vue/compiler-core": "npm:3.5.32"
+    "@vue/shared": "npm:3.5.32"
+  checksum: d061e950240e48ce09500005f58ffe5b09f8627f5c999ecf7f52b9525d527e25fc5f7527e66ce67acbe5464a395ba91ad27a5791223f5d1c7064af3b234eefd4
   languageName: node
   linkType: hard
 
@@ -2344,6 +2367,13 @@ __metadata:
   version: 3.5.31
   resolution: "@vue/shared@npm:3.5.31"
   checksum: a727c20ac555569acec5e05966e2b4673c39f8c0d9ac3aa9e97eaffbe2b73e83cf80e8530fd959355964e931b75da67d4674dc027a55ebcfb6ac04ec35ce5c76
+  languageName: node
+  linkType: hard
+
+"@vue/shared@npm:3.5.32":
+  version: 3.5.32
+  resolution: "@vue/shared@npm:3.5.32"
+  checksum: 5b070d2cc7bd6db8109f3b8826a2ed67f4e9806ad1290d7a9af606afeaa071051c63c00096e4bf5094ae79673e21c637ed637efbe0cf73f6e1b5a3e32eaa73ed
   languageName: node
   linkType: hard
 
