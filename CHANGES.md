@@ -16,16 +16,17 @@
 - Bump axios from 1.13.6 to 1.15.0 #636
 - Bump codecov/codecov-action from 5 to 6 #627
 - Bump concurrently from 9.1.2 to 9.2.1 #464 #503
-- Bump cypress from 14.4.0 to 15.11.0 #452 #477 #479 #491 #499 #515 #526 #538 #553 #577 #581 #606 #614
+- Bump cypress from 14.4.0 to 15.13.0 #452 #477 #479 #491 #499 #515 #526 #538 #553 #577 #581 #606 #614 #631
 - Bump cypress-vite from 1.6.0 to 1.8.0 #518
 - Bump eslint from 9.28.0 to 10.0.2 #453 #465 #472 #471 #482 #490 #502 #513 #522 #533 #551 #584 #598 #611
-- Bump eslint-plugin-cypress from 4.3.0 to 5.2.1 #461 #493 #531 #595
+- Bump eslint-plugin-cypress from 4.3.0 to 6.3.1 #461 #493 #531 #595 #632 #641
 - Bump eslint-plugin-import from 2.31.0 to 2.32.0 #476
 - Bump eslint-plugin-vue from 10.1.0 to 10.7.0 #449 #467 #485 #516 #540 #557 #579 #585
+- Bump follow-redirects from 1.15.11 to 1.16.0 #637
 - Bump form-data from 4.0.0 to 4.0.4 #478
 - Bump happy-dom from 17.5.6 to 20.8.9 #456 #519 #524 #530 #532 #539 #545 #601 #604 #624
 - Bump immutable from 5.0.3 to 5.1.5 #612
-- Bump lodash from 4.17.21 to 4.17.23 #589
+- Bump lodash from 4.17.21 to 4.18.1 #589 #630
 - Bump picomatch from 2.3.1 to 2.3.2 #622
 - Bump qs from 6.14.1 to 6.14.2 #597
 - Bump rollup from 4.46.3 to 4.59.0 #608
