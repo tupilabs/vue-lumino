@@ -7,20 +7,21 @@
 - Bump @lumino/widgets from 2.7.1 to 2.7.5 #558 #590 #609
 - Bump @vitest/coverage-v8 from 3.1.4 to 4.0.18 #462 #586
 - Bump @vitejs/plugin-vue from 5.2.4 to 6.0.5 #474 #486 #567 #620
-- Bump @vue/compiler-dom from 3.5.13 to 3.5.31 #450 #463 #501 #511 #517 #547 #563 #580 #628
+- Bump @vue/compiler-dom from 3.5.13 to 3.5.33 #450 #463 #501 #511 #517 #547 #563 #580 #628 #646
 - Bump @vue/compiler-sfc from 3.5.16 to 3.5.31 #473 #4487 #500 #528 #564 #578 #607 #626
-- Bump @vue/server-renderer from 3.5.14 to 3.5.31 #451 #460 #481 #498 #510 #520 #562 #600 #625
+- Bump @vue/server-renderer from 3.5.14 to 3.5.33 #451 #460 #481 #498 #510 #520 #562 #600 #625 #648
 - Bump actions/cache from 4 to 5 #572
 - Bump actions/checkout from 4 to 6  #496 #561
 - Bump actions/setup-node from 4 to 6 #507 #535
-- Bump axios from 1.13.6 to 1.15.0 #636
-- Bump codecov/codecov-action from 5 to 6 #627
+- Bump axios from 1.13.6 to 1.16.0 #636 #650
+- Bump codecov/codecov-action from 5 to 7 #627 #563
 - Bump concurrently from 9.1.2 to 9.2.1 #464 #503
-- Bump cypress from 14.4.0 to 15.13.0 #452 #477 #479 #491 #499 #515 #526 #538 #553 #577 #581 #606 #614 #631
+- Bump cypress from 14.4.0 to 15.14.2 #452 #477 #479 #491 #499 #515 #526 #538 #553 #577 #581 #606 #614 #631 #649
 - Bump cypress-vite from 1.6.0 to 1.8.0 #518
 - Bump eslint from 9.28.0 to 10.0.2 #453 #465 #472 #471 #482 #490 #502 #513 #522 #533 #551 #584 #598 #611
 - Bump eslint-plugin-cypress from 4.3.0 to 6.3.1 #461 #493 #531 #595 #632 #641
 - Bump eslint-plugin-import from 2.31.0 to 2.32.0 #476
+- Bump eslint-plugin-promise from 7.2.1 to 7.3.0 #647
 - Bump eslint-plugin-vue from 10.1.0 to 10.7.0 #449 #467 #485 #516 #540 #557 #579 #585
 - Bump follow-redirects from 1.15.11 to 1.16.0 #637
 - Bump form-data from 4.0.0 to 4.0.4 #478
@@ -28,14 +29,15 @@
 - Bump immutable from 5.0.3 to 5.1.5 #612
 - Bump lodash from 4.17.21 to 4.18.1 #589 #630
 - Bump picomatch from 2.3.1 to 2.3.2 #622
+- Bump postcss from 8.5.6 to 8.5.12 #643
 - Bump qs from 6.14.1 to 6.14.2 #597
 - Bump rollup from 4.46.3 to 4.59.0 #608
-- Bump sass from 1.89.0 to 1.97.3 #448 #457 #492 #521 #576 #593
+- Bump sass from 1.89.0 to 1.99.0 #448 #457 #492 #521 #576 #593 #639
 - Bump sinon from 20.0.0 to 21.0.2 #475 #573 #615
-- Bump systeminformation from 5.28.3 to 5.31.1 #602
-- Bump tmp from 0.2.3 to 0.2.4 #489
+- Bump systeminformation from 5.28.3 to 5.31.6 #602 #651
+- Bump tmp from 0.2.3 to 0.2.7 #489 #652
 - Bump vite from 6.3.5 to 7.3.2 #468 #469 #483 #494 #508 #512 #523 #536 #582 #635
-- Bump vitest from 3.1.4 to 4.1.2 #458 #586 #629
+- Bump vitest from 3.1.4 to 4.1.4 #458 #586 #629 #640
 - Bump vue from 3.5.16 to 3.5.27 #459 #480 #497 #505 #527 #548 #587
 - Bump vue-eslint-parser from 10.1.3 to 10.2.0 #470
 - Bump wait-on from 8.0.3 to 9.0.3 #484 #509 #554
