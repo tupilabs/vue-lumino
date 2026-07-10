@@ -1,7 +1,7 @@
 ## 1.2.5 (20??-??-??)
 
 - Bump @babel/core from 7.23.7 to 7.29.7 #658
-- Bump @cypress/code-coverage from 3.14.0 to 3.14.17 #466 #506 #525
+- Bump @cypress/code-coverage from 3.14.0 to 4.0.3 #466 #506 #525 #644
 - Bump @eslint/js from 9.28.0 to 10.0.1 #455 #488 #514 #534 #544 #599
 - Bump @lumino/datagrid from 2.5.2 to 2.5.6 #552 #633
 - Bump @lumino/default-theme from 2.1.10 to 2.1.14 #613
@@ -17,7 +17,7 @@
 - Bump axios from 1.13.6 to 1.16.0 #636 #650
 - Bump codecov/codecov-action from 5 to 7 #627 #563
 - Bump concurrently from 9.1.2 to 9.2.1 #464 #503
-- Bump cypress from 14.4.0 to 15.14.2 #452 #477 #479 #491 #499 #515 #526 #538 #553 #577 #581 #606 #614 #631 #649
+- Bump cypress from 14.4.0 to 15.18.1 #452 #477 #479 #491 #499 #515 #526 #538 #553 #577 #581 #606 #614 #631 #649 #656
 - Bump cypress-vite from 1.6.0 to 1.8.0 #518
 - Bump eslint from 9.28.0 to 10.0.2 #453 #465 #472 #471 #482 #490 #502 #513 #522 #533 #551 #584 #598 #611
 - Bump eslint-plugin-cypress from 4.3.0 to 6.3.1 #461 #493 #531 #595 #632 #641
@@ -37,7 +37,7 @@
 - Bump sinon from 20.0.0 to 21.0.2 #475 #573 #615
 - Bump systeminformation from 5.28.3 to 5.31.6 #602 #651
 - Bump tmp from 0.2.3 to 0.2.7 #489 #652
-- Bump vite from 6.3.5 to 7.3.2 #468 #469 #483 #494 #508 #512 #523 #536 #582 #635
+- Bump vite from 6.3.5 to 8.1.4 #468 #469 #483 #494 #508 #512 #523 #536 #582 #635 #657
 - Bump vitest from 3.1.4 to 4.1.4 #458 #586 #629 #640
 - Bump vue from 3.5.16 to 3.5.27 #459 #480 #497 #505 #527 #548 #587
 - Bump vue-eslint-parser from 10.1.3 to 10.2.0 #470
