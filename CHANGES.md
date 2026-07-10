@@ -1,5 +1,6 @@
 ## 1.2.5 (20??-??-??)
 
+- Bump @babel/core from 7.23.7 to 7.29.7 #658
 - Bump @cypress/code-coverage from 3.14.0 to 3.14.17 #466 #506 #525
 - Bump @eslint/js from 9.28.0 to 10.0.1 #455 #488 #514 #534 #544 #599
 - Bump @lumino/datagrid from 2.5.2 to 2.5.6 #552 #633
@@ -10,8 +11,8 @@
 - Bump @vue/compiler-dom from 3.5.13 to 3.5.33 #450 #463 #501 #511 #517 #547 #563 #580 #628 #646
 - Bump @vue/compiler-sfc from 3.5.16 to 3.5.31 #473 #4487 #500 #528 #564 #578 #607 #626
 - Bump @vue/server-renderer from 3.5.14 to 3.5.33 #451 #460 #481 #498 #510 #520 #562 #600 #625 #648
-- Bump actions/cache from 4 to 5 #572
-- Bump actions/checkout from 4 to 6  #496 #561
+- Bump actions/cache from 4 to 6 #572 #661
+- Bump actions/checkout from 4 to 7  #496 #561 #660
 - Bump actions/setup-node from 4 to 6 #507 #535
 - Bump axios from 1.13.6 to 1.16.0 #636 #650
 - Bump codecov/codecov-action from 5 to 7 #627 #563
@@ -24,7 +25,7 @@
 - Bump eslint-plugin-promise from 7.2.1 to 7.3.0 #647
 - Bump eslint-plugin-vue from 10.1.0 to 10.7.0 #449 #467 #485 #516 #540 #557 #579 #585
 - Bump follow-redirects from 1.15.11 to 1.16.0 #637
-- Bump form-data from 4.0.0 to 4.0.4 #478
+- Bump form-data from 4.0.0 to 4.0.6 #478 #659
 - Bump happy-dom from 17.5.6 to 20.8.9 #456 #519 #524 #530 #532 #539 #545 #601 #604 #624
 - Bump immutable from 5.0.3 to 5.1.5 #612
 - Bump lodash from 4.17.21 to 4.18.1 #589 #630
