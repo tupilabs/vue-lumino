@@ -1,5 +1,5 @@
 import {defineConfig} from 'cypress'
-import codeCoverageTask from '@cypress/code-coverage/task.js'
+import codeCoverageTask from '@cypress/code-coverage/task'
 import vitePreprocessor from 'cypress-vite'
 import {resolve} from 'path'
 
