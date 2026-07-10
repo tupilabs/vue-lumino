@@ -7,7 +7,7 @@
 - Bump @lumino/default-theme from 2.1.10 to 2.1.14 #613
 - Bump @lumino/widgets from 2.7.1 to 2.7.5 #558 #590 #609
 - Bump @vitest/coverage-v8 from 3.1.4 to 4.0.18 #462 #586
-- Bump @vitejs/plugin-vue from 5.2.4 to 6.0.5 #474 #486 #567 #620
+- Bump @vitejs/plugin-vue from 5.2.4 to 6.0.7 #474 #486 #567 #620 #654
 - Bump @vue/compiler-dom from 3.5.13 to 3.5.33 #450 #463 #501 #511 #517 #547 #563 #580 #628 #646
 - Bump @vue/compiler-sfc from 3.5.16 to 3.5.31 #473 #4487 #500 #528 #564 #578 #607 #626
 - Bump @vue/server-renderer from 3.5.14 to 3.5.33 #451 #460 #481 #498 #510 #520 #562 #600 #625 #648
@@ -26,7 +26,7 @@
 - Bump eslint-plugin-vue from 10.1.0 to 10.7.0 #449 #467 #485 #516 #540 #557 #579 #585
 - Bump follow-redirects from 1.15.11 to 1.16.0 #637
 - Bump form-data from 4.0.0 to 4.0.6 #478 #659
-- Bump happy-dom from 17.5.6 to 20.8.9 #456 #519 #524 #530 #532 #539 #545 #601 #604 #624
+- Bump happy-dom from 17.5.6 to 20.10.3 #456 #519 #524 #530 #532 #539 #545 #601 #604 #624 #655
 - Bump immutable from 5.0.3 to 5.1.5 #612
 - Bump lodash from 4.17.21 to 4.18.1 #589 #630
 - Bump picomatch from 2.3.1 to 2.3.2 #622
