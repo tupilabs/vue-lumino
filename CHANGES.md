@@ -1,4 +1,4 @@
-## 1.2.5 (20??-??-??)
+## 1.2.5 (2026-07-11)
 
 - Bump @babel/core from 7.23.7 to 7.29.7 #658
 - Bump @cypress/code-coverage from 3.14.0 to 4.0.3 #466 #506 #525 #644
