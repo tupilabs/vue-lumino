@@ -37,3 +37,5 @@ yarn-error.log*
 # Coverage files
 .nyc_output/
 coverage
+
+*.timestamp-*.mjs
