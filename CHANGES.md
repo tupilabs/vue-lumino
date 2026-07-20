@@ -1,6 +1,12 @@
 ## 1.2.6 (20??-??-??)
 
-- 
+- Bump @lumino/widgets from 2.7.5 to 2.9.0#662
+- Bump actions/setup-node from 6 to 7#669
+- Bump eslint from 10.0.2 to 10.7.0#664
+- Bump eslint-plugin-cypress from 6.3.1 to 6.4.2#663
+- Bump happy-dom from 20.10.3 to 20.10.6#665
+- Bump systeminformation from 5.31.6 to 5.31.17#667
+- Bump vue from 3.5.27 to 3.5.39#666
 
 ## 1.2.5 (2026-07-11)
 
