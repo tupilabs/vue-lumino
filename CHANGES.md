@@ -6,6 +6,7 @@
 - Bump eslint-plugin-cypress from 6.3.1 to 6.4.2#663
 - Bump happy-dom from 20.10.3 to 20.10.6#665
 - Bump systeminformation from 5.31.6 to 5.31.17#667
+- Bump vite from 8.1.4 to 8.1.5#668
 - Bump vue from 3.5.27 to 3.5.39#666
 
 ## 1.2.5 (2026-07-11)
