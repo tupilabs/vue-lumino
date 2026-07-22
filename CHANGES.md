@@ -1,13 +1,17 @@
 ## 1.2.6 (20??-??-??)
 
-- Bump @lumino/widgets from 2.7.5 to 2.9.0#662
-- Bump actions/setup-node from 6 to 7#669
-- Bump eslint from 10.0.2 to 10.7.0#664
-- Bump eslint-plugin-cypress from 6.3.1 to 6.4.2#663
-- Bump happy-dom from 20.10.3 to 20.10.6#665
-- Bump systeminformation from 5.31.6 to 5.31.17#667
-- Bump vite from 8.1.4 to 8.1.5#668
-- Bump vue from 3.5.27 to 3.5.39#666
+- Bump @lumino/widgets from 2.7.5 to 2.9.0 #662
+- Bump actions/setup-node from 6 to 7 #669
+- Bump axios from 1.16.0 to 1.18.1 #670
+- Bump brace-expansion from 1.1.11 to 1.1.16 #671
+- Bump eslint from 10.0.2 to 10.7.0 #664
+- Bump eslint-plugin-cypress from 6.3.1 to 6.4.2 #663
+- Bump immutable from 5.1.5 to 5.1.9 #673
+- Bump js-yaml from 3.14.1 to 3.15.0 #672
+- Bump happy-dom from 20.10.3 to 20.10.6 #665
+- Bump systeminformation from 5.31.6 to 5.31.17 #667
+- Bump vite from 8.1.4 to 8.1.5 #668
+- Bump vue from 3.5.27 to 3.5.39 #666
 
 ## 1.2.5 (2026-07-11)
 
