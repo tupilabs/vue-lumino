@@ -15,7 +15,7 @@
 - Bump sinon from 21.0.2 to 22.0.0 #683
 - Bump systeminformation from 5.31.6 to 5.31.17 #667
 - Bump vite from 8.1.4 to 8.1.5 #668
-- Bump vue from 3.5.27 to 3.5.39 #666
+- Bump vue from 3.5.27 to 3.5.40 #666 #678
 - Bump wait-on from 9.0.4 to 9.0.10 #682
 - fix: this dependabot configuration does not set a cool down period (thanks @anupamme) #681
 
