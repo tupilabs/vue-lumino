@@ -765,12 +765,12 @@ __metadata:
   linkType: hard
 
 "@lumino/default-theme@npm:^2.1.4":
-  version: 2.1.14
-  resolution: "@lumino/default-theme@npm:2.1.14"
+  version: 2.1.16
+  resolution: "@lumino/default-theme@npm:2.1.16"
   dependencies:
-    "@lumino/dragdrop": "npm:^2.1.8"
-    "@lumino/widgets": "npm:^2.7.5"
-  checksum: 4d3d72bf1ff3bcf7c1f8888c5e0c5786692771e7473cb67e3cb7e351a754207e5f9aaf56b60fd97fa490e2194e4b294b66d20535afc86e098e2a1e83b277956f
+    "@lumino/dragdrop": "npm:^2.1.9"
+    "@lumino/widgets": "npm:^2.9.0"
+  checksum: c265ef7c6fa88b0fbc541ce28e729c4c495ff014e7f6a52c4294f1e4eff9b36cd917ae400e79b74b58c1f93dbcca304b792866edabd5bdf6f574ef3bc767a653
   languageName: node
   linkType: hard
 
@@ -896,7 +896,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@lumino/widgets@npm:^2.3.2, @lumino/widgets@npm:^2.7.5":
+"@lumino/widgets@npm:^2.3.2, @lumino/widgets@npm:^2.7.5, @lumino/widgets@npm:^2.9.0":
   version: 2.9.0
   resolution: "@lumino/widgets@npm:2.9.0"
   dependencies:
