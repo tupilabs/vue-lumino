@@ -1,0 +1,132 @@
+name: Update CHANGES
+
+on:
+  workflow_dispatch:
+    inputs:
+      pull_requests:
+        description: "PR numbers to include (comma or space separated)"
+        required: true
+        type: string
+
+concurrency:
+  group: update-changes
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+        with:
+          ref: master
+
+      - name: Fetch pull request data
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PULL_REQUESTS: ${{ inputs.pull_requests }}
+        run: |
+          set -euo pipefail
+
+          printf '%s\n' "$PULL_REQUESTS" |
+            tr ', ' '\n' |
+            sed '/^$/d' |
+            sort -n -u > /tmp/pull-request-numbers.txt
+
+          if [ ! -s /tmp/pull-request-numbers.txt ]; then
+            echo "No pull requests supplied."
+            exit 1
+          fi
+
+          echo "Fetching pull request data:"
+          cat /tmp/pull-request-numbers.txt
+          echo
+
+          printf '[\n' > /tmp/pull-requests.json
+
+          first=true
+
+          while IFS= read -r number; do
+            if ! [[ "$number" =~ ^[0-9]+$ ]]; then
+              echo "Invalid pull request number: $number"
+              exit 1
+            fi
+
+            echo "Fetching #$number..."
+
+            if [ "$first" = true ]; then
+              first=false
+            else
+              printf ',\n' >> /tmp/pull-requests.json
+            fi
+
+            gh pr view "$number" \
+              --repo "$GITHUB_REPOSITORY" \
+              --json number,title,author,mergedAt,state,baseRefName \
+              | tr -d '\n' >> /tmp/pull-requests.json
+          done < /tmp/pull-request-numbers.txt
+
+          printf '\n]\n' >> /tmp/pull-requests.json
+
+          echo
+          echo "Fetched pull request data:"
+          jq -r '.[] | "  #\(.number): \(.title)"' /tmp/pull-requests.json
+
+      - name: Update CHANGES.md
+        run: |
+          node .github/workflows/scripts/update-changes.mjs \
+            /tmp/pull-requests.json
+
+      - name: Check for changes
+        id: changes
+        run: |
+          if git diff --quiet -- CHANGES.md; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Create/update CHANGES branch
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          # 41898282 is GitHub's numeric user ID for the github-actions bot
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git checkout -B automation/update-changes
+          git add CHANGES.md
+          git commit -m "Update CHANGES.md"
+          git push origin automation/update-changes
+
+      - name: Find existing CHANGES PR
+        if: steps.changes.outputs.changed == 'true'
+        id: pr
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          number=$(gh pr list \
+            --repo "$GITHUB_REPOSITORY" \
+            --base master \
+            --head automation/update-changes \
+            --state open \
+            --json number \
+            --jq '.[0].number // empty')
+
+          echo "number=$number" >> "$GITHUB_OUTPUT"
+
+      - name: Create CHANGES PR
+        if: steps.changes.outputs.changed == 'true' && steps.pr.outputs.number == ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh pr create \
+            --repo "$GITHUB_REPOSITORY" \
+            --base master \
+            --head automation/update-changes \
+            --title "Update CHANGES.md" \
+            --body "Update CHANGES.md with the selected merged Dependabot pull requests."

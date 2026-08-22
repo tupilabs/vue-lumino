@@ -1,3 +1,4 @@
+<!-- changelog:next-release -->
 ## 1.2.6 (20??-??-??)
 
 - Bump @lumino/default-theme from 2.1.14 to 2.1.16 #686
