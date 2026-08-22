@@ -279,31 +279,11 @@ for (const update of updates) {
             `- Bump ${dependency} from ${fromVersion} ` +
             `to ${toVersion} #${number}`
 
-        //
-        // Insert immediately after the release heading.
-        // Sorting below will put it in the correct position.
-        //
-
-        const headingMatch =
-            updatedReleaseSection.match(/^## .+$/m)
-
-        if (!headingMatch) {
-            fail(
-                `Could not find the release heading for ` +
-                `${releaseVersion}.`
-            )
-        }
-
-        const headingEnd =
-            headingMatch.index + headingMatch[0].length
-
-        updatedReleaseSection =
-            updatedReleaseSection.slice(0, headingEnd) +
-            `\n\n${entry}` +
-            updatedReleaseSection.slice(headingEnd)
+        updatedReleaseSection += `\n${entry}`
 
         console.log(`Added: ${entry}`)
     }
+
 }
 
 //
