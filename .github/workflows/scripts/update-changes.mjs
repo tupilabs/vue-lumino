@@ -2,7 +2,6 @@ import fs from 'node:fs'
 
 const changesPath = 'CHANGES.md'
 const pullRequestsPath = process.argv[2]
-const nextReleaseMarker = '<!-- changelog:next-release -->'
 
 function fail(message) {
     console.error(`ERROR: ${message}`)
@@ -12,6 +11,10 @@ function fail(message) {
 if (!pullRequestsPath) {
     fail('No pull request JSON file supplied.')
 }
+
+//
+// Read pull request JSON.
+//
 
 let pullRequests
 
@@ -36,9 +39,19 @@ console.log(
 )
 console.log()
 
+//
+// Parse Dependabot titles.
+//
+// Expected:
+//   Bump dependency from 1.2.3 to 1.2.4
+//
+// This intentionally requires the complete Dependabot title
+// format so unrelated PRs cannot accidentally modify CHANGES.md.
+//
+
 function parseDependabotTitle(title) {
     const match = title.match(
-        /^Bump (.+) from (.+) to (.+)$/
+        /^Bump (.+?) from (.+?) to (.+?)$/
     )
 
     if (!match) {
@@ -53,11 +66,16 @@ function parseDependabotTitle(title) {
 }
 
 //
-// First pass: validate EVERYTHING before changing CHANGES.md.
+// Validate ALL pull requests before touching CHANGES.md.
 //
 
 const updates = []
 const seenNumbers = new Set()
+
+const dependabotAuthors = new Set([
+    'dependabot[bot]',
+    'app/dependabot'
+])
 
 for (const pr of pullRequests) {
     const number = pr?.number
@@ -85,13 +103,10 @@ for (const pr of pullRequests) {
     }
 
     if (pr.state !== 'MERGED' || !pr.mergedAt) {
-        fail(`PR #${number} has not been merged.`)
+        fail(
+            `PR #${number} has not been merged.`
+        )
     }
-
-    const dependabotAuthors = new Set([
-        'dependabot[bot]',
-        'app/dependabot'
-    ])
 
     if (!dependabotAuthors.has(pr.author?.login)) {
         fail(
@@ -102,7 +117,9 @@ for (const pr of pullRequests) {
     }
 
     if (typeof pr.title !== 'string') {
-        fail(`PR #${number} has no valid title.`)
+        fail(
+            `PR #${number} has no valid title.`
+        )
     }
 
     const update = parseDependabotTitle(pr.title)
@@ -145,38 +162,39 @@ try {
 }
 
 //
-// Find the next-release section using the explicit marker.
+// Find the first unreleased Version section.
 //
-// The marker should immediately precede the release heading:
+// Current Active Choices format:
 //
-// <!-- changelog:next-release -->
-// ## 1.2.6 (20??-??-??)
+// ## Version 2.8.10 (????/??/??)
+//
+// This intentionally targets the first such section, which is
+// the unreleased release at the top of CHANGES.md.
 //
 
 const releaseMatch = changes.match(
-    /^<!-- changelog:next-release -->\r?\n## (\S+) \(20\?\?-\?\?-\?\?\)\r?\n/m
+    /^## .+\r?\n/m
 )
 
 if (!releaseMatch) {
     fail(
-        'Could not find the next-release marker and unreleased ' +
-        'release section in CHANGES.md.\n' +
-        `Expected the marker "${nextReleaseMarker}" immediately ` +
-        'before a heading such as:\n' +
-        '  ## 1.2.6 (20??-??-??)'
+        'Could not find a Markdown H2 release heading in CHANGES.md.'
     )
 }
 
-const releaseVersion = releaseMatch[1]
+const releaseStart = releaseMatch.index
 
-console.log(`Updating release ${releaseVersion}.`)
+console.log(
+    `Updating the first release section: ${releaseMatch[0].trim()}`
+)
 console.log()
 
-//
-// Find the boundaries of the next-release section.
-//
 
-const releaseStart = releaseMatch.index
+//
+// Find the end of the unreleased section.
+//
+// The next "## " heading starts the next release.
+//
 
 const nextReleaseIndex = changes.indexOf(
     '\n## ',
@@ -203,259 +221,323 @@ const afterRelease = changes.slice(
 )
 
 //
-// Find the release heading.
+// Split the release section into lines.
 //
 
-const headingMatch =
-    releaseSection.match(/^## .+$/m)
+const releaseLines =
+    releaseSection.split(/\r?\n/)
 
-if (!headingMatch) {
+//
+// Locate the release heading.
+//
+
+const headingIndex = releaseLines.findIndex(
+    line =>
+        line.startsWith(
+            `## Version ${releaseVersion} `
+        )
+)
+
+if (headingIndex === -1) {
     fail(
-        `Could not find the release heading for ${releaseVersion}.`
+        `Could not find release heading for Version ${releaseVersion}.`
     )
 }
 
-const headingEnd =
-    headingMatch.index + headingMatch[0].length
-
 //
-// Split the release section into:
-//   - heading
-//   - body
+// Find all dependency entries in this release.
 //
-// Keep the body structure intact so that non-dependency entries,
-// such as "fix:" entries, are preserved.
+// Example:
+//   - Bump @babel/cli from 7.28.6 to 7.29.7
 //
 
-const releaseBody =
-    releaseSection.slice(headingEnd)
+const dependencyEntryPattern =
+    /^- Bump (.+?) from (.+?) to (.+?)(?:\s+((?:#\d+\s*)+))?$/
 
-const bodyLines =
-    releaseBody.split(/\r?\n/)
-
-//
-// Find all dependency entries.
-//
-
-const dependencyEntryIndexes = []
+const dependencyEntries = []
 
 for (
-    let index = 0;
-    index < bodyLines.length;
+    let index = headingIndex + 1;
+    index < releaseLines.length;
     index++
 ) {
-    if (bodyLines[index].startsWith('- Bump ')) {
-        dependencyEntryIndexes.push(index)
+    const line = releaseLines[index]
+
+    const match =
+        line.match(dependencyEntryPattern)
+
+    if (!match) {
+        continue
     }
+
+    dependencyEntries.push({
+        index,
+        dependency: match[1],
+        fromVersion: match[2],
+        toVersion: match[3],
+        prNumbers: match[4]
+            ? [...match[4].matchAll(/#(\d+)/g)]
+                .map(match => Number(match[1]))
+            : []
+    })
 }
 
 //
-// Collect dependency entries by dependency name.
+// Build a map of existing dependencies.
+//
+// If the changelog accidentally contains the same dependency
+// more than once, merge the entries instead of silently losing
+// information.
 //
 
 const entriesByDependency = new Map()
 
-for (const index of dependencyEntryIndexes) {
-    const entry = bodyLines[index]
+for (const entry of dependencyEntries) {
+    const existing =
+        entriesByDependency.get(entry.dependency)
 
-    const match =
-        entry.match(/^- Bump (.+?) from /)
-
-    if (!match) {
-        fail(
-            `Could not parse dependency entry:\n` +
-            `  ${entry}`
+    if (!existing) {
+        entriesByDependency.set(
+            entry.dependency,
+            {
+                dependency: entry.dependency,
+                fromVersion: entry.fromVersion,
+                toVersion: entry.toVersion,
+                prNumbers: [...entry.prNumbers],
+                indexes: [entry.index]
+            }
         )
+
+        continue
     }
 
-    entriesByDependency.set(
-        match[1],
-        entry
-    )
+    existing.prNumbers = [
+        ...new Set([
+            ...existing.prNumbers,
+            ...entry.prNumbers
+        ])
+    ]
+
+    existing.indexes.push(entry.index)
 }
 
 //
-// Apply updates.
+// Apply the requested updates.
 //
 
 for (const update of updates) {
-    const {
-        dependency,
-        fromVersion,
-        toVersion,
-        number
-    } = update
+    const existing =
+        entriesByDependency.get(update.dependency)
 
-    const existingEntry =
-        entriesByDependency.get(dependency)
-
-    if (existingEntry) {
-        const match = existingEntry.match(
-            /^(- Bump .+? from )([^ ]+)( to )([^ ]+)(.*)$/
-        )
-
-        if (!match) {
-            fail(
-                `Could not parse existing entry for ${dependency}:\n` +
-                `  ${existingEntry}`
-            )
-        }
-
-        const originalFromVersion = match[2]
-        const suffix = match[5]
-
-        //
-        // Preserve all existing PR numbers and append
-        // the new PR number.
-        //
-
-        const existingPrNumbers = [
-            ...suffix.matchAll(/#(\d+)/g)
-        ].map(match => Number(match[1]))
-
+    if (existing) {
         const prNumbers = [
             ...new Set([
-                ...existingPrNumbers,
-                number
+                ...existing.prNumbers,
+                update.number
             ])
         ]
 
-        const replacement =
-            `${match[1]}` +
-            `${originalFromVersion}` +
-            `${match[3]}` +
-            `${toVersion} ` +
-            `${prNumbers.map(n => `#${n}`).join(' ')}`
+        existing.toVersion =
+            update.toVersion
 
-        entriesByDependency.set(
-            dependency,
-            replacement
-        )
+        existing.prNumbers =
+            prNumbers
 
         console.log(
-            `Updated ${dependency}: ` +
-            `${originalFromVersion} → ${toVersion} ` +
+            `Updated ${update.dependency}: ` +
+            `${existing.fromVersion} → ${existing.toVersion} ` +
             `(#${prNumbers.join(', #')})`
         )
     } else {
-        //
-        // No existing entry: create one.
-        //
-
-        const entry =
-            `- Bump ${dependency} from ${fromVersion} ` +
-            `to ${toVersion} #${number}`
+        const newEntry = {
+            dependency: update.dependency,
+            fromVersion: update.fromVersion,
+            toVersion: update.toVersion,
+            prNumbers: [update.number],
+            indexes: []
+        }
 
         entriesByDependency.set(
-            dependency,
-            entry
+            update.dependency,
+            newEntry
         )
 
-        console.log(`Added: ${entry}`)
+        console.log(
+            `Added ${update.dependency}: ` +
+            `${update.fromVersion} → ${update.toVersion} ` +
+            `#${update.number}`
+        )
     }
 }
 
 //
-// Sort dependency entries alphabetically.
+// Sort all dependency entries alphabetically.
 //
 
 const sortedEntries = [
-    ...entriesByDependency.entries()
-]
-    .sort(([dependencyA], [dependencyB]) =>
-        dependencyA.localeCompare(
-            dependencyB,
+    ...entriesByDependency.values()
+].sort(
+    (a, b) =>
+        a.dependency.localeCompare(
+            b.dependency,
             undefined,
-            {sensitivity: 'base'}
+            {
+                sensitivity: 'base'
+            }
         )
-    )
-    .map(([, entry]) => entry)
+)
 
 //
-// Replace the existing dependency lines with the sorted
-// dependency entries.
+// Render dependency entries.
 //
-// Existing non-dependency lines are left untouched.
+
+function renderEntry(entry) {
+    const prSuffix =
+        entry.prNumbers.length > 0
+            ? ` ${entry.prNumbers
+                .map(number => `#${number}`)
+                .join(' ')}`
+            : ''
+
+    return (
+        `- Bump ${entry.dependency} ` +
+        `from ${entry.fromVersion} ` +
+        `to ${entry.toVersion}` +
+        prSuffix
+    )
+}
+
+const renderedEntries =
+    sortedEntries.map(renderEntry)
+
 //
+// Remove all existing dependency lines from the release,
+// including duplicate dependency lines.
+//
+// This lets us reconstruct one clean, alphabetically sorted
+// dependency block.
+//
+
+const dependencyIndexes =
+    new Set(
+        dependencyEntries.map(
+            entry => entry.index
+        )
+    )
+
+const nonDependencyLines = []
 
 for (
     let index = 0;
-    index < dependencyEntryIndexes.length;
+    index < releaseLines.length;
     index++
 ) {
-    bodyLines[dependencyEntryIndexes[index]] =
-        sortedEntries[index]
-}
-
-//
-// If new dependencies were added, there are more sorted
-// entries than existing dependency lines.
-//
-// Insert the additional entries immediately before the
-// first non-dependency content after the existing entries.
-//
-
-if (
-    sortedEntries.length >
-    dependencyEntryIndexes.length
-) {
-    const additionalEntries =
-        sortedEntries.slice(
-            dependencyEntryIndexes.length
-        )
-
-    //
-    // Find the last existing dependency entry.
-    //
-
-    const lastDependencyIndex =
-        dependencyEntryIndexes.at(-1)
-
-    if (lastDependencyIndex === undefined) {
-        //
-        // There were no existing dependency entries.
-        // Insert after the heading.
-        //
-
-        bodyLines.unshift(
-            '',
-            ...additionalEntries
-        )
-    } else {
-        bodyLines.splice(
-            lastDependencyIndex + 1,
-            0,
-            ...additionalEntries
-        )
+    if (!dependencyIndexes.has(index)) {
+        nonDependencyLines.push({
+            originalIndex: index,
+            line: releaseLines[index]
+        })
     }
 }
 
 //
-// Rebuild the release section.
+// Find where the dependency block should go.
 //
-// The original newline after the heading is retained,
-// while the dependency entries themselves are kept to
-// exactly one line each.
+// We preserve the existing location of the first dependency
+// entry. If there are no existing dependency entries, insert
+// immediately after the release heading.
 //
+
+const firstDependencyIndex =
+    dependencyEntries.length > 0
+        ? Math.min(
+            ...dependencyEntries.map(
+                entry => entry.index
+            )
+        )
+        : headingIndex + 1
+
+//
+// Reconstruct the release section.
+//
+// Existing non-dependency content is preserved in its original
+// relative order. The dependency block replaces the old
+// dependency entries.
+//
+
+const rebuiltReleaseLines = []
+
+for (
+    let index = 0;
+    index < releaseLines.length;
+    index++
+) {
+    if (index === firstDependencyIndex) {
+        rebuiltReleaseLines.push(
+            ...renderedEntries
+        )
+    }
+
+    if (dependencyIndexes.has(index)) {
+        continue
+    }
+
+    rebuiltReleaseLines.push(
+        releaseLines[index]
+    )
+}
+
+//
+// If there were no dependency entries at all, the insertion
+// point was immediately after the heading.
+//
+
+if (dependencyEntries.length === 0) {
+    const insertionIndex = headingIndex + 1
+
+    rebuiltReleaseLines.length = 0
+
+    for (
+        let index = 0;
+        index < releaseLines.length;
+        index++
+    ) {
+        rebuiltReleaseLines.push(
+            releaseLines[index]
+        )
+
+        if (index === insertionIndex - 1) {
+            rebuiltReleaseLines.push(
+                ...renderedEntries
+            )
+        }
+    }
+}
 
 const updatedReleaseSection =
-    releaseSection.slice(0, headingEnd) +
-    bodyLines.join('\n')
-
-//
-// Write only if something actually changed.
-//
+    rebuiltReleaseLines.join('\n')
 
 const updatedChanges =
     beforeRelease +
     updatedReleaseSection +
     afterRelease
 
+//
+// Do not create a commit when there is no actual change.
+//
+
 if (updatedChanges === changes) {
     console.log()
-    console.log('CHANGES.md is already up to date.')
+    console.log(
+        'CHANGES.md is already up to date.'
+    )
+
     process.exit(0)
 }
+
+//
+// Write the updated changelog.
+//
 
 fs.writeFileSync(
     changesPath,
@@ -463,11 +545,6 @@ fs.writeFileSync(
 )
 
 console.log()
-console.log(`Updated ${changesPath}.`)
-
-function escapeRegExp(value) {
-    return value.replace(
-        /[.*+?^${}()|[\]\\]/g,
-        '\\$&'
-    )
-}
+console.log(
+    `Updated ${changesPath}.`
+)

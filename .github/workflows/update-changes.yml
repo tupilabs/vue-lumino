@@ -94,14 +94,19 @@ jobs:
       - name: Create/update CHANGES branch
         if: steps.changes.outputs.changed == 'true'
         run: |
+          set -euo pipefail
+
           git config user.name "github-actions[bot]"
           # 41898282 is GitHub's numeric user ID for the github-actions bot
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
           git checkout -B automation/update-changes
+
           git add CHANGES.md
+
           git commit -m "Update CHANGES.md"
-          git push origin automation/update-changes
+
+          git push --force-with-lease origin automation/update-changes
 
       - name: Find existing CHANGES PR
         if: steps.changes.outputs.changed == 'true'
@@ -109,6 +114,8 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
+          set -euo pipefail
+
           number=$(gh pr list \
             --repo "$GITHUB_REPOSITORY" \
             --base master \
@@ -124,6 +131,8 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
+          set -euo pipefail
+
           gh pr create \
             --repo "$GITHUB_REPOSITORY" \
             --base master \
