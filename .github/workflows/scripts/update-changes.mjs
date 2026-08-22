@@ -88,13 +88,19 @@ for (const pr of pullRequests) {
         fail(`PR #${number} has not been merged.`)
     }
 
-    if (pr.author?.login !== 'dependabot[bot]') {
+    const dependabotAuthors = new Set([
+        'dependabot[bot]',
+        'app/dependabot'
+    ])
+
+    if (!dependabotAuthors.has(pr.author?.login)) {
         fail(
             `PR #${number} was authored by ` +
             `${pr.author?.login ?? 'unknown'}, ` +
-            'not dependabot[bot].'
+            'not Dependabot.'
         )
     }
+
 
     if (typeof pr.title !== 'string') {
         fail(`PR #${number} has no valid title.`)
