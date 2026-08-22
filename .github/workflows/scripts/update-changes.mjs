@@ -101,7 +101,6 @@ for (const pr of pullRequests) {
         )
     }
 
-
     if (typeof pr.title !== 'string') {
         fail(`PR #${number} has no valid title.`)
     }
@@ -189,20 +188,95 @@ const releaseEnd =
         ? changes.length
         : nextReleaseIndex + 1
 
-const beforeRelease = changes.slice(0, releaseStart)
+const beforeRelease = changes.slice(
+    0,
+    releaseStart
+)
 
 const releaseSection = changes.slice(
     releaseStart,
     releaseEnd
 )
 
-const afterRelease = changes.slice(releaseEnd)
+const afterRelease = changes.slice(
+    releaseEnd
+)
 
 //
-// Apply updates one dependency at a time.
+// Find the release heading.
 //
 
-let updatedReleaseSection = releaseSection
+const headingMatch =
+    releaseSection.match(/^## .+$/m)
+
+if (!headingMatch) {
+    fail(
+        `Could not find the release heading for ${releaseVersion}.`
+    )
+}
+
+const headingEnd =
+    headingMatch.index + headingMatch[0].length
+
+//
+// Split the release section into:
+//   - heading
+//   - body
+//
+// Keep the body structure intact so that non-dependency entries,
+// such as "fix:" entries, are preserved.
+//
+
+const releaseBody =
+    releaseSection.slice(headingEnd)
+
+const bodyLines =
+    releaseBody.split(/\r?\n/)
+
+//
+// Find all dependency entries.
+//
+
+const dependencyEntryIndexes = []
+
+for (
+    let index = 0;
+    index < bodyLines.length;
+    index++
+) {
+    if (bodyLines[index].startsWith('- Bump ')) {
+        dependencyEntryIndexes.push(index)
+    }
+}
+
+//
+// Collect dependency entries by dependency name.
+//
+
+const entriesByDependency = new Map()
+
+for (const index of dependencyEntryIndexes) {
+    const entry = bodyLines[index]
+
+    const match =
+        entry.match(/^- Bump (.+?) from /)
+
+    if (!match) {
+        fail(
+            `Could not parse dependency entry:\n` +
+            `  ${entry}`
+        )
+    }
+
+    entriesByDependency.set(
+        match[1],
+        entry
+    )
+}
+
+//
+// Apply updates.
+//
 
 for (const update of updates) {
     const {
@@ -212,36 +286,27 @@ for (const update of updates) {
         number
     } = update
 
-    //
-    // Match an existing entry for this dependency.
-    //
-    // Example:
-    //
-    // - Bump vue from 3.5.27 to 3.5.40 #666 #678
-    //
-
-    const escapedDependency =
-        escapeRegExp(dependency)
-
-    const entryPattern = new RegExp(
-        `^(- Bump ${escapedDependency} from )` +
-        `([^ ]+)` +
-        `( to )` +
-        `([^ ]+)` +
-        `(.*)$`,
-        'm'
-    )
-
     const existingEntry =
-        updatedReleaseSection.match(entryPattern)
+        entriesByDependency.get(dependency)
 
     if (existingEntry) {
-        const prefix = existingEntry[1]
-        const originalFromVersion = existingEntry[2]
-        const suffix = existingEntry[5]
+        const match = existingEntry.match(
+            /^(- Bump .+? from )([^ ]+)( to )([^ ]+)(.*)$/
+        )
+
+        if (!match) {
+            fail(
+                `Could not parse existing entry for ${dependency}:\n` +
+                `  ${existingEntry}`
+            )
+        }
+
+        const originalFromVersion = match[2]
+        const suffix = match[5]
 
         //
-        // Preserve all existing PR numbers and append the new one.
+        // Preserve all existing PR numbers and append
+        // the new PR number.
         //
 
         const existingPrNumbers = [
@@ -256,14 +321,16 @@ for (const update of updates) {
         ]
 
         const replacement =
-            `${prefix}${originalFromVersion} to ${toVersion}` +
-            ` ${prNumbers.map(n => `#${n}`).join(' ')}`
+            `${match[1]}` +
+            `${originalFromVersion}` +
+            `${match[3]}` +
+            `${toVersion} ` +
+            `${prNumbers.map(n => `#${n}`).join(' ')}`
 
-        updatedReleaseSection =
-            updatedReleaseSection.replace(
-                existingEntry[0],
-                replacement
-            )
+        entriesByDependency.set(
+            dependency,
+            replacement
+        )
 
         console.log(
             `Updated ${dependency}: ` +
@@ -272,59 +339,108 @@ for (const update of updates) {
         )
     } else {
         //
-        // No existing entry: add one.
+        // No existing entry: create one.
         //
 
         const entry =
             `- Bump ${dependency} from ${fromVersion} ` +
             `to ${toVersion} #${number}`
 
-        updatedReleaseSection += `\n${entry}`
+        entriesByDependency.set(
+            dependency,
+            entry
+        )
 
         console.log(`Added: ${entry}`)
     }
-
 }
 
 //
 // Sort dependency entries alphabetically.
 //
 
-const releaseLines =
-    updatedReleaseSection.split(/\r?\n/)
+const sortedEntries = [
+    ...entriesByDependency.entries()
+]
+    .sort(([dependencyA], [dependencyB]) =>
+        dependencyA.localeCompare(
+            dependencyB,
+            undefined,
+            {sensitivity: 'base'}
+        )
+    )
+    .map(([, entry]) => entry)
 
-const entryIndexes = []
+//
+// Replace the existing dependency lines with the sorted
+// dependency entries.
+//
+// Existing non-dependency lines are left untouched.
+//
 
-for (let index = 0; index < releaseLines.length; index++) {
-    if (releaseLines[index].startsWith('- Bump ')) {
-        entryIndexes.push(index)
+for (
+    let index = 0;
+    index < dependencyEntryIndexes.length;
+    index++
+) {
+    bodyLines[dependencyEntryIndexes[index]] =
+        sortedEntries[index]
+}
+
+//
+// If new dependencies were added, there are more sorted
+// entries than existing dependency lines.
+//
+// Insert the additional entries immediately before the
+// first non-dependency content after the existing entries.
+//
+
+if (
+    sortedEntries.length >
+    dependencyEntryIndexes.length
+) {
+    const additionalEntries =
+        sortedEntries.slice(
+            dependencyEntryIndexes.length
+        )
+
+    //
+    // Find the last existing dependency entry.
+    //
+
+    const lastDependencyIndex =
+        dependencyEntryIndexes.at(-1)
+
+    if (lastDependencyIndex === undefined) {
+        //
+        // There were no existing dependency entries.
+        // Insert after the heading.
+        //
+
+        bodyLines.unshift(
+            '',
+            ...additionalEntries
+        )
+    } else {
+        bodyLines.splice(
+            lastDependencyIndex + 1,
+            0,
+            ...additionalEntries
+        )
     }
 }
 
-const entries = entryIndexes.map(
-    index => releaseLines[index]
-)
+//
+// Rebuild the release section.
+//
+// The original newline after the heading is retained,
+// while the dependency entries themselves are kept to
+// exactly one line each.
+//
 
-entries.sort((a, b) => {
-    const dependencyA =
-        a.match(/^- Bump (.+?) from /)?.[1] ?? ''
-
-    const dependencyB =
-        b.match(/^- Bump (.+?) from /)?.[1] ?? ''
-
-    return dependencyA.localeCompare(
-        dependencyB,
-        undefined,
-        {sensitivity: 'base'}
-    )
-})
-
-for (let index = 0; index < entryIndexes.length; index++) {
-    releaseLines[entryIndexes[index]] = entries[index]
-}
-
-updatedReleaseSection = releaseLines.join('\n')
-
+const updatedReleaseSection =
+    releaseSection.slice(0, headingEnd) +
+    bodyLines.join('\n')
 
 //
 // Write only if something actually changed.
