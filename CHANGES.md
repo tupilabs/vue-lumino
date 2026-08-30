@@ -3,6 +3,7 @@
 
 - Bump @lumino/default-theme from 2.1.14 to 2.1.16 #686
 - Bump @lumino/widgets from 2.7.5 to 2.9.0 #662
+- Bump @vitejs/plugin-vue from 6.0.7 to 6.0.8 #702
 - Bump @vitest/coverage-v8 from 4.0.18 to 4.1.10 #695
 - Bump @vue/compiler-sfc from 3.5.31 to 3.5.41 #693
 - Bump @vue/server-renderer from 3.5.33 to 3.5.41 #674 #692
@@ -11,11 +12,11 @@
 - Bump axios from 1.16.0 to 1.18.1 #670
 - Bump brace-expansion from 1.1.11 to 1.1.16 #671
 - Bump concurrently from 9.2.1 to 10.0.5 #696
-- Bump cypress from 15.18.1 to 15.20.0 #691
+- Bump cypress from 15.18.1 to 15.21.0 #691 #701
 - Bump eslint from 10.0.2 to 10.8.0 #664 #685
 - Bump eslint-plugin-cypress from 6.3.1 to 6.4.3 #663 #675
 - Bump glob from 10.3.10 to 10.5.0 #680
-- Bump happy-dom from 20.10.3 to 20.10.6 #665
+- Bump happy-dom from 20.10.3 to 20.11.6 #665 #703
 - Bump immutable from 5.1.5 to 5.1.9 #673
 - Bump js-yaml from 3.14.1 to 3.15.1 #672 #689
 - Bump nanoid from 3.3.16 to 3.3.18 #690
@@ -25,7 +26,8 @@
 - Bump systeminformation from 5.31.6 to 5.31.17 #667
 - Bump vite from 8.1.4 to 8.1.5 #668
 - Bump vitest from 4.1.4 to 4.1.10 #694
-- Bump vue from 3.5.27 to 3.5.40 #666 #678
+- Bump vue from 3.5.27 to 3.5.41 #666 #678 #704
+- Bump vue-eslint-parser from 10.2.0 to 10.4.1 #705
 - Bump wait-on from 9.0.4 to 9.0.10 #682
 - fix: this dependabot configuration does not set a cool down period (thanks @anupamme) #681
 
