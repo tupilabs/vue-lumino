@@ -166,7 +166,7 @@ try {
 //
 // Current Active Choices format:
 //
-// ## Version 2.8.10 (????/??/??)
+// ## 1.2.6 (20??-??-??)
 //
 // This intentionally targets the first such section, which is
 // the unreleased release at the top of CHANGES.md.
@@ -188,7 +188,6 @@ console.log(
     `Updating the first release section: ${releaseMatch[0].trim()}`
 )
 console.log()
-
 
 //
 // Find the end of the unreleased section.
@@ -231,18 +230,7 @@ const releaseLines =
 // Locate the release heading.
 //
 
-const headingIndex = releaseLines.findIndex(
-    line =>
-        line.startsWith(
-            `## Version ${releaseVersion} `
-        )
-)
-
-if (headingIndex === -1) {
-    fail(
-        `Could not find release heading for Version ${releaseVersion}.`
-    )
-}
+const headingIndex = 0
 
 //
 // Find all dependency entries in this release.
