@@ -1,6 +1,7 @@
 <!-- changelog:next-release -->
 ## 1.2.6 (20??-??-??)
 
+- Bump @humanfs/node from 0.16.6 to 0.16.8 #708
 - Bump @lumino/default-theme from 2.1.14 to 2.1.16 #686
 - Bump @lumino/widgets from 2.7.5 to 2.9.0 #662
 - Bump @vitejs/plugin-vue from 6.0.7 to 6.0.8 #702
@@ -21,6 +22,7 @@
 - Bump js-yaml from 3.14.1 to 3.15.1 #672 #689
 - Bump nanoid from 3.3.16 to 3.3.18 #690
 - Bump postcss from 8.5.12 to 8.5.23 #679
+- Bump postcss-selector-parser from 7.1.0 to 7.1.5 #707
 - Bump sass from 1.99.0 to 1.102.0 #687
 - Bump sinon from 21.0.2 to 22.0.0 #683
 - Bump systeminformation from 5.31.6 to 5.31.17 #667
