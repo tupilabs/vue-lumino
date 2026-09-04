@@ -12,6 +12,7 @@
 - Bump actions/setup-node from 6 to 7 #669
 - Bump axios from 1.16.0 to 1.18.1 #670
 - Bump brace-expansion from 1.1.11 to 1.1.16 #671
+- Bump browserslist from 4.28.2 to 4.28.8 #709
 - Bump concurrently from 9.2.1 to 10.0.5 #696
 - Bump cypress from 15.18.1 to 15.21.0 #691 #701
 - Bump eslint from 10.0.2 to 10.8.0 #664 #685
