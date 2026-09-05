@@ -263,9 +263,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cypress/vue@npm:^6.0.0":
-  version: 6.0.2
-  resolution: "@cypress/vue@npm:6.0.2"
+"@cypress/vue@npm:^7.0.0":
+  version: 7.0.0
+  resolution: "@cypress/vue@npm:7.0.0"
   peerDependencies:
     "@cypress/webpack-dev-server": "*"
     cypress: ">=7.0.0"
@@ -273,7 +273,7 @@ __metadata:
   peerDependenciesMeta:
     "@cypress/webpack-dev-server":
       optional: true
-  checksum: d5cb3d6c45d65c07058185f92af90cf9d1572fe7a36c262742c571f4093cb4088b654b15c09ea55ece6312d2528084eee4dfceabc42f1892b3de7acc7ee3c353
+  checksum: 0faf2f78f308ca49d91df226eae871f4883cf346343633007e63a43ef238b669cc74a27cdb4f929c94a28d9b59314d6e0a28cac212773276fe4f04eb02e73e37
   languageName: node
   linkType: hard
 
@@ -1374,7 +1374,7 @@ __metadata:
   resolution: "@tupilabs/vue-lumino@workspace:."
   dependencies:
     "@cypress/code-coverage": "npm:^4.0.3"
-    "@cypress/vue": "npm:^6.0.0"
+    "@cypress/vue": "npm:^7.0.0"
     "@eslint/js": "npm:^10.0.1"
     "@lumino/datagrid": "npm:^2.3.0"
     "@lumino/default-theme": "npm:^2.1.4"
