@@ -23,7 +23,8 @@
 - Bump glob from 10.3.10 to 10.5.0 #680
 - Bump happy-dom from 20.10.3 to 20.11.6 #665 #703
 - Bump immutable from 5.1.5 to 5.1.9 #673
-- Bump js-yaml from 3.14.1 to 3.15.1 #672 #689
+- Bump joi from 18.2.3 to 18.2.8 #718
+- Bump js-yaml from 3.14.1 to 3.15.2 #672 #689 #719
 - Bump nanoid from 3.3.16 to 3.3.18 #690
 - Bump postcss from 8.5.12 to 8.5.23 #679
 - Bump postcss-selector-parser from 7.1.0 to 7.1.5 #707
