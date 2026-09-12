@@ -44,7 +44,7 @@
     "@vue/server-renderer": "^3.4.13",
     "@vue/test-utils": "^2.4.1",
     "concurrently": "^10.0.5",
-    "cypress": "^15.0.0",
+    "cypress": "^16.0.0",
     "cypress-vite": "^1.10.2",
     "eslint": "^10.0.0",
     "eslint-plugin-cypress": "^6.2.2",
