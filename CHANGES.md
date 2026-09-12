@@ -3,25 +3,26 @@
 
 - Bump @cypress/vue from 6.0.2 to 7.0.0 #714
 - Bump @humanfs/node from 0.16.6 to 0.16.8 #708
+- Bump @lumino/datagrid from 2.5.6 to 2.5.8 #722
 - Bump @lumino/default-theme from 2.1.14 to 2.1.16 #686
 - Bump @lumino/widgets from 2.7.5 to 2.9.0 #662
 - Bump @vitejs/plugin-vue from 6.0.7 to 6.0.8 #702
 - Bump @vitest/coverage-v8 from 4.0.18 to 4.1.10 #695
 - Bump @vue/compiler-dom from 3.5.41 to 3.5.42 #712
 - Bump @vue/compiler-sfc from 3.5.31 to 3.5.42 #693 #715
-- Bump @vue/server-renderer from 3.5.33 to 3.5.41 #674 #692
+- Bump @vue/server-renderer from 3.5.33 to 3.5.42 #674 #692 #721
 - Bump @vue/test-utils from 2.4.6 to 2.4.11 #684
 - Bump actions/setup-node from 6 to 7 #669
 - Bump axios from 1.16.0 to 1.18.1 #670
 - Bump brace-expansion from 1.1.11 to 1.1.16 #671
 - Bump browserslist from 4.28.2 to 4.28.8 #709
 - Bump concurrently from 9.2.1 to 10.0.5 #696
-- Bump cypress from 15.18.1 to 15.21.0 #691 #701
+- Bump cypress from 15.18.1 to 16.0.0 #691 #701 #723
 - Bump eslint from 10.0.2 to 10.8.0 #664 #685
 - Bump eslint-plugin-cypress from 6.3.1 to 6.4.3 #663 #675
 - Bump eslint-plugin-vue from 10.7.0 to 10.10.0 #713
 - Bump glob from 10.3.10 to 10.5.0 #680
-- Bump happy-dom from 20.10.3 to 20.11.6 #665 #703
+- Bump happy-dom from 20.10.3 to 20.14.0 #665 #703 #725
 - Bump immutable from 5.1.5 to 5.1.9 #673
 - Bump joi from 18.2.3 to 18.2.8 #718
 - Bump js-yaml from 3.14.1 to 3.15.2 #672 #689 #719
