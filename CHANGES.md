@@ -18,8 +18,8 @@
 - Bump browserslist from 4.28.2 to 4.28.8 #709
 - Bump concurrently from 9.2.1 to 10.0.5 #696
 - Bump cypress from 15.18.1 to 16.0.0 #691 #701 #723
-- Bump eslint from 10.0.2 to 10.8.0 #664 #685
-- Bump eslint-plugin-cypress from 6.3.1 to 6.4.3 #663 #675
+- Bump eslint from 10.0.2 to 10.10.0 #664 #685 #729
+- Bump eslint-plugin-cypress from 6.3.1 to 7.0.2 #663 #675 #728
 - Bump eslint-plugin-vue from 10.7.0 to 10.10.0 #713
 - Bump glob from 10.3.10 to 10.5.0 #680
 - Bump happy-dom from 20.10.3 to 20.14.0 #665 #703 #725
@@ -32,8 +32,8 @@
 - Bump sass from 1.99.0 to 1.103.1 #687 #716
 - Bump sinon from 21.0.2 to 22.0.0 #683
 - Bump systeminformation from 5.31.6 to 5.31.17 #667
-- Bump vite from 8.1.4 to 8.1.5 #668
-- Bump vitest from 4.1.4 to 4.1.10 #694
+- Bump vite from 8.1.4 to 8.3.0 #668 #727
+- Bump vitest from 4.1.4 to 5.0.0 #694 #730
 - Bump vue from 3.5.27 to 3.5.41 #666 #678 #704
 - Bump vue-eslint-parser from 10.2.0 to 10.4.1 #705
 - Bump wait-on from 9.0.4 to 9.0.10 #682
