@@ -10,8 +10,8 @@
 - Bump @vitest/coverage-v8 from 4.0.18 to 4.1.10 #695
 - Bump @vue/compiler-dom from 3.5.41 to 3.5.42 #712
 - Bump @vue/compiler-sfc from 3.5.31 to 3.5.42 #693 #715
-- Bump @vue/server-renderer from 3.5.33 to 3.5.42 #674 #692 #721
-- Bump @vue/test-utils from 2.4.6 to 2.4.11 #684
+- Bump @vue/server-renderer from 3.5.33 to 3.5.43 #674 #692 #721 #733
+- Bump @vue/test-utils from 2.4.6 to 2.5.1 #684 #734
 - Bump actions/setup-node from 6 to 7 #669
 - Bump axios from 1.16.0 to 1.18.1 #670
 - Bump brace-expansion from 1.1.11 to 1.1.16 #671
@@ -29,12 +29,12 @@
 - Bump nanoid from 3.3.16 to 3.3.18 #690
 - Bump postcss from 8.5.12 to 8.5.23 #679
 - Bump postcss-selector-parser from 7.1.0 to 7.1.5 #707
-- Bump sass from 1.99.0 to 1.103.1 #687 #716
+- Bump sass from 1.99.0 to 1.104.1 #687 #716 #732
 - Bump sinon from 21.0.2 to 22.0.0 #683
 - Bump systeminformation from 5.31.6 to 5.31.17 #667
 - Bump vite from 8.1.4 to 8.3.0 #668 #727
-- Bump vitest from 4.1.4 to 5.0.0 #694 #730
-- Bump vue from 3.5.27 to 3.5.41 #666 #678 #704
+- Bump vitest from 4.1.4 to 5.0.1 #694 #730 #736
+- Bump vue from 3.5.27 to 3.5.43 #666 #678 #704 #735
 - Bump vue-eslint-parser from 10.2.0 to 10.4.1 #705
 - Bump wait-on from 9.0.4 to 9.0.10 #682
 - fix: this dependabot configuration does not set a cool down period (thanks @anupamme) #681
