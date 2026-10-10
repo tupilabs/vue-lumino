@@ -286,8 +286,8 @@ __metadata:
   linkType: hard
 
 "@cypress/vue@npm:^7.0.0":
-  version: 7.0.0
-  resolution: "@cypress/vue@npm:7.0.0"
+  version: 7.0.1
+  resolution: "@cypress/vue@npm:7.0.1"
   peerDependencies:
     "@cypress/webpack-dev-server": "*"
     cypress: ">=7.0.0"
@@ -295,7 +295,7 @@ __metadata:
   peerDependenciesMeta:
     "@cypress/webpack-dev-server":
       optional: true
-  checksum: 0faf2f78f308ca49d91df226eae871f4883cf346343633007e63a43ef238b669cc74a27cdb4f929c94a28d9b59314d6e0a28cac212773276fe4f04eb02e73e37
+  checksum: 2fd1a4c0c059c9b5c62c82437dcf09ac45c9583040572b41e0d3475f08d102506e15af4cbf991d39aee787fdecd58d5d5e53ed5b5869a93af7d530cee896edac
   languageName: node
   linkType: hard
 
