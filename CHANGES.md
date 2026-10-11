@@ -1,7 +1,7 @@
 <!-- changelog:next-release -->
 ## 1.2.6 (20??-??-??)
 
-- Bump @cypress/vue from 6.0.2 to 7.0.0 #714
+- Bump @cypress/vue from 6.0.2 to 7.0.1 #714 #749
 - Bump @humanfs/node from 0.16.6 to 0.16.8 #708
 - Bump @lumino/datagrid from 2.5.6 to 2.5.8 #722
 - Bump @lumino/default-theme from 2.1.14 to 2.1.16 #686
@@ -18,9 +18,9 @@
 - Bump browserslist from 4.28.2 to 4.28.8 #709
 - Bump concurrently from 9.2.1 to 10.0.5 #696
 - Bump cypress from 15.18.1 to 16.1.0 #691 #701 #723 #738
-- Bump eslint from 10.0.2 to 10.10.0 #664 #685 #729
+- Bump eslint from 10.0.2 to 10.12.0 #664 #685 #729 #747
 - Bump eslint-plugin-cypress from 6.3.1 to 7.0.2 #663 #675 #728
-- Bump eslint-plugin-vue from 10.7.0 to 10.10.0 #713
+- Bump eslint-plugin-vue from 10.7.0 to 10.11.1 #713 #750
 - Bump glob from 10.3.10 to 10.5.0 #680
 - Bump happy-dom from 20.10.3 to 20.14.0 #665 #703 #725
 - Bump immutable from 5.1.5 to 5.1.9 #673
@@ -29,14 +29,15 @@
 - Bump nanoid from 3.3.16 to 3.3.18 #690
 - Bump postcss from 8.5.12 to 8.5.23 #679
 - Bump postcss-selector-parser from 7.1.0 to 7.1.5 #707
-- Bump sass from 1.99.0 to 1.104.1 #687 #716 #732
+- Bump sass from 1.99.0 to 1.105.1 #687 #716 #732 #748
 - Bump sinon from 21.0.2 to 22.0.0 #683
+- Bump source-map-js from 1.0.2 to 1.2.2 #751
 - Bump systeminformation from 5.31.6 to 5.31.17 #667
 - Bump vite from 8.1.4 to 8.3.1 #668 #727 #741
 - Bump vitest from 4.1.4 to 5.0.1 #694 #730 #736
 - Bump vue from 3.5.27 to 3.5.43 #666 #678 #704 #735
 - Bump vue-eslint-parser from 10.2.0 to 10.4.1 #705
-- Bump wait-on from 9.0.4 to 9.0.10 #682
+- Bump wait-on from 9.0.4 to 9.5.1 #682 #746
 - fix: this dependabot configuration does not set a cool down period (thanks @anupamme) #681
 
 ## 1.2.5 (2026-07-11)
