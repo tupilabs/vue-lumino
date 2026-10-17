@@ -746,12 +746,12 @@ __metadata:
   linkType: hard
 
 "@lumino/default-theme@npm:^2.1.4":
-  version: 2.1.16
-  resolution: "@lumino/default-theme@npm:2.1.16"
+  version: 2.1.17
+  resolution: "@lumino/default-theme@npm:2.1.17"
   dependencies:
     "@lumino/dragdrop": "npm:^2.1.9"
-    "@lumino/widgets": "npm:^2.9.0"
-  checksum: c265ef7c6fa88b0fbc541ce28e729c4c495ff014e7f6a52c4294f1e4eff9b36cd917ae400e79b74b58c1f93dbcca304b792866edabd5bdf6f574ef3bc767a653
+    "@lumino/widgets": "npm:^2.10.0"
+  checksum: 80e869e3689fe4f089b69e97d35cb19f72eff556c3e77ed935b2f34da524f55cf6e5bd3db32d4cf2984eac8a0870bbdc79b82352d208c0f5f6e5aa098f3a7f30
   languageName: node
   linkType: hard
 
