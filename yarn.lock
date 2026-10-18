@@ -854,7 +854,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@lumino/widgets@npm:^2.3.2, @lumino/widgets@npm:^2.9.0":
+"@lumino/widgets@npm:^2.3.2":
   version: 2.9.0
   resolution: "@lumino/widgets@npm:2.9.0"
   dependencies:
