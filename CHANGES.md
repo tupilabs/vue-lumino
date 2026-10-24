@@ -7,7 +7,7 @@
 - Bump @lumino/default-theme from 2.1.14 to 2.1.17 #686 #756
 - Bump @lumino/widgets from 2.7.5 to 2.9.0 #662
 - Bump @vitejs/plugin-vue from 6.0.7 to 6.0.9 #702 #742
-- Bump @vitest/coverage-v8 from 4.0.18 to 5.0.2 #695 #739
+- Bump @vitest/coverage-v8 from 4.0.18 to 5.0.5 #695 #739 #762
 - Bump @vue/compiler-dom from 3.5.41 to 3.5.43 #712 #740
 - Bump @vue/compiler-sfc from 3.5.31 to 3.5.43 #693 #715 #755
 - Bump @vue/server-renderer from 3.5.33 to 3.5.43 #674 #692 #721 #733
@@ -18,11 +18,12 @@
 - Bump browserslist from 4.28.2 to 4.28.8 #709
 - Bump concurrently from 9.2.1 to 10.0.6 #696 #757
 - Bump cypress from 15.18.1 to 16.1.0 #691 #701 #723 #738
-- Bump eslint from 10.0.2 to 10.12.0 #664 #685 #729 #747
+- Bump eslint from 10.0.2 to 10.13.0 #664 #685 #729 #747 #764
 - Bump eslint-plugin-cypress from 6.3.1 to 7.0.2 #663 #675 #728
 - Bump eslint-plugin-vue from 10.7.0 to 10.11.1 #713 #750
+- Bump follow-redirects from 1.16.0 to 1.16.1 #760
 - Bump glob from 10.3.10 to 10.5.0 #680
-- Bump happy-dom from 20.10.3 to 20.14.0 #665 #703 #725
+- Bump happy-dom from 20.10.3 to 21.0.3 #665 #703 #725 #763
 - Bump immutable from 5.1.5 to 5.1.9 #673
 - Bump joi from 18.2.3 to 18.2.8 #718
 - Bump js-yaml from 3.14.1 to 3.15.2 #672 #689 #719
@@ -33,7 +34,7 @@
 - Bump sinon from 21.0.2 to 22.0.0 #683
 - Bump source-map-js from 1.0.2 to 1.2.2 #751
 - Bump systeminformation from 5.31.6 to 5.31.17 #667
-- Bump vite from 8.1.4 to 8.3.1 #668 #727 #741
+- Bump vite from 8.1.4 to 8.3.4 #668 #727 #741 #765
 - Bump vitest from 4.1.4 to 5.0.3 #694 #730 #736 #754
 - Bump vue from 3.5.27 to 3.5.43 #666 #678 #704 #735
 - Bump vue-eslint-parser from 10.2.0 to 10.4.1 #705
