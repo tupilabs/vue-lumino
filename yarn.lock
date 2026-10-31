@@ -1826,6 +1826,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@vue/reactivity@npm:3.5.44":
+  version: 3.5.44
+  resolution: "@vue/reactivity@npm:3.5.44"
+  dependencies:
+    "@vue/shared": "npm:3.5.44"
+  checksum: fa7560b603e09c8b54107230958c90c41149564e8c1502e06eb09da570185370bac66604cb392d06de3444adfd87962a2f1b32ce0fd1c65236ae97a52c3819f4
+  languageName: node
+  linkType: hard
+
 "@vue/runtime-core@npm:3.5.43":
   version: 3.5.43
   resolution: "@vue/runtime-core@npm:3.5.43"
@@ -1833,6 +1842,16 @@ __metadata:
     "@vue/reactivity": "npm:3.5.43"
     "@vue/shared": "npm:3.5.43"
   checksum: f023832140f650994bc1cb9b3145ca2635e2661e6bccac40162f77103e3e9b6ae1f67e18fb9a32ac261888491c3429ef22e853775cac6a7ce0ef24f1fba90805
+  languageName: node
+  linkType: hard
+
+"@vue/runtime-core@npm:3.5.44":
+  version: 3.5.44
+  resolution: "@vue/runtime-core@npm:3.5.44"
+  dependencies:
+    "@vue/reactivity": "npm:3.5.44"
+    "@vue/shared": "npm:3.5.44"
+  checksum: 531a89e29460d52ea5464b2a97f50a0dc35ab9ed4d5a0f81b5eb25f36332a70dec4bab75b8fd59c41472854b23ab59a20980000ee6dae454a997de34e30470db
   languageName: node
   linkType: hard
 
@@ -1848,7 +1867,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vue/server-renderer@npm:3.5.43, @vue/server-renderer@npm:^3.4.13":
+"@vue/runtime-dom@npm:3.5.44":
+  version: 3.5.44
+  resolution: "@vue/runtime-dom@npm:3.5.44"
+  dependencies:
+    "@vue/reactivity": "npm:3.5.44"
+    "@vue/runtime-core": "npm:3.5.44"
+    "@vue/shared": "npm:3.5.44"
+    csstype: "npm:^3.2.3"
+  checksum: 3ceab406e1f0ed8eb5b37c6a47975c43a6da71bf6f2b9d84c8abd7c0ce0155931368050489e9b579c0f3fc61f9acdd1967bac44a77e05bbcdb148bafbcc3aef3
+  languageName: node
+  linkType: hard
+
+"@vue/server-renderer@npm:3.5.43":
   version: 3.5.43
   resolution: "@vue/server-renderer@npm:3.5.43"
   dependencies:
@@ -1856,6 +1887,17 @@ __metadata:
     "@vue/runtime-dom": "npm:3.5.43"
     "@vue/shared": "npm:3.5.43"
   checksum: bc3fa8227db943987dae28c271c8ef7c09e42e0777480bca49d89446b51aa4d76c6c71b8169a48ccb2d7ade51e4add3bdee50106c7df73b17a65558a6d7d7f7d
+  languageName: node
+  linkType: hard
+
+"@vue/server-renderer@npm:^3.4.13":
+  version: 3.5.44
+  resolution: "@vue/server-renderer@npm:3.5.44"
+  dependencies:
+    "@vue/compiler-ssr": "npm:3.5.44"
+    "@vue/runtime-dom": "npm:3.5.44"
+    "@vue/shared": "npm:3.5.44"
+  checksum: 74ca1e1bdc2bfaab0665e5179b81086236cc507d942622e1835f607ecb02dbd5de498af5b5da7d50d763486c40cbdb2c0b9fe1c7a5d21f4ed13786996755d3af
   languageName: node
   linkType: hard
 
