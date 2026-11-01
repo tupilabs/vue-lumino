@@ -5,35 +5,36 @@
 - Bump @humanfs/node from 0.16.6 to 0.16.8 #708
 - Bump @lumino/datagrid from 2.5.6 to 2.5.9 #722 #758
 - Bump @lumino/default-theme from 2.1.14 to 2.1.17 #686 #756
-- Bump @lumino/widgets from 2.7.5 to 2.9.0 #662
-- Bump @vitejs/plugin-vue from 6.0.7 to 6.0.9 #702 #742
+- Bump @lumino/widgets from 2.7.5 to 2.10.0 #662 #771
+- Bump @vitejs/plugin-vue from 6.0.7 to 6.0.10 #702 #742 #772
 - Bump @vitest/coverage-v8 from 4.0.18 to 5.0.5 #695 #739 #762
-- Bump @vue/compiler-dom from 3.5.41 to 3.5.43 #712 #740
+- Bump @vue/compiler-dom from 3.5.41 to 3.5.44 #712 #740 #770
 - Bump @vue/compiler-sfc from 3.5.31 to 3.5.43 #693 #715 #755
-- Bump @vue/server-renderer from 3.5.33 to 3.5.43 #674 #692 #721 #733
+- Bump @vue/server-renderer from 3.5.33 to 3.5.44 #674 #692 #721 #733 #768
 - Bump @vue/test-utils from 2.4.6 to 2.5.1 #684 #734
 - Bump actions/setup-node from 6 to 7 #669
 - Bump axios from 1.16.0 to 1.20.0 #670 #744
 - Bump brace-expansion from 1.1.11 to 1.1.21 #671 #743
 - Bump browserslist from 4.28.2 to 4.28.8 #709
 - Bump concurrently from 9.2.1 to 10.0.6 #696 #757
-- Bump cypress from 15.18.1 to 16.1.0 #691 #701 #723 #738
+- Bump cypress from 15.18.1 to 16.2.0 #691 #701 #723 #738 #769
 - Bump eslint from 10.0.2 to 10.13.0 #664 #685 #729 #747 #764
 - Bump eslint-plugin-cypress from 6.3.1 to 7.0.2 #663 #675 #728
 - Bump eslint-plugin-vue from 10.7.0 to 10.11.1 #713 #750
-- Bump follow-redirects from 1.16.0 to 1.16.1 #760
+- Bump follow-redirects from 1.16.0 to 1.16.2 #760 #773
 - Bump glob from 10.3.10 to 10.5.0 #680
-- Bump happy-dom from 20.10.3 to 21.0.3 #665 #703 #725 #763
+- Bump happy-dom from 20.10.3 to 21.0.4 #665 #703 #725 #763 #767
 - Bump immutable from 5.1.5 to 5.1.9 #673
 - Bump joi from 18.2.3 to 18.2.8 #718
 - Bump js-yaml from 3.14.1 to 3.15.2 #672 #689 #719
 - Bump nanoid from 3.3.16 to 3.3.18 #690
 - Bump postcss from 8.5.12 to 8.5.23 #679
 - Bump postcss-selector-parser from 7.1.0 to 7.1.5 #707
+- Bump qs from 6.15.3 to 6.17.1 #774
 - Bump sass from 1.99.0 to 1.105.1 #687 #716 #732 #748
 - Bump sinon from 21.0.2 to 22.0.0 #683
 - Bump source-map-js from 1.0.2 to 1.2.2 #751
-- Bump systeminformation from 5.31.6 to 5.31.17 #667
+- Bump systeminformation from 5.31.6 to 5.33.19 #667 #775
 - Bump vite from 8.1.4 to 8.3.4 #668 #727 #741 #765
 - Bump vitest from 4.1.4 to 5.0.3 #694 #730 #736 #754
 - Bump vue from 3.5.27 to 3.5.43 #666 #678 #704 #735
