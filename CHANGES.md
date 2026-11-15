@@ -8,10 +8,10 @@
 - Bump @lumino/default-theme from 2.1.14 to 2.1.17 #686 #756
 - Bump @lumino/widgets from 2.7.5 to 2.10.0 #662 #771
 - Bump @vitejs/plugin-vue from 6.0.7 to 6.0.10 #702 #742 #772
-- Bump @vitest/coverage-v8 from 4.0.18 to 5.0.5 #695 #739 #762
-- Bump @vue/compiler-dom from 3.5.41 to 3.5.44 #712 #740 #770
+- Bump @vitest/coverage-v8 from 4.0.18 to 5.1.0 #695 #739 #762 #783
+- Bump @vue/compiler-dom from 3.5.41 to 3.5.45 #712 #740 #770 #784
 - Bump @vue/compiler-sfc from 3.5.31 to 3.5.43 #693 #715 #755
-- Bump @vue/server-renderer from 3.5.33 to 3.5.44 #674 #692 #721 #733 #768
+- Bump @vue/server-renderer from 3.5.33 to 3.5.45 #674 #692 #721 #733 #768 #785
 - Bump @vue/test-utils from 2.4.6 to 2.5.1 #684 #734
 - Bump actions/setup-node from 6 to 7 #669
 - Bump axios from 1.16.0 to 1.20.0 #670 #744
@@ -20,7 +20,7 @@
 - Bump concurrently from 9.2.1 to 10.0.6 #696 #757
 - Bump cypress from 15.18.1 to 16.2.0 #691 #701 #723 #738 #769
 - Bump eslint from 10.0.2 to 10.14.0 #664 #685 #729 #747 #764 #779
-- Bump eslint-plugin-cypress from 6.3.1 to 7.0.2 #663 #675 #728
+- Bump eslint-plugin-cypress from 6.3.1 to 7.0.3 #663 #675 #728 #787
 - Bump eslint-plugin-vue from 10.7.0 to 10.12.0 #713 #750 #781
 - Bump follow-redirects from 1.16.0 to 1.16.2 #760 #773
 - Bump glob from 10.3.10 to 10.5.0 #680
@@ -36,7 +36,7 @@
 - Bump sinon from 21.0.2 to 22.0.0 #683
 - Bump source-map-js from 1.0.2 to 1.2.2 #751
 - Bump systeminformation from 5.31.6 to 5.33.19 #667 #775
-- Bump vite from 8.1.4 to 8.3.4 #668 #727 #741 #765
+- Bump vite from 8.1.4 to 8.3.6 #668 #727 #741 #765 #786
 - Bump vitest from 4.1.4 to 5.0.3 #694 #730 #736 #754
 - Bump vue from 3.5.27 to 3.5.44 #666 #678 #704 #735 #780
 - Bump vue-eslint-parser from 10.2.0 to 10.4.1 #705
